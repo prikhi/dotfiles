@@ -64,3 +64,6 @@
 [submodule "_vim/bundle/ctrlp"]
 	path = _vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "_vim/bundle/jedi-vim"]
+	path = _vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git

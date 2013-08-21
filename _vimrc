@@ -77,6 +77,7 @@ map <leader>td <Plug>TaskList
 
 " Run pep8
 let g:pep8_map='<leader>8'
+let g:pep8_ignore='E501'
 
 " run py.test's
 nmap <silent><Leader>tf <Esc>:Pytest file<CR>
@@ -126,6 +127,8 @@ map <leader>j :RopeGotoDefinition<CR>
 
 " Rename whatever the cursor is on (including references to it)
 map <leader>r :RopeRename<CR>
+
+
 " ==========================================================
 " Pathogen - Allows us to organize our vim plugins
 " ==========================================================
@@ -282,8 +285,9 @@ au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smart
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
-
-
+" Jedi Python settings
+let g:jedi#goto_command = "<leader>G"
+let g:jedi#popup_select_first = 0
 
 " Add the virtualenv's site-packages to vim path
 if has('python')
