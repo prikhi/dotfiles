@@ -37,9 +37,6 @@
 [submodule "_vim/bundle/ropevim"]
 	path = _vim/bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
-[submodule "_vim/bundle/acp"]
-	path = _vim/bundle/acp
-	url = https://github.com/vim-scripts/AutoComplPop.git
 [submodule "_vim/bundle/solarized"]
 	path = _vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
@@ -61,10 +58,6 @@
 [submodule "_vim/bundle/coffee"]
 	path = _vim/bundle/coffee
 	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "_vim/bundle/ctrlp"]
-	path = _vim/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
-	url = https://github.com/davidhalter/jedi-vim.git
 [submodule "_vim/bundle/syntastic"]
 	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -74,9 +67,6 @@
 [submodule "_vim/bundle/vim-airline"]
 	path = _vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
-[submodule "_vim/bundle/riv.vim"]
-	path = _vim/bundle/riv.vim
-	url = https://github.com/Rykka/riv.vim.git
 [submodule "_vim/bundle/colorschemes"]
 	path = _vim/bundle/colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git

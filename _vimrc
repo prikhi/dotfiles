@@ -244,6 +244,8 @@ endif
 
 colorscheme molokai
 
+" Airline - lightweight Powerline
+let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = '⮀'
 let g:airline_left_alt_sep = '⮁'
@@ -253,6 +255,14 @@ let g:airline_symbols = {}
 let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
+
+" YouCompleteMe Option
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_filepath_completion_use_working_dir = 1
+
+" Don't let pyflakes use the quickfix window
+let g:pyflakes_use_quickfix = 0
 
 " Paste from clipboard
 map <leader>p "+p
@@ -278,8 +288,6 @@ au BufRead *.js set makeprg=jslint\ %
 "autocmd VimEnter * imap <expr> <Tab> pumvisible() ? "<C-N>" : "<Tab>"
 "autocmd VimEnter * imap <expr> <S-Tab> pumvisible() ? "<C-P>" : "<S-Tab>"
 
-let g:acp_completeoptPreview=1
-
 " ===========================================================
 " FileType specific changes
 " ============================================================
@@ -293,11 +301,6 @@ au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-" Don't let pyflakes use the quickfix window
-let g:pyflakes_use_quickfix = 0
-" Jedi Python settings
-let g:jedi#goto_assignments_command = "<leader>G"
-let g:jedi#popup_select_first = 0
 
 " Add the virtualenv's site-packages to vim path
 if has('python')
