@@ -296,7 +296,7 @@ au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
 " Jedi Python settings
-let g:jedi#goto_command = "<leader>G"
+let g:jedi#goto_assignments_command = "<leader>G"
 let g:jedi#popup_select_first = 0
 
 " Add the virtualenv's site-packages to vim path
