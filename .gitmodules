@@ -71,3 +71,12 @@
 [submodule "_vim/bundle/youcompleteme"]
 	path = _vim/bundle/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "_vim/bundle/vim-airline"]
+	path = _vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule "_vim/bundle/riv.vim"]
+	path = _vim/bundle/riv.vim
+	url = https://github.com/Rykka/riv.vim.git
+[submodule "_vim/bundle/colorschemes"]
+	path = _vim/bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
