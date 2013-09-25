@@ -52,6 +52,10 @@
 set nocompatible              " Don't be compatible with vi
 let mapleader=","             " change the leader to be a comma vs slash
 
+" Set environment variable to directory containing this vimrc. Expect absolute
+" directory $HOME on Unix or %USERPROFILE% on Windows.
+let $VIMFILES = expand("<sfile>:p:h")
+
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
 
@@ -244,7 +248,9 @@ endif
 
 colorscheme molokai
 
+" ==========================================================
 " Airline - lightweight Powerline
+" ==========================================================
 let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = '⮀'
@@ -256,13 +262,65 @@ let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 
-" YouCompleteMe Option
+" ==========================================================
+" YouCompleteMe Options
+" ==========================================================
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf = 0
 let g:ycm_filepath_completion_use_working_dir = 1
+
+" ==========================================================
+" Pyflakes
+" ==========================================================
 
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
+
+" ==========================================================
+" Tagbar
+" ==========================================================
+
+" TagBar Commands
+nmap <F8> :TagbarToggle<CR>
+
+" TagBar Settings
+let g:tagbar_width = 35
+let g:tagbar_autofocus = 1
+
+" Support for reStructuredText, if available.
+if executable("rst2ctags")
+    let g:rst2ctags = 'rst2ctags'
+else
+    let g:rst2ctags = $VIMFILES . '/.vim/tool/rst2ctags/rst2ctags.py'
+endif
+
+" Local tagbar settings. Assign g:tagbar_type_rst to this value to enable
+" support for .rst files in tagbar.
+let g:local_tagbar_type_rst = {
+    \ 'ctagstype': 'rst',
+    \ 'ctagsbin' : g:rst2ctags,
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+\ }
+
+" Enable support for .rst files in tagbar by default. Disable if desired in
+" your per-user "-after.vim" file via:
+" unlet g:tagbar_type_rst.
+let g:tagbar_type_rst = g:local_tagbar_type_rst
+
+
+" ==========================================================
+" Misc Bindings
+" ==========================================================
+
 
 " Paste from clipboard
 map <leader>p "+p
@@ -302,6 +360,9 @@ au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smart
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
+" ==========================================================
+" Python VirtualEnv
+" ==========================================================
 " Add the virtualenv's site-packages to vim path
 if has('python')
 py << EOF
