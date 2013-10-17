@@ -52,3 +52,6 @@
 [submodule "_vim/bundle/ultisnips"]
 	path = _vim/bundle/ultisnips
 	url = https://github.com/vim-scripts/UltiSnips.git
+[submodule "_vim/bundle/vim-r-plugin"]
+	path = _vim/bundle/vim-r-plugin
+	url = https://github.com/jcfaria/Vim-R-plugin.git
