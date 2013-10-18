@@ -57,4 +57,4 @@
 	url = https://github.com/jcfaria/Vim-R-plugin.git
 [submodule "_oh-my-zsh"]
 	path = _oh-my-zsh
-	url = /home/prikhi/.dotfiles/_oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
