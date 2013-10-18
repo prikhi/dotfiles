@@ -1,0 +1,18 @@
+[user]
+	name = Pavan Rikhi
+	email = pavan.rikhi+agit@gmail.com
+	signingkey = 0xA736A3428D5063BB
+
+[color]
+    diff = true
+    status = true
+    branch = true
+	ui = true
+
+[push]
+	default = current
+
+[core]
+	editor = vim
+	whitespace = cr-at-eol
+	autocrif = true

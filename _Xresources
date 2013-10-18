@@ -1,0 +1,69 @@
+! Xresources file
+!
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+
+URxvt*font:             -*-dinapowerline-medium-r-*-*-13-*-*-*-*-*-*-*
+
+! Makes w3mimgdisplay not work :(
+!URxvt.depth: 32
+URxvt.fading: 20
+URxvt.iconFile: /home/prikhi/Media/Pictures/Icons/terminal.png
+URxvt.saveLines: 50000
+URxvt.urgentOnBell: true
+URxvt.visualBell: true
+
+URxvt*termName: rxvt-256color
+URxvt.perl-ext-common:  default,matcher,tabbed,vtwheel
+URxvt.url-launcher:      /usr/bin/firefox
+URxvt.matcher.button:   1
+
+URxvt.background:  [90]#000000
+URxvt.foreground:  white
+
+URxvt.scrollBar: true
+URxvt.scrollBar_right: true
+URxvt.scrollColor: #FF7F00
+
+URxvt.cursorBlink: true
+URxvt.cursorColor: #FF7F00
+
+URxvt.tabbed.tab-bg:    12
+!URxvt.color2:  #FE5A1D
+!URxvt.color10:  #FF7F00
+
+!! Black (not tango) + DarkGrey
+!URxvt.color0:  #000000
+!URxvt.color8:  #555753
+!! DarkRed + Red
+!URxvt.color1:  #ff6565
+!URxvt.color9:  #ff8d8d
+!! DarkGreen + Green
+!URxvt.color2:  #93d44f
+!URxvt.color10: #c8e7a8
+!! DarkYellow + Yellow
+!URxvt.color3:  #eab93d
+!URxvt.color11: #ffc123
+!! OrangeRed + Orange
+URxvt.color4: #FF4500
+URxvt.color12:  #FF7F00
+!! DarkMagenta + Magenta
+!URxvt.color5:  #ce5c00
+!URxvt.color13: #f57900
+!!DarkCyan + Cyan (both not tango)
+!URxvt.color6:  #89b6e2
+!URxvt.color14: #46a4ff
+!! LightGrey + White
+!URxvt.color7:  #cccccc
+!URxvt.color15: #ffffff
+
+!URxvt.color1: #f92671
+!URxvt.color2: #a6e22e
+!URxvt.color4: #1692d0
+!URxvt.color7: #ffffff
+!URxvt.color9: #ff669d
+!URxvt.color10: #beed5f
+!URxvt.color12: #66d9ef
+!URxvt.color15: #ffffff

@@ -1,0 +1,90 @@
+# $Id$
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#
+#
+# The format of this file is one command per line.  Everything after a pound
+# sign (#) is a comment, unless a backward slash (\) precedes it.  Note: In
+# folder-hook and send-hook you need to account for two levels of dequoting
+# (see manual).
+#
+
+# Note: $folder should be set _before_ any other path vars where `+' or `='
+# is used because paths are expanded when parsed
+#
+
+source ~/.mutt/mailboxes
+source ~/.mutt/crypto
+source ~/.mutt/colors.muttrc
+source ~/.mutt/lists
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set mailcap_path = ~/.mutt/mailcap
+
+set from = "pavan.rikhi@gmail.com"
+alternates "(pavan@acorncommunity\.org)|(accounting@acorncommunity\.org)"
+set realname = "Pavan Rikhi"
+set use_from = yes
+set envelope_from = yes
+
+set sleep_time = 0
+set mail_check = 120
+set beep_new = yes
+
+set sendmail = "/usr/bin/msmtp"
+set editor = 'vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "set spell"'
+
+set imap_check_subscribed
+set mbox_type = Maildir
+set spoolfile = "~/.mail/gmail/INBOX/"
+set folder = "~/.mail/gmail/"
+# Gmail's SMTP server saves a copy itself, setting record will make a duplicate
+unset record
+set postponed = "+[Gmail].Drafts/"
+set move = no
+
+hdr_order Date From To Cc
+alternative_order text/plain text/enriched text/html *
+auto_view text/html
+
+set pager_context=4
+set pager_index_lines=8
+set pager_stop
+
+set nostrict_threads
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+
+set include = yes
+set edit_headers = yes
+set askcc
+set fcc_attach
+set forward_decode
+set reply_to
+set reverse_name
+
+set query_command="goobook query '%s'"
+macro index,pager a "<pipe-message>goobook add<return>" "add the sender address to google contacts"
+
+bind editor <Tab> complete-query
+bind editor ^T complete
+bind editor <space> noop
+bind index,pager gr group-reply
+
+
+# Gmail-style bindings
+macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager gs "<change-folder>=[Gmail].Starred<enter>" "Go to starred messages"
+macro index,pager gd "<change-folder>=[Gmail].Drafts<enter>" "Go to drafts"
+
+# notmuch search bindings
+macro index <F8> "<enter-command>unset wait_key<enter><shell-escape>notmuch-mutt --prompt search<enter><change-folder-readonly>`echo ${XDG_CACHE_HOME:-$HOME/.cache}/notmuch/mutt/results`<enter>" \
+   "notmuch: search mail"
+macro index <F9> "<enter-command>unset wait_key<enter><enter-command>unignore message-id<enter><pipe-message>notmuch-mutt thread<enter><change-folder-readonly>`echo ${XDG_CACHE_HOME:-$HOME/.cache}/notmuch/mutt/results`<enter><enter-command>set wait_key<enter>" \
+   "search and reconstruct owning thread with notmuch"
+macro index <F6> "<enter-command>unset wait_key<enter><enter-command>unignore message-id<enter><pipe-message>notmuch-mutt -- tag -inbox<enter>" \
+   "remove message from inbox with notmuch"

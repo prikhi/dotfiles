@@ -55,3 +55,6 @@
 [submodule "_vim/bundle/vim-r-plugin"]
 	path = _vim/bundle/vim-r-plugin
 	url = https://github.com/jcfaria/Vim-R-plugin.git
+[submodule "_oh-my-zsh"]
+	path = _oh-my-zsh
+	url = /home/prikhi/.dotfiles/_oh-my-zsh

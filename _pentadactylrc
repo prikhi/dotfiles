@@ -1,0 +1,32 @@
+"hg6950
+
+loadplugins '\.(js|penta)$'
+group user
+
+colorscheme molokai
+
+set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79"'
+
+set defsearch=duckduckgo
+set hintkeys=hjkl;asdfg
+set guioptions=bCrsn
+
+""Performance Tweaks
+set! network.dns.disableIPv6=true
+set! network.http.pipelining=true
+set! network.http.pipelining.ssl=true
+set! network.http.proxy.pipelining=true
+set! network.http.pipelining.maxrequests=64
+set! network.http.max-connections=512
+set! network.http.max-persistent-connections-per-server=32
+set! nglayout.initialpaint.delay=0
+set! ui.submenuDelay=0
+
+"Privacy
+set! geo.enabled=false
+set! privacy.donottrackheader.enabled=true
+
+map -builtin J 5j
+map -builtin K 5k
+
+" vim: set ft=pentadactyl:
