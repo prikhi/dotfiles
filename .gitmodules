@@ -7,9 +7,6 @@
 [submodule "_vim/bundle/pyflakes"]
 	path = _vim/bundle/pyflakes
 	url = https://github.com/mitechie/pyflakes-pathogen.git
-[submodule "_vim/bundle/ack"]
-	path = _vim/bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "_vim/bundle/gundo"]
 	path = _vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
@@ -52,9 +49,6 @@
 [submodule "_vim/bundle/ultisnips"]
 	path = _vim/bundle/ultisnips
 	url = https://github.com/vim-scripts/UltiSnips.git
-[submodule "_vim/bundle/vim-r-plugin"]
-	path = _vim/bundle/vim-r-plugin
-	url = https://github.com/jcfaria/Vim-R-plugin.git
 [submodule "_oh-my-zsh"]
 	path = _oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
