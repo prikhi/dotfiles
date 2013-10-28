@@ -266,16 +266,14 @@ let g:airline_symbols.linenr = '⭡'
 " YouCompleteMe Options
 " ==========================================================
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_filepath_completion_use_working_dir = 1
 
 " ==========================================================
-" Pyflakes
+" Python-mod
 " ==========================================================
 
-" Don't let pyflakes use the quickfix window
-let g:pyflakes_use_quickfix = 0
 
 " ==========================================================
 " Tagbar

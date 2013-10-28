@@ -72,7 +72,7 @@ alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
-alias aphrodite="ssh admin@aphrodite.acorn"
+alias aphrodite="ssh prikhi@aphrodite.acorn"
 alias vishnu="ssh admin@vishnu.acorn"
 alias adonis="ssh prikhi@adonis.acorn"
 alias slacktest="ssh admin@SlackTesting.acorn"
