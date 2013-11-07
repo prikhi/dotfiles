@@ -34,3 +34,4 @@ bind-key ^R random-unread
 bind-key U reload-urls
 bind-key o open-in-browser-and-mark-read
 bind-key O open-in-browser
+bind-key o open-in-browser article
