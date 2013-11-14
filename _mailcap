@@ -1,0 +1,22 @@
+text/html; w3m -I %{charset} -T text/html; needsterminal;
+text/html; w3m -I %{charset} -T text/html -dump %s; copiousoutput;
+text/*; vim %s
+
+image/*; feh %s >/dev/null; test=test -n "$DISPLAY"
+audio/*; vlc %s; test=test -n "$DISPLAY"
+video/*; vlc %s; test=test -n "$DISPLAY"
+
+application/pdf; pdftotext %s -; copiousoutput
+application/pdf; zathura '%s'; test=test -n "$DISPLAY"
+
+application/msword; lowriter '%s'; test=test -n "$DISPLAY"
+application/ms-excel; localc '%s'; test=test -n "$DISPLAY"
+application/ms-powerpoint; loimpress '%s'; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.text; libreoffice '%s'; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.spreadsheet; localc '%s'; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.presentation; loimpress '%s'; test=test -n "$DISPLAY"
+
+application/x-tar; tar tvf %s; copiousoutput
+application/x-tar-gz; tar tvfz %s; copiousoutput
+application/x-zip-compressed; unzip -v %s; copiousoutput
+application/zip; unzip -v %s; copiousoutput
