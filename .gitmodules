@@ -3,40 +3,40 @@
 	url = http://github.com/tpope/vim-fugitive.git
 [submodule "_vim/bundle/git"]
 	path = _vim/bundle/git
-	url = https://github.com/tpope/vim-git.git
+	url = http://github.com/tpope/vim-git.git
 [submodule "_vim/bundle/gundo"]
 	path = _vim/bundle/gundo
-	url = https://github.com/sjl/gundo.vim.git
+	url = http://github.com/sjl/gundo.vim.git
 [submodule "_vim/bundle/makegreen"]
 	path = _vim/bundle/makegreen
-	url = https://github.com/reinh/vim-makegreen
+	url = http://github.com/reinh/vim-makegreen
 [submodule "_vim/bundle/tasklist"]
 	path = _vim/bundle/tasklist
-	url = https://github.com/vim-scripts/TaskList.vim.git
+	url = http://github.com/vim-scripts/TaskList.vim.git
 [submodule "_vim/bundle/nerdtree"]
 	path = _vim/bundle/nerdtree
-	url = https://github.com/vim-scripts/The-NERD-tree.git
+	url = http://github.com/vim-scripts/The-NERD-tree.git
 [submodule "_vim/bundle/syntastic"]
 	path = _vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
+	url = http://github.com/scrooloose/syntastic.git
 [submodule "_vim/bundle/youcompleteme"]
 	path = _vim/bundle/youcompleteme
-	url = https://github.com/Valloric/YouCompleteMe.git
+	url = http://github.com/Valloric/YouCompleteMe.git
 [submodule "_vim/bundle/vim-airline"]
 	path = _vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
+	url = http://github.com/bling/vim-airline
 [submodule "_vim/bundle/tagbar"]
 	path = _vim/bundle/tagbar
-	url = git://github.com/majutsushi/tagbar
+	url = http://github.com/majutsushi/tagbar
 [submodule "_vim/tool/rst2ctags"]
 	path = _vim/tool/rst2ctags
-	url = https://github.com/jszakmeister/rst2ctags.git
+	url = http://github.com/jszakmeister/rst2ctags.git
 [submodule "_vim/bundle/ultisnips"]
 	path = _vim/bundle/ultisnips
-	url = https://github.com/vim-scripts/UltiSnips.git
+	url = http://github.com/vim-scripts/UltiSnips.git
 [submodule "_oh-my-zsh"]
 	path = _oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
+	url = http://github.com/robbyrussell/oh-my-zsh.git
 [submodule "_vim/bundle/python-mode"]
 	path = _vim/bundle/python-mode
-	url = https://github.com/klen/python-mode.git
+	url = http://github.com/klen/python-mode.git
