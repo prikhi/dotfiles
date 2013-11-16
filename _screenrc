@@ -1,0 +1,19 @@
+# fix residual editor text
+altscreen on
+
+# get rid of the welcome message
+startup_message off
+
+# Enable 256 colors
+term rxvt-256color
+
+# No visal bell
+vbell off
+
+# I like a girl with a short skirt and a loooong scrollback
+defscrollback 500000
+
+# Make a better status bar
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
