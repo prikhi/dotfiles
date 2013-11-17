@@ -65,7 +65,7 @@ export NNTPSERVER="news.gmane.org"
 #########
 # Aliases
 #########
-alias svim="sudo vim"
+alias svim="EDITOR=vim sudoedit"
 alias c="gcc -g -O2 -Wall -Wextra -Werror --std=c11 -pedantic -Wno-unused-parameter -D_XOPEN_SOURCE=700"
 alias zc="zcalc"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
