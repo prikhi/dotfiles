@@ -66,6 +66,7 @@ export NNTPSERVER="news.gmane.org"
 # Aliases
 #########
 alias svim="EDITOR=vim sudoedit"
+alias svimdiff="EDITOR=vimdiff sudoedit"
 alias c="gcc -g -O2 -Wall -Wextra -Werror --std=c11 -pedantic -Wno-unused-parameter -D_XOPEN_SOURCE=700"
 alias zc="zcalc"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
@@ -106,10 +107,12 @@ fi
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python2.7"
 if [ -f "/usr/bin/virtualenvwrapper.sh" ]; then
     source /usr/bin/virtualenvwrapper.sh
- fi
+fi
 
 # ALL HAIL THE HYPNOTOAD
-fortune -so | cowsay -f hypnotoad
+if [ -e "/usr/bin/fortune" -a -e "/usr/bin/cowsay" ]; then
+    fortune -so | cowsay -f hypnotoad
+fi
 
 
 ## Fix for special keys (home, end, delete, etc.)
