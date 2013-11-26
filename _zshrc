@@ -79,6 +79,7 @@ alias adonis="ssh prikhi@adonis.acorn"
 alias slacktest="ssh prikhi@SlackTesting.acorn"
 alias sese="ssh sese@vps.southernexposure.com -p 8822 -i ~/.ssh/id_rsa"
 alias acorn="ssh acorn@vps.southernexposure.com -p 8822 -i ~/.ssh/id_rsa"
+alias nocturnal="ssh pavan@nocturnal.1337.cx -i ~/.ssh/id_rsa"
 
 # Safety First!
 alias rm="rm -i"
