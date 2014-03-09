@@ -20,3 +20,10 @@ subscribe awesome-help@naquadah.org
 # Security
 subscribe full-disclosure@lists.grok.org.uk
 subscribe bugtraq@securityfocus.com
+
+# Programming
+subscribe beginners@haskell.org
+subscribe haskell@haskell.org
+subscribe tutor@python.org
+subscribe python-list@python.org
+subscribe core-mentorship@python.org

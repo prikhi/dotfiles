@@ -40,3 +40,12 @@
 [submodule "_vim/bundle/python-mode"]
 	path = _vim/bundle/python-mode
 	url = http://github.com/klen/python-mode.git
+[submodule "_vim/bundle/neco-ghc"]
+	path = _vim/bundle/neco-ghc
+	url = http://github.com/eagletmt/neco-ghc.git
+[submodule "_vim/bundle/vim2hs"]
+	path = _vim/bundle/vim2hs
+	url = http://github.com/dag/vim2hs.git
+[submodule "_vim/bundle/SudoEdit.vim"]
+	path = _vim/bundle/SudoEdit.vim
+	url = http://github.com/chrisbra/SudoEdit.vim.git

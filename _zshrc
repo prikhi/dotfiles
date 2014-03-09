@@ -40,7 +40,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux git colored-man command-not-found pip python screen systemd vi-mode)
+plugins=(archlinux git colored-man colorize command-not-found django extract pip python screen systemd vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,19 +57,24 @@ setopt AUTO_CONTINUE
 export EDITOR="vim"
 export PAGER="less"
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
-export LESS=-R
+export LESS="-R"
 export VBOX_USB=usbfs
-export PATH="${PATH}:/home/prikhi/.bin"
+export PATH=$PATH:~/.bin:~/.cabal/bin
 export NNTPSERVER="news.gmane.org"
 
 #########
 # Aliases
 #########
+alias v="vim"
+alias vd="vimdiff"
+alias sv="EDITOR=vim sudoedit"
 alias svim="EDITOR=vim sudoedit"
 alias svimdiff="EDITOR=vimdiff sudoedit"
 alias c="gcc -g -O2 -Wall -Wextra -Werror --std=c11 -pedantic -Wno-unused-parameter -D_XOPEN_SOURCE=700"
 alias zc="zcalc"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
+alias irc="~/.bin/start_irc; screen -x irc"
+alias torrent="~/.bin/start_torrent; screen -x torrent"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
@@ -79,7 +84,7 @@ alias adonis="ssh prikhi@adonis.acorn"
 alias slacktest="ssh prikhi@SlackTesting.acorn"
 alias sese="ssh sese@vps.southernexposure.com -p 8822 -i ~/.ssh/id_rsa"
 alias acorn="ssh acorn@vps.southernexposure.com -p 8822 -i ~/.ssh/id_rsa"
-alias nocturnal="ssh pavan@nocturnal.1337.cx -i ~/.ssh/id_rsa"
+alias vps="ssh pavan@sleepanarchy.com -i ~/.ssh/id_rsa"
 
 # Safety First!
 alias rm="rm -i"
@@ -156,6 +161,7 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-init
     zle -N zle-line-finish
 fi
+
 
 if [[ -f ~/.zshrc.local ]]; then
     source ~/.zshrc.local

@@ -7,7 +7,7 @@ Xft.hinting: true
 Xft.hintstyle: hintfull
 Xft.rgba: rgb
 
-URxvt*font:             -*-dinapowerline-medium-r-*-*-13-*-*-*-*-*-*-*
+URxvt.font:             -*-dinapowerline-medium-r-*-*-13-*-*-*-*-*-*-*
 
 ! Makes w3mimgdisplay not work :(
 !URxvt.depth: 32
@@ -28,6 +28,7 @@ URxvt.foreground:  white
 URxvt.scrollBar: true
 URxvt.scrollBar_right: true
 URxvt.scrollColor: #FF7F00
+URxvt.troughColor: #000000
 
 URxvt.cursorBlink: true
 URxvt.cursorColor: #FF7F00

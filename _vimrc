@@ -130,7 +130,8 @@ map <leader>g :GundoToggle<CR>
 map <leader>j :RopeGotoDefinition<CR>
 
 " Rename whatever the cursor is on (including references to it)
-map <leader>r :RopeRename<CR>
+noremap <leader>R :RopeRename<CR>
+
 
 
 " ==========================================================
@@ -248,6 +249,9 @@ endif
 
 colorscheme molokai
 
+" ;; to exit Insert Mode
+imap ;; <Esc>
+
 " ==========================================================
 " Airline - lightweight Powerline
 " ==========================================================
@@ -262,6 +266,8 @@ let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 
+let g:airline_section_x="%{airline#util#wrap(airline#extensions#tagbar#currenttag(), 0)}"
+
 " ==========================================================
 " YouCompleteMe Options
 " ==========================================================
@@ -271,9 +277,17 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_filepath_completion_use_working_dir = 1
 
 " ==========================================================
-" Python-mod
+" Python-mode
 " ==========================================================
 
+let g:pymode_lint_ignore = "E1101,W0232,C0111,E1103,R0904,C0103"
+
+" ==========================================================
+" Syntastic
+" ==========================================================
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['python'] }
 
 " ==========================================================
 " Tagbar
@@ -353,8 +367,8 @@ autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 so
 
 " Python
 "au BufRead *.py compiler nose
-au FileType python set omnifunc=pythoncomplete#Complete
-au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+"au FileType python set omnifunc=pythoncomplete#Complete
+"au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
