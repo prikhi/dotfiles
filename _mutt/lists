@@ -8,6 +8,7 @@ subscribe awesome@naquadah.org
 subscribe freebsd-announce@freebsd.org
 subscribe arch-announce@archlinux.org
 subscribe security@slackware.com
+subscribe django-announce@googlegroups.com
 
 # OS Distributions
 subscribe arch-general@archlinux.org
@@ -21,9 +22,16 @@ subscribe awesome-help@naquadah.org
 subscribe full-disclosure@lists.grok.org.uk
 subscribe bugtraq@securityfocus.com
 
-# Programming
+# Haskell
 subscribe beginners@haskell.org
 subscribe haskell@haskell.org
+
+# Python
 subscribe tutor@python.org
 subscribe python-list@python.org
 subscribe core-mentorship@python.org
+
+# Django
+subscribe django-users@googlegroups.com
+subscribe django-core-mentorship@googlegroups.com
+subscribe django-developers@googlegroups.com
