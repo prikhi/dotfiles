@@ -8,10 +8,11 @@
 
 _vim/ropevim/src*
 _vim/ropevim/pylibs*
-_vim/bundle/*/doc/tags
+doc/tags
 
 _mutt/.passwd/
 _mutt/cache/
 _mutt/mailboxes
+_mutt/certificates
 
 _pentadactyl/info/

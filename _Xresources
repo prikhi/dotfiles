@@ -6,19 +6,26 @@ Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintfull
 Xft.rgba: rgb
+Xft.dpi: 108
 
 URxvt.font:             -*-dinapowerline-medium-r-*-*-13-*-*-*-*-*-*-*
+!URxvt.font:              xft:Inconsolata-dz for Powerline:size=11
 
-! Makes w3mimgdisplay not work :(
-!URxvt.depth: 32
+URxvt.depth: 24
 URxvt.fading: 20
 URxvt.iconFile: /home/prikhi/Media/Pictures/Icons/terminal.png
 URxvt.saveLines: 50000
 URxvt.urgentOnBell: true
-URxvt.visualBell: true
+URxvt.visualBell: false
 
-URxvt*termName: rxvt-256color
-URxvt.perl-ext-common:  default,matcher,tabbed,vtwheel
+!URxvt*termName: rxvt-256color
+URxvt.perl-ext-common:  default,matcher,tabbedex,vtwheel
+
+! Tabs
+URxvt.tabbed.title-fg:  12
+URxvt.tabbed.tab-bg:    12
+
+! URL Matcher
 URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:   1
 
@@ -33,11 +40,7 @@ URxvt.troughColor: #000000
 URxvt.cursorBlink: true
 URxvt.cursorColor: #FF7F00
 
-URxvt.tabbed.tab-bg:    12
-!URxvt.color2:  #FE5A1D
-!URxvt.color10:  #FF7F00
-
-!! Black (not tango) + DarkGrey
+!! Black + DarkGrey
 !URxvt.color0:  #000000
 !URxvt.color8:  #555753
 !! DarkRed + Red
@@ -49,9 +52,11 @@ URxvt.tabbed.tab-bg:    12
 !! DarkYellow + Yellow
 !URxvt.color3:  #eab93d
 !URxvt.color11: #ffc123
-!! OrangeRed + Orange
+
+! OrangeRed + Orange
 URxvt.color4: #FF4500
 URxvt.color12:  #FF7F00
+
 !! DarkMagenta + Magenta
 !URxvt.color5:  #ce5c00
 !URxvt.color13: #f57900
@@ -60,13 +65,4 @@ URxvt.color12:  #FF7F00
 !URxvt.color14: #46a4ff
 !! LightGrey + White
 !URxvt.color7:  #cccccc
-!URxvt.color15: #ffffff
-
-!URxvt.color1: #f92671
-!URxvt.color2: #a6e22e
-!URxvt.color4: #1692d0
-!URxvt.color7: #ffffff
-!URxvt.color9: #ff669d
-!URxvt.color10: #beed5f
-!URxvt.color12: #66d9ef
 !URxvt.color15: #ffffff

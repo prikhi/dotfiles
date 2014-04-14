@@ -75,6 +75,7 @@ alias zc="zcalc"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 alias irc="~/.bin/start_irc; screen -x irc"
 alias torrent="~/.bin/start_torrent; screen -x torrent"
+alias work="~/.bin/start_work; screen -x work"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
@@ -119,6 +120,11 @@ fi
 if [ -e "/usr/bin/fortune" -a -e "/usr/bin/cowsay" ]; then
     fortune -so | cowsay -f hypnotoad
 fi
+
+# Copy rxvt-unicode-256color terminfo to specified remote host
+push_rxvt_info () {
+    infocmp rxvt-unicode-256color | ssh $1 "mkdir -p .terminfo && cat >/tmp/ti && tic /tmp/ti"
+}
 
 
 ## Fix for special keys (home, end, delete, etc.)
