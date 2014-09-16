@@ -49,3 +49,6 @@
 [submodule "_vim/bundle/SudoEdit.vim"]
 	path = _vim/bundle/SudoEdit.vim
 	url = http://github.com/chrisbra/SudoEdit.vim.git
+[submodule "_vim/bundle/vim-markdown"]
+	path = _vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git

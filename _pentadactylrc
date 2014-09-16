@@ -26,7 +26,7 @@ set! ui.submenuDelay=0
 set! geo.enabled=false
 set! privacy.donottrackheader.enabled=true
 
-map -builtin J 5j
-map -builtin K 5k
+map -builtin J 10j
+map -builtin K 10k
 
 " vim: set ft=pentadactyl:

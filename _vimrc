@@ -132,6 +132,11 @@ map <leader>j :RopeGotoDefinition<CR>
 " Rename whatever the cursor is on (including references to it)
 noremap <leader>R :RopeRename<CR>
 
+" Search for the next Uppercase character(use a search so 'n' and 'm' jump
+" to the next/previous match)
+nnoremap <leader>u /\u<CR>:nohlsearch<CR>
+nnoremap <leader>U ?\u<CR>:nohlsearch<CR>
+
 
 
 " ==========================================================
@@ -154,6 +159,7 @@ set background=dark           " We are using dark background in vim
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
+set guifont=Dina\ 10
 
 " don't bell or blink
 set noerrorbells
@@ -266,6 +272,7 @@ let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 
+" Remove the filetype
 let g:airline_section_x="%{airline#util#wrap(airline#extensions#tagbar#currenttag(), 0)}"
 
 " ==========================================================
@@ -275,12 +282,14 @@ let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_filepath_completion_use_working_dir = 1
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " ==========================================================
 " Python-mode
 " ==========================================================
 
 let g:pymode_lint_ignore = "E1101,W0232,C0111,E1103,R0904,C0103"
+let g:pymode_rope_completion = 0
 
 " ==========================================================
 " Syntastic
@@ -350,13 +359,21 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " ==========================================================
+" Haskell
+" ==========================================================
+"
+" Show the Types of Symbols in the autocomplete menu
+" let g:necoghc_enable_detailed_browse = 1
+
+" Run Check and Lint Asynchronously
+" autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+
+
+" ==========================================================
 " Javascript
 " ==========================================================
 au BufRead *.js set makeprg=jslint\ %
-
-" Use tab to scroll through autocomplete menus
-"autocmd VimEnter * imap <expr> <Tab> pumvisible() ? "<C-N>" : "<Tab>"
-"autocmd VimEnter * imap <expr> <S-Tab> pumvisible() ? "<C-P>" : "<S-Tab>"
+au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 " ===========================================================
 " FileType specific changes
@@ -365,11 +382,9 @@ au BufRead *.js set makeprg=jslint\ %
 autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
 autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
+" ==========================================================
 " Python
-"au BufRead *.py compiler nose
-"au FileType python set omnifunc=pythoncomplete#Complete
-"au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+" ==========================================================
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
 " ==========================================================

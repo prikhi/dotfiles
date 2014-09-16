@@ -1,9 +1,9 @@
 auto-reload yes
-reload-time 30
+reload-time 240
 reload-threads 5
 
 browser "w3m %u"
-html-renderer "w3m -dump -T text/html" 
+html-renderer "w3m -dump -T text/html"
 notify-program notify-send
 notify-screen yes
 notify-beep yes

@@ -40,7 +40,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux git colored-man colorize command-not-found django extract pip python screen systemd vi-mode)
+plugins=(archlinux git cabal colored-man colorize command-not-found django extract pip python screen systemd vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -73,6 +73,7 @@ alias svimdiff="EDITOR=vimdiff sudoedit"
 alias c="gcc -g -O2 -Wall -Wextra -Werror --std=c11 -pedantic -Wno-unused-parameter -D_XOPEN_SOURCE=700"
 alias zc="zcalc"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
+alias ssplit="~/.bin/start_split; screen -x split"
 alias irc="~/.bin/start_irc; screen -x irc"
 alias torrent="~/.bin/start_torrent; screen -x torrent"
 alias work="~/.bin/start_work; screen -x work"
@@ -86,6 +87,7 @@ alias slacktest="ssh prikhi@SlackTesting.acorn"
 alias sese="ssh sese@vps.southernexposure.com -p 8822 -i ~/.ssh/id_rsa"
 alias acorn="ssh acorn@vps.southernexposure.com -p 8822 -i ~/.ssh/id_rsa"
 alias vps="ssh pavan@sleepanarchy.com -i ~/.ssh/id_rsa"
+alias fic="ssh vps.ic.org"
 
 # Safety First!
 alias rm="rm -i"
@@ -126,6 +128,13 @@ push_rxvt_info () {
     infocmp rxvt-unicode-256color | ssh $1 "mkdir -p .terminfo && cat >/tmp/ti && tic /tmp/ti"
 }
 
+## Bindings
+# Bind Ctrl-R to History Search
+bindkey '^R' history-incremental-search-backward
+# Bind Ctrl-W to Delete Word Backwards
+bindkey '^W' backward-kill-word
+# Bind ;; to Command Mode
+bindkey -M viins ';;' vi-cmd-mode
 
 ## Fix for special keys (home, end, delete, etc.)
 # create a zkbd compatible hash;
