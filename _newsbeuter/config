@@ -13,10 +13,10 @@ download-full-page yes
 
 color background          white   black
 color listnormal          white   black
-color listfocus           white   blue   bold
-color listnormal_unread   blue    black
-color listfocus_unread    white   blue   bold
-color info                white   blue   bold
+color listfocus           blue    black   bold
+color listnormal_unread   white   black   bold
+color listfocus_unread    blue    black   bold
+color info                blue    black   bold
 color article             white   black
 
 # vim-like bindings
