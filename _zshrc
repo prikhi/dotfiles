@@ -15,7 +15,7 @@ ZSH_THEME="ys"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -46,6 +46,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Modules
 autoload -U zcalc
+autoload bashcompinit
+bashcompinit
 
 # Options
 zstyle ':completion:*' menu select
@@ -65,18 +67,26 @@ export NNTPSERVER="news.gmane.org"
 #########
 # Aliases
 #########
+# Vim shortcuts
 alias v="vim"
 alias vd="vimdiff"
 alias sv="EDITOR=vim sudoedit"
 alias svim="EDITOR=vim sudoedit"
 alias svimdiff="EDITOR=vimdiff sudoedit"
+
 alias c="gcc -g -O2 -Wall -Wextra -Werror --std=c11 -pedantic -Wno-unused-parameter -D_XOPEN_SOURCE=700"
 alias zc="zcalc"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
+
+# Launch and/or Open Screen Sessions
 alias ssplit="~/.bin/start_split; screen -x split"
 alias irc="~/.bin/start_irc; screen -x irc"
 alias torrent="~/.bin/start_torrent; screen -x torrent"
 alias work="~/.bin/start_work; screen -x work"
+
+# Edit config files
+alias vimrc="v ~/.vimrc"
+alias zshrc="v ~/.zshrc"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
@@ -101,18 +111,33 @@ alias nc-restart="sudo netctl restart"
 alias nc-status="sudo netctl status"
 
 # Arch linux package management - packer
-alias pacdow='sudo pacman -Syuw'    # Only download new packages, do not install
-alias pacupg='packer -Syu'        # Synchronize with repositories before upgrading packages that are out of date on the local system.
-alias pacin='packer -S'           # Install specific package(s) from the repositories
-alias pacrep='packer -Si'              # Display information about a given package in the repositories
-alias pacreps='packer -Ss'             # Search for package(s) in the repositories
+# Only download new packages, do not install them
+alias pacdow='sudo pacman -Syuw'
+# Synchronize with repositories before upgrading packages that are out of date
+# on the local system.
+alias pacupg='packer -Syu'
+# Install specific package(s) from the repositories
+alias pacin='packer -S'
+# Display information about a given package in the repositories
+alias pacrep='packer -Si'
+# Search for package(s) in the repositories
+alias pacreps='packer -Ss'
+
+# Haskell package development/management - cabal
+# These use multiple cores
+alias cbj='cabal -j'
+alias cbb='cbj build'
+alias cbi='cbj install'
+alias cbc='cabal clean'
+alias cbh='cabal haddock'
+alias fcbb='cbc && cbb && cbh'  # A full Clean + Build (including docs)
 
 # ls colors
 if [ -f ~/.dir_colors ]; then
     eval `dircolors ~/.dir_colors`
 fi
 
-# Python2 virtualenv
+# Python2 virtualenvwrapper setup
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python2.7"
 if [ -f "/usr/bin/virtualenvwrapper.sh" ]; then
     source /usr/bin/virtualenvwrapper.sh
@@ -123,10 +148,14 @@ if [ -e "/usr/bin/fortune" -a -e "/usr/bin/cowsay" ]; then
     fortune -so | cowsay -f hypnotoad
 fi
 
+
+## Functions
 # Copy rxvt-unicode-256color terminfo to specified remote host
 push_rxvt_info () {
     infocmp rxvt-unicode-256color | ssh $1 "mkdir -p .terminfo && cat >/tmp/ti && tic /tmp/ti"
 }
+
+
 
 ## Bindings
 # Bind Ctrl-R to History Search
@@ -135,6 +164,8 @@ bindkey '^R' history-incremental-search-backward
 bindkey '^W' backward-kill-word
 # Bind ;; to Command Mode
 bindkey -M viins ';;' vi-cmd-mode
+
+
 
 ## Fix for special keys (home, end, delete, etc.)
 # create a zkbd compatible hash;
@@ -178,6 +209,8 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 
+
+# Run a local config if it exists
 if [[ -f ~/.zshrc.local ]]; then
     source ~/.zshrc.local
 fi

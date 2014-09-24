@@ -2,10 +2,9 @@
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
-" Pep8 - http://pypi.python.org/pypi/pep8
-" Pyflakes
-" Ack
-" nose, django-nose
+" pip install pep8 pylint
+" cabal install hlint ghc-mod hdevtools
+"
 
 " ==========================================================
 " Plugins included
@@ -16,35 +15,14 @@
 " GunDo
 "     Visual Undo in vim with diff's to check the differences
 "
-" Pytest
-"     Runs your Python tests in Vim.
-"
-" Commant-T
-"     Allows easy search and opening of files within a given path
-"
-" Snipmate
-"     Configurable snippets to avoid re-typing common comands
-"
-" PyFlakes
-"     Underlines and displays errors with Python on-the-fly
-"
 " Fugitive
 "    Interface with git from vim
 "
 " Git
 "    Syntax highlighting for git config files
 "
-" Pydoc
-"    Opens up pydoc within vim
-"
 " Surround
 "    Allows you to surround text with open/close tags
-"
-" Py.test
-"    Run py.test test's from within vim
-"
-" MakeGreen
-"    Generic test runner that works with nose
 "
 " ==========================================================
 " Shortcuts
@@ -56,55 +34,16 @@ let mapleader=","             " change the leader to be a comma vs slash
 " directory $HOME on Unix or %USERPROFILE% on Windows.
 let $VIMFILES = expand("<sfile>:p:h")
 
-" Seriously, guys. It's not like :W is bound to anything anyway.
-command! W :w
-
-fu! SplitScroll()
-    :wincmd v
-    :wincmd w
-    execute "normal! \<C-d>"
-    :set scrollbind
-    :wincmd w
-    :set scrollbind
-endfu
-
-nmap <leader>sb :call SplitScroll()<CR>
-
-
-"<CR><C-w>l<C-f>:set scrollbind<CR>
-
-" sudo write this
-cmap W! w !sudo tee % >/dev/null
-
-" Toggle the tasklist
-map <leader>td <Plug>TaskList
-
-" Run pep8
-let g:pep8_map='<leader>8'
-let g:pep8_ignore='E501'
-
-" run py.test's
-nmap <silent><Leader>tf <Esc>:Pytest file<CR>
-nmap <silent><Leader>tc <Esc>:Pytest class<CR>
-nmap <silent><Leader>tm <Esc>:Pytest method<CR>
-nmap <silent><Leader>tn <Esc>:Pytest next<CR>
-nmap <silent><Leader>tp <Esc>:Pytest previous<CR>
-nmap <silent><Leader>te <Esc>:Pytest error<CR>
-
-" Run django tests
-map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
-
 " Reload Vimrc
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-" open/close the quickfix window
-nmap <leader>c :copen<CR>
-nmap <leader>cc :cclose<CR>
+" ;; to exit Insert Mode
+imap ;; <Esc>
 
-" for when we forget to use sudo to open/edit a file
-cmap w!! w !sudo tee % >/dev/null
+" For when you forget to let go of SHIFT...
+command! W :w
 
-" ctrl-jklm  changes to that split
+" ctrl-hjkl switches to a split by direction
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
@@ -114,14 +53,38 @@ map <c-h> <c-w>h
 "  happen as if in command mode )
 imap <C-W> <C-O><C-W>
 
+" Paste from global buffer
+map <leader>p "+p
+map <leader>P "+P
+
+" Yank to global buffer
+map <leader>y "+y
+map <leader>Y "+Y
+
+" Quit window on <leader>q
+nnoremap <leader>q :q<CR>
+
+" hide matches on <leader>space
+nnoremap <leader><space> :nohlsearch<cr>
+
+" Remove trailing whitespace on <leader>S
+nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Select the item in the list with enter
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" open/close the quickfix window
+nmap <leader>c :copen<CR>
+nmap <leader>cc :cclose<CR>
+
+" Set working directory
+nnoremap <leader>. :lcd %:p:h<CR>
+
+" ==========================================================
+" Plugin Shortcuts
+" ==========================================================
 " Open NerdTree
 map <leader>n :NERDTreeToggle<CR>
-
-map <leader>f :CtrlP<CR>
-map <leader>b :CtrlPBuffer<CR>
-
-" Ack searching
-nmap <leader>a <Esc>:Ack!
 
 " Load the Gundo window
 map <leader>g :GundoToggle<CR>
@@ -132,12 +95,10 @@ map <leader>j :RopeGotoDefinition<CR>
 " Rename whatever the cursor is on (including references to it)
 noremap <leader>R :RopeRename<CR>
 
-" Search for the next Uppercase character(use a search so 'n' and 'm' jump
-" to the next/previous match)
-nnoremap <leader>u /\u<CR>:nohlsearch<CR>
-nnoremap <leader>U ?\u<CR>:nohlsearch<CR>
-
-
+" Write a file as a super-user
+command SW SudoWrite
+" Write a file as a super-user, then close the window
+command SWQ SudoWrite|q
 
 " ==========================================================
 " Pathogen - Allows us to organize our vim plugins
@@ -172,13 +133,6 @@ set wildignore+=*.egg-info/**
 
 set grepprg=ack         " replace the default grep program with ack
 
-
-" Set working directory
-nnoremap <leader>. :lcd %:p:h<CR>
-
-" Disable the colorcolumn when switching modes.  Make sure this is the
-" first autocmd for the filetype here
-"autocmd FileType * setlocal colorcolumn=0
 
 """ Insert completion
 " don't select first item, follow typing in autocomplete
@@ -255,9 +209,10 @@ endif
 
 colorscheme molokai
 
-" ;; to exit Insert Mode
-imap ;; <Esc>
-
+" ==========================================================
+" Plugin Settings
+" ==========================================================
+"
 " ==========================================================
 " Airline - lightweight Powerline
 " ==========================================================
@@ -272,17 +227,19 @@ let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 
-" Remove the filetype
+" Remove the filetype section
 let g:airline_section_x="%{airline#util#wrap(airline#extensions#tagbar#currenttag(), 0)}"
 
 " ==========================================================
-" YouCompleteMe Options
+" YouCompleteMe
 " ==========================================================
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_filepath_completion_use_working_dir = 1
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
+let g:ycm_complete_in_comments = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
 " ==========================================================
 " Python-mode
@@ -292,7 +249,7 @@ let g:pymode_lint_ignore = "E1101,W0232,C0111,E1103,R0904,C0103"
 let g:pymode_rope_completion = 0
 
 " ==========================================================
-" Syntastic
+" Syntastic - Syntax Checking
 " ==========================================================
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
@@ -339,29 +296,16 @@ let g:tagbar_type_rst = g:local_tagbar_type_rst
 
 
 " ==========================================================
-" Misc Bindings
-" ==========================================================
-
-
-" Paste from clipboard
-map <leader>p "+p
-
-" Quit window on <leader>q
-nnoremap <leader>q :q<CR>
-
-" hide matches on <leader>space
-nnoremap <leader><space> :nohlsearch<cr>
-
-" Remove trailing whitespace on <leader>S
-nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
-
-" Select the item in the list with enter
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" ==========================================================
 " Haskell
 " ==========================================================
-"
+
+" GHC is our Haskell compiler
+let g:ghc = "/usr/bin/ghc"
+
+" Firefox for browsing Haddock
+let g:haddock_browser = "/usr/bin/firefox"
+
+
 " Show the Types of Symbols in the autocomplete menu
 " let g:necoghc_enable_detailed_browse = 1
 

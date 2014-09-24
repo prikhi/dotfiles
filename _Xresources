@@ -29,9 +29,6 @@ URxvt.tabbed.tab-bg:    12
 URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:   1
 
-URxvt.background:  [90]#000000
-URxvt.foreground:  white
-
 URxvt.scrollBar: true
 URxvt.scrollBar_right: true
 URxvt.scrollColor: #FF7F00
@@ -40,29 +37,26 @@ URxvt.troughColor: #000000
 URxvt.cursorBlink: true
 URxvt.cursorColor: #FF7F00
 
-!! Black + DarkGrey
-!URxvt.color0:  #000000
-!URxvt.color8:  #555753
-!! DarkRed + Red
-!URxvt.color1:  #ff6565
-!URxvt.color9:  #ff8d8d
-!! DarkGreen + Green
-!URxvt.color2:  #93d44f
-!URxvt.color10: #c8e7a8
-!! DarkYellow + Yellow
-!URxvt.color3:  #eab93d
-!URxvt.color11: #ffc123
 
-! OrangeRed + Orange
+! Replace DarkBlue + Blue with OrangeRed + Orange
 URxvt.color4: #FF4500
 URxvt.color12:  #FF7F00
 
+!!!! Molokai Attempt
+URxvt.background:   [90]#080800
+URxvt.foreground:   #F8F8F0
+!! Black + DarkGrey
+URxvt.color0:       #080800
+URxvt.color8:       #272822
+!! Red
+URxvt.color9:       #FF0000
+!! Green
+URxvt.color10:      #AAFF00
 !! DarkMagenta + Magenta
-!URxvt.color5:  #ce5c00
-!URxvt.color13: #f57900
-!!DarkCyan + Cyan (both not tango)
-!URxvt.color6:  #89b6e2
-!URxvt.color14: #46a4ff
-!! LightGrey + White
-!URxvt.color7:  #cccccc
-!URxvt.color15: #ffffff
+URxvt.color5:       #CC004A
+URxvt.color13:      #F9005A
+!!DarkCyan + Cyan
+URxvt.color6:      #00A1BF
+URxvt.color14:      #00C9EF
+!! White
+URxvt.color15:      #F8F8F0
