@@ -307,7 +307,7 @@ let g:haddock_browser = "/usr/bin/firefox"
 
 
 " Show the Types of Symbols in the autocomplete menu
-" let g:necoghc_enable_detailed_browse = 1
+let g:necoghc_enable_detailed_browse = 1
 
 " Run Check and Lint Asynchronously
 " autocmd BufWritePost *.hs GhcModCheckAndLintAsync
@@ -325,6 +325,9 @@ au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smart
 " Mako/HTML
 autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
 autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" RedmineWiki
+au BufNewFile,BufRead *.redmine set ft=redminewiki
 
 " ==========================================================
 " Python

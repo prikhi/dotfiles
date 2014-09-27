@@ -52,3 +52,6 @@
 [submodule "_vim/bundle/vim-markdown"]
 	path = _vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "_vim/bundle/haskell-vim"]
+	path = _vim/bundle/haskell-vim
+	url = http://github.com/raichoo/haskell-vim.git
