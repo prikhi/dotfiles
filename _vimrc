@@ -2,8 +2,8 @@
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
-" pip install pep8 pylint
-" cabal install hlint ghc-mod hdevtools
+" pip install pep8 pylint mccabe pep257
+" cabal install hlint ghc-mod hdevtools fast-tags pointfree
 "
 
 " ==========================================================
@@ -74,8 +74,12 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " open/close the quickfix window
-nmap <leader>c :copen<CR>
+nmap <leader>c  :copen<CR>
 nmap <leader>cc :cclose<CR>
+" open/close the location window (where syntastic puts its feedback)
+nmap <leader>l  :lopen<CR>
+nmap <leader>ll :lclose<CR>
+
 
 " Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
@@ -137,7 +141,7 @@ set grepprg=ack         " replace the default grep program with ack
 """ Insert completion
 " don't select first item, follow typing in autocomplete
 set completeopt=menuone,longest,preview
-set pumheight=6             " Keep a small completion window
+set pumheight=10             " 10 item completion window
 
 
 """ Moving Around/Editing
@@ -247,10 +251,21 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
 let g:pymode_lint_ignore = "E1101,W0232,C0111,E1103,R0904,C0103"
 let g:pymode_rope_completion = 0
+let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pep257']
 
 " ==========================================================
 " Syntastic - Syntax Checking
 " ==========================================================
+let g:syntastic_error_symbol = "✖✖"
+let g:syntastic_style_error_symbol = '⚑⚑'
+let g:syntastic_warning_symbol = '∆∆'
+let g:syntastic_style_warning_symbol = '≈≈'
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 5
+
+let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['python'] }
@@ -308,6 +323,9 @@ let g:haddock_browser = "/usr/bin/firefox"
 
 " Show the Types of Symbols in the autocomplete menu
 let g:necoghc_enable_detailed_browse = 1
+
+" Generate a tags file when cabal file present
+let g:haskell_autotags = 1
 
 " Run Check and Lint Asynchronously
 " autocmd BufWritePost *.hs GhcModCheckAndLintAsync
