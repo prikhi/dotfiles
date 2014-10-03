@@ -135,8 +135,10 @@ alias fcbb='cbc && cbb && cbh'  # A full Clean + Build (including docs)
 
 # Redmine CLI Client - hkredmine
 alias hkr='hkredmine'
+alias hkru='hkredmine use'
 # Show Issues w/ Project as 1st position argument
 alias hkpi='hkredmine issues -p'
+alias hkri='hkredmine issue'
 # New Issue w/ Project as 1st position argument & open description in editor
 alias hkni='hkredmine newissue -e -p'
 alias hknv='hkredmine nextversion'
