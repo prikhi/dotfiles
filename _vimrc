@@ -251,7 +251,8 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
 let g:pymode_lint_ignore = "E1101,W0232,C0111,E1103,R0904,C0103"
 let g:pymode_rope_completion = 0
-let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pep257']
+let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
+" let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pep257']
 
 " ==========================================================
 " Syntastic - Syntax Checking
