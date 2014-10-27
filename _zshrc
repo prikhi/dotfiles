@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh configuration.
+# Path to oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -6,10 +6,6 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="ys"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -95,10 +91,10 @@ alias aphrodite="ssh prikhi@aphrodite.acorn"
 alias vishnu="ssh prikhi@vishnu.acorn"
 alias adonis="ssh prikhi@adonis.acorn"
 alias slacktest="ssh prikhi@SlackTesting.acorn"
-alias sese="ssh sese@vps.southernexposure.com -p 8822 -i ~/.ssh/id_rsa"
-alias acorn="ssh acorn@vps.southernexposure.com -p 8822 -i ~/.ssh/id_rsa"
+alias sese="ssh sese"
+alias acorn="ssh acorn"
 alias vps="ssh pavan@sleepanarchy.com -i ~/.ssh/id_rsa"
-alias fic="ssh vps.ic.org"
+alias fic="ssh fic"
 
 # Safety First!
 alias rm="rm -i"
@@ -110,6 +106,7 @@ alias nc-start="sudo netctl start"
 alias nc-stop="sudo netctl stop"
 alias nc-restart="sudo netctl restart"
 alias nc-status="sudo netctl status"
+alias wifi-menu="sudo wifi-menu && sudo mount -a"
 
 # Arch linux package management - packer
 # Only download new packages, do not install them
@@ -137,16 +134,19 @@ alias fcbb='cbc && cbb && cbh'  # A full Clean + Build (including docs)
 alias hkr='hkredmine'
 alias hkru='hkredmine use'
 # Show Issues w/ Project as 1st position argument
-alias hkpi='hkredmine issues -p'
+alias hkpi='hkredmine issues -S priority:desc,category -p'
 alias hkri='hkredmine issue'
 # New Issue w/ Project as 1st position argument & open description in editor
 alias hkni='hkredmine newissue -e -p'
-alias hknv='hkredmine nextversion'
+alias hknv='hkredmine nextversion -S priority:desc,category'
 alias hkst='hkredmine status'
 alias hkup='hkredmine update'
 alias hkcl='hkredmine close'
 alias hkstart='hkredmine startwork'
 alias hkstop='hkredmine stopwork'
+
+# Remind CLI Reminders/Calendar
+alias rlist='rem -n |  sort'
 
 # ls colors
 if [ -f ~/.dir_colors ]; then
@@ -168,6 +168,7 @@ fi
 for f in $HOME/.completions/*; do
     source $f
 done
+complete -o bashdefault -F _hkredmine hkr
 
 
 ## Functions
