@@ -1,0 +1,8 @@
+#!/bin/bash
+screen -wipe
+
+if screen -list | awk '{print $1}' | grep -q "irc$"; then
+    echo "screen 'irc' exists."
+else
+    screen -d -m -U -S irc -c ~/.screen/screenrc_IRC
+fi

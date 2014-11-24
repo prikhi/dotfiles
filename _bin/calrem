@@ -1,0 +1,75 @@
+#!/bin/python
+"""Print a centered calendar followed by any reminders for the month.
+
+Usage: calrem [[[day] month] year]
+
+Unspecified
+
+"""
+
+from __future__ import print_function
+
+import subprocess
+import sys
+
+
+def main(args):
+    """Print a calendar and reminders for the current date or a passed date."""
+
+    calendar = get_calendar(args)
+    reminders = get_reminders(args)
+    output_width = max(len(s) for s in calendar + reminders)
+    output = format_output(calendar, reminders, output_width)
+
+    print('\n'.join(output))
+
+
+def get_calendar(args):
+    """Use cal to reurn a calendar, using a date if passed as an argument."""
+    cal = open_process_with_stdout_pipe("/usr/bin/cal --color=always " +
+                                        ' '.join(args))
+    return get_cleaned_process_output(cal)
+
+
+def get_reminders(args):
+    """Grab the next weeks(or the specified dates) reminders from Remind."""
+    remind_args = get_remind_arguments(args)
+    remind = subprocess.Popen(
+        "rem -qs+1 {0} | cut -d ' ' -f 1,6-".format(remind_args),
+        shell=True, stdout=subprocess.PIPE)
+    remind_output = get_cleaned_process_output(remind)
+    return [s[5:] for s in remind_output]   # Remove the year from the output
+
+
+def open_process_with_stdout_pipe(command):
+    """Open a command with a stdout pipe allowing the capture of any output."""
+    return subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
+
+
+def get_remind_arguments(arguments):
+    """Add a month and date for Remind if one is not provided via arguments."""
+    if arguments is list:
+        while len(arguments) < 3:
+            arguments = arguments.append("1")
+        return reversed('-'.join(arguments))
+    else:
+        return ''
+
+
+def get_cleaned_process_output(process_handle):
+    """Return the process's standard output, dropping the trailing newline."""
+    return process_handle.communicate()[0].decode().split('\n')[:-1]
+
+
+def format_output(cal_output, remind_output, output_width):
+    """Center only cal's output, leaving Remind left-aligned."""
+    return ([s.center(output_width) for s in cal_output] + remind_output)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) > 4:
+        print("USAGE: calrem [[[day] month] year]")
+    elif len(sys.argv) > 1:
+        main(sys.argv[1:])
+    else:
+        main([])

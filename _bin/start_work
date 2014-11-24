@@ -1,0 +1,14 @@
+#!/bin/bash
+screen -wipe
+
+if screen -list | awk '{print $1}' | grep -q "work$"; then
+    echo "screen 'work' exists."
+else
+    bash -c 'cd ~/Projects/git/Acorn-Accounting/acornaccounting; \
+        source ~/.virtualenvs/DjangoAccounting/bin/activate; \
+        export PATH="/home/prikhi/.virtualenvs/DjangoAccounting/bin:"$PATH; \
+        export DJANGO_SETTINGS_MODULE="accounting.settings.local" \
+        export VIRTUAL_ENV=/home/prikhi/.virtualenvs/DjangoAccounting; \
+        export PS1="(DjangoAccounting)\[\e[m\][\e[0;32m\]\u\[\e[m\]\[\e[0;33m\]@\h\e[m\]]:\[\e[1;36m\]"; \
+        screen -dmUS work -c ~/.screen/screenrc_DjangoAccounting'
+fi

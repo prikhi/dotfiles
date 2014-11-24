@@ -71,6 +71,7 @@ alias svim="EDITOR=vim sudoedit"
 alias svimdiff="EDITOR=vimdiff sudoedit"
 
 alias c="gcc -g -O2 -Wall -Wextra -Werror --std=c11 -pedantic -Wno-unused-parameter -D_XOPEN_SOURCE=700"
+alias ra="ranger"
 alias zc="zcalc"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 
@@ -121,32 +122,58 @@ alias pacrep='packer -Si'
 # Search for package(s) in the repositories
 alias pacreps='packer -Ss'
 
+# Git
+alias grb='git rebase'
+complete -o bashdefault -F _git-rebase grb
+alias gm='git merge'
+complete -o bashdefault -F _git-merge gm
+
+
+
+# Python/Django Commands
+alias djt='python manage.py test'   # Run Django project's tests
+alias djr='python manage.py runserver 0.0.0.0:8000' # Run Server on All IPs
+alias mcmh='make clean; make html'  # Clean and Make Sphinx Docs
+
+# Selenium & Xvfb for headless integration testing
+# Create a virtual screen on display :20 (Virtual Frame Buffer)
+alias vfb='sudo Xvfb :20 -ac'
+alias selenium='DISPLAY=:20 java -jar /usr/share/selenium-server/selenium-server-standalone.jar -timeout=60 -browserTimeout=60'
+alias seleniumlocal='DISPLAY=:0 java -jar /usr/share/selenium-server/selenium-server-standalone.jar -timeout=60 -browserTimeout=60'
+
 # Haskell package development/management - cabal
 # These use multiple cores
 alias cbj='cabal -j'
 alias cbb='cbj build'
 alias cbi='cbj install'
 alias cbc='cabal clean'
-alias cbh='cabal haddock'
+alias cbh='cabal haddock --all'
+alias cbt='cabal test -j'
+alias hspec='cbt --show-details=always --test-option=--color --test-option=--fail-fast'
+alias tasty='cbt --show-details=always --test-option=--color=always'
 alias fcbb='cbc && cbb && cbh'  # A full Clean + Build (including docs)
 
 # Redmine CLI Client - hkredmine
-alias hkr='hkredmine'
-alias hkru='hkredmine use'
 # Show Issues w/ Project as 1st position argument
 alias hkpi='hkredmine issues -S priority:desc,category -p'
-alias hkri='hkredmine issue'
 # New Issue w/ Project as 1st position argument & open description in editor
 alias hkni='hkredmine newissue -e -p'
-alias hknv='hkredmine nextversion -S priority:desc,category'
-alias hkst='hkredmine status'
+# Others
+alias hkr='hkredmine'
+alias hkru='hkredmine use'
+alias hkri='hkredmine issue'
 alias hkup='hkredmine update'
 alias hkcl='hkredmine close'
-alias hkstart='hkredmine startwork'
+alias hkca='hkredmine categories'
+alias hknc='hkredmine newcategory'
+alias hkve='hkredmine version'
+alias hkvs='hkredmine versions'
+alias hknv='hkredmine nextversion -S priority:desc,category'
+alias hkst='hkredmine startwork'
 alias hkstop='hkredmine stopwork'
 
-# Remind CLI Reminders/Calendar
-alias rlist='rem -n |  sort'
+# Show the next 2 weeks worth of reminders
+alias rlist='rem -s+2 |  cut -d " " -f 1,6-'
 
 # ls colors
 if [ -f ~/.dir_colors ]; then
@@ -175,6 +202,10 @@ complete -o bashdefault -F _hkredmine hkr
 # Copy rxvt-unicode-256color terminfo to specified remote host
 push_rxvt_info () {
     infocmp rxvt-unicode-256color | ssh $1 "mkdir -p .terminfo && cat >/tmp/ti && tic /tmp/ti"
+}
+
+mysql_restore_bz2 () {
+    bunzip2 < "$2" | mysql -u root -p "$1"
 }
 
 

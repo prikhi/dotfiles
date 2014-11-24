@@ -55,3 +55,6 @@
 [submodule "_vim/bundle/haskell-vim"]
 	path = _vim/bundle/haskell-vim
 	url = http://github.com/raichoo/haskell-vim.git
+[submodule "_vim/bundle/vim-cucumber"]
+	path = _vim/bundle/vim-cucumber
+	url = https://github.com/tpope/vim-cucumber.git

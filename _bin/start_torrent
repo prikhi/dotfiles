@@ -1,0 +1,8 @@
+#!/bin/bash
+screen -wipe
+
+if screen -list | awk '{print $1}' | grep -q "torrent$"; then
+    echo "screen 'torrent' exists."
+else
+    screen -d -m -U -S torrent -c ~/.screen/screenrc_Torrent
+fi

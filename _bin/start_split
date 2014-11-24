@@ -1,0 +1,8 @@
+#!/bin/bash
+screen -wipe
+
+if screen -list | awk '{print $1}' | grep -q "split$"; then
+    echo "screen 'split' exists."
+else
+    screen -d -m -U -S split -c ~/.screen/screenrc_General
+fi

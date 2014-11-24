@@ -32,6 +32,8 @@ set envelope_from = yes
 set sleep_time = 0
 set mail_check = 120
 set beep_new = yes
+set check_new = yes
+set timeout = 600
 
 set sendmail = "/usr/bin/msmtp"
 set editor = 'vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "set spell"'

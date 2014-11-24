@@ -244,15 +244,18 @@ let g:ycm_filepath_completion_use_working_dir = 1
 "let g:ycm_semantic_triggers = {'haskell' : ['.']}
 let g:ycm_complete_in_comments = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_collect_identifiers_from_tag_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
 
 " ==========================================================
 " Python-mode
 " ==========================================================
 
-let g:pymode_lint_ignore = "E1101,W0232,C0111,E1103,R0904,C0103"
+let g:pymode_lint_ignore = "E1101,E1103,E0202,W0232,R0904,C0103,C0111"
 let g:pymode_rope_completion = 0
-let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
-" let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pep257']
+let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe']
+" let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe', 'pep257']
+let g:pymode_options_max_line_length = 79
 
 " ==========================================================
 " Syntastic - Syntax Checking
@@ -335,7 +338,7 @@ let g:haskell_autotags = 1
 " ==========================================================
 " Javascript
 " ==========================================================
-au BufRead *.js set makeprg=jslint\ %
+au BufRead *.js set makeprg=jshint\ %
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 " ===========================================================
@@ -353,9 +356,9 @@ au BufNewFile,BufRead *.redmine set ft=redminewiki
 " ==========================================================
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
-" ==========================================================
-" Python VirtualEnv
-" ==========================================================
+" Lettuce - Python BDD
+au BufRead,BufNewFile *.feature set filetype=lettuce
+
 " Add the virtualenv's site-packages to vim path
 if has('python')
 py << EOF
@@ -376,5 +379,5 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 if exists("&colorcolumn")
-   set colorcolumn=79
+   set colorcolumn=78
 endif
