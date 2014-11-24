@@ -58,3 +58,6 @@
 [submodule "_vim/bundle/vim-cucumber"]
 	path = _vim/bundle/vim-cucumber
 	url = https://github.com/tpope/vim-cucumber.git
+[submodule "_urxvt/ext/urxvt-tabbedex"]
+	path = _urxvt/ext/urxvt-tabbedex
+	url = http://github.com/stepb/urxvt-tabbedex.git
