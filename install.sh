@@ -2,9 +2,9 @@
 set -e
 
 CONFIG="config.yaml"
-DOTBOT_DIR="dotbot/dotbot"
+DOTBOT_DIR="dotbot/"
 
-DOTBOT_BIN="dotbot/bin/dotbot"
+DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
