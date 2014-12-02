@@ -1,10 +1,13 @@
 - link:
     ~/.config/awesome:
         create: true
-        path: _awesome
+        path: _awesome/
+    ~/.config/ranger:
+        create: true
+        path: _ranger/
     ~/.config/user-dirs.dirs:
         create: true
-        path: user-dirs.dirs
+        path: _user-dirs.dirs
     ~/.bin: _bin/
     ~/.completions: _completions/
     ~/.dir_colors: _dir_colors
@@ -30,6 +33,6 @@
 - clean: ['~']
 
 - shell:
-    - [git update-submodules, Installing/updating submodules]
+    - [git submodule update --init --recursive, Installing/updating submodules]
     - [cd ~/.fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
 
