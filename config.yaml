@@ -4,7 +4,7 @@
         path: _awesome/
     ~/.config/gtk-3.0:
         create: true
-        path: _gtk-3.0
+        path: _gtk-3.0/
     ~/.config/keepassx:
         create: true
         path: _keepassx/
@@ -14,6 +14,9 @@
     ~/.config/user-dirs.dirs:
         create: true
         path: _user-dirs.dirs
+    ~/.config/vlc:
+        create: true
+        path: _vlc/
     ~/.bin: _bin/
     ~/.completions: _completions/
     ~/.dir_colors: _dir_colors
