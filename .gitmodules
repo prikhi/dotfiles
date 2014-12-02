@@ -61,3 +61,6 @@
 [submodule "_urxvt/ext/urxvt-tabbedex"]
 	path = _urxvt/ext/urxvt-tabbedex
 	url = http://github.com/stepb/urxvt-tabbedex.git
+[submodule "dotbot"]
+	path = dotbot
+	url = http://github.com/anishathalye/dotbot.git

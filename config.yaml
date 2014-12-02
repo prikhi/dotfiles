@@ -1,0 +1,35 @@
+- link:
+    ~/.config/awesome:
+        create: true
+        path: _awesome
+    ~/.config/user-dirs.dirs:
+        create: true
+        path: user-dirs.dirs
+    ~/.bin: _bin/
+    ~/.completions: _completions/
+    ~/.dir_colors: _dir_colors
+    ~/.fonts: _fonts/
+    ~/.mailcap: _mailcap
+    ~/.mutt: _mutt/
+    ~/.muttrc: _muttrc
+    ~/.newsbeuter: _newsbeuter
+    ~/.oh-my-zsh: _oh-my-zsh/
+    ~/.pentadactyl: _pentadactyl
+    ~/.pentadactylrc: _pentadactylrc
+    ~/.pip: _pip/
+    ~/.profile: _profile
+    ~/.screenrc: _screenrc
+    ~/.urxvt: _urxvt/
+    ~/.vim: _vim/
+    ~/.vimrc: _vimrc
+    ~/.xprofile: _xprofile
+    ~/.Xresources: _Xresources
+    ~/.Xdefaults: _Xresources
+    ~/.zshrc: _zshrc
+
+- clean: ['~']
+
+- shell:
+    - [git update-submodules, Installing/updating submodules]
+    - [cd ~/.fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
+
