@@ -21,3 +21,8 @@ From this top-level directory.
   * pylint
 * haskell
   * hlint
+
+### X
+* gtk
+  * Obsidian xcursor theme
+  * Clearlooks Phenix gtk3 theme

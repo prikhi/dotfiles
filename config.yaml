@@ -2,6 +2,12 @@
     ~/.config/awesome:
         create: true
         path: _awesome/
+    ~/.config/gtk-3.0:
+        create: true
+        path: _gtk-3.0
+    ~/.config/keepassx:
+        create: true
+        path: _keepassx/
     ~/.config/ranger:
         create: true
         path: _ranger/
