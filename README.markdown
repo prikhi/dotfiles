@@ -23,6 +23,6 @@ From this top-level directory.
   * hlint
 
 ### X
-* gtk
-  * Obsidian xcursor theme
-  * Clearlooks Phenix gtk3 theme
+* Awesome Window Manager
+* Obsidian xcursor theme
+* Clearlooks Phenix gtk theme

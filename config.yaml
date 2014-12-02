@@ -18,13 +18,25 @@
         create: true
         path: _vlc/
     ~/.bin: _bin/
+    ~/.cabal: _cabal/
     ~/.completions: _completions/
     ~/.dir_colors: _dir_colors
+    ~/.dmrc: _dmrc
+    ~/.face.icon: _face.icon
     ~/.fonts: _fonts/
+    ~/.fonts.config: _fonts.config
+    ~/.ghc: _ghc/
+    ~/.gnupg: _gnupg/
+    ~/.goobookrc: _goobookrc
+    ~/.gtk-bookmarks: _gtk-bookmarks
+    ~/.gtkrc-2.0: _gtkrc-2.0
     ~/.mailcap: _mailcap
+    ~/.mpv: _mpv/
     ~/.mutt: _mutt/
     ~/.muttrc: _muttrc
-    ~/.newsbeuter: _newsbeuter
+    ~/.ncmpcpp: _ncmpcpp/
+    ~/.newsbeuter: _newsbeuter/
+    ~/.notmuch-config: _notmuch-config
     ~/.oh-my-zsh: _oh-my-zsh/
     ~/.pentadactyl: _pentadactyl
     ~/.pentadactylrc: _pentadactylrc
