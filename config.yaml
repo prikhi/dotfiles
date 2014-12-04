@@ -26,6 +26,7 @@
     ~/.face.icon: _face.icon
     ~/.fonts: _fonts/
     ~/.fonts.config: _fonts.config
+    ~/.gitconfig: _gitconfig
     ~/.ghc: _ghc/
     ~/.gnupg: _gnupg/
     ~/.goobookrc: _goobookrc
@@ -33,6 +34,7 @@
     ~/.gtkrc-2.0: _gtkrc-2.0
     ~/.mailcap: _mailcap
     ~/.mpv: _mpv/
+    ~/.msmtprc: _msmtprc
     ~/.mutt: _mutt/
     ~/.muttrc: _muttrc
     ~/.ncmpcpp: _ncmpcpp/

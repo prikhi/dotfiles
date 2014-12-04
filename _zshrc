@@ -104,9 +104,7 @@ alias pacreps='packer -Ss'
 
 # Git
 alias grb='git rebase'
-complete -o bashdefault -F _git-rebase grb
 alias gm='git merge'
-complete -o bashdefault -F _git-merge gm
 
 
 
