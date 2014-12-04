@@ -67,3 +67,6 @@
 [submodule "_antigen"]
 	path = _antigen
 	url = http://github.com/zsh-users/antigen.git
+[submodule "_awesome"]
+	path = _awesome
+	url = http://bugs.sleepanarchy.com/awesome-config.git
