@@ -17,6 +17,7 @@
     ~/.config/vlc:
         create: true
         path: _vlc/
+    ~/.antigen: _antigen/
     ~/.bin: _bin/
     ~/.cabal: _cabal/
     ~/.completions: _completions/
@@ -37,7 +38,6 @@
     ~/.ncmpcpp: _ncmpcpp/
     ~/.newsbeuter: _newsbeuter/
     ~/.notmuch-config: _notmuch-config
-    ~/.oh-my-zsh: _oh-my-zsh/
     ~/.pentadactyl: _pentadactyl
     ~/.pentadactylrc: _pentadactylrc
     ~/.pip: _pip/

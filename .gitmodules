@@ -64,3 +64,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = http://github.com/anishathalye/dotbot.git
+[submodule "_antigen"]
+	path = _antigen
+	url = http://github.com/zsh-users/antigen.git
