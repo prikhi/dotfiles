@@ -1,0 +1,9 @@
+# Vim
+*.sw[op]
+
+# Python
+*.py[ocd]
+.ropeproject
+
+# For storing nixpkgs in ~/.nix-defexpr/
+channels_root

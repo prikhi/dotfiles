@@ -16,3 +16,4 @@
 	editor = vim
 	whitespace = cr-at-eol
 	autocrif = true
+	excludesfile = /home/prikhi/.gitignore

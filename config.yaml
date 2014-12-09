@@ -27,6 +27,7 @@
     ~/.fonts: _fonts/
     ~/.fonts.config: _fonts.config
     ~/.gitconfig: _gitconfig
+    ~/.gitignore: _gitignore
     ~/.ghc: _ghc/
     ~/.gnupg: _gnupg/
     ~/.goobookrc: _goobookrc
