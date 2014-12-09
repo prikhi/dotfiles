@@ -18,6 +18,13 @@ export VDPAU_NVIDIA_NO_OVERLAY=1
 export EDITOR=vim
 export PATH=$PATH:~/.bin:~/.cabal/bin
 
+# NixOS Specifics
+if [ -e /etc/NIXOS ];
+then
+    export GTK_DATA_PREFIX=/home/prikhi/.nix-profile
+fi
+
+
 # font-cache
 xset +fp /usr/share/fonts/local
 xset +fp /home/prikhi/.fonts
