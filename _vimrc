@@ -350,6 +350,9 @@ autocmd FileType html,htmldjango,xhtml,xml,css setlocal expandtab shiftwidth=2 t
 " Nix
 autocmd FileType nix setlocal expandtab sw=2 ts=2 sts=2
 
+" LESS
+au BufNewFile,BufRead *.less set ft=less
+
 " RedmineWiki
 au BufNewFile,BufRead *.redmine set ft=redminewiki
 
