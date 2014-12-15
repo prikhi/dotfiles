@@ -17,6 +17,9 @@
     ~/.config/vlc:
         create: true
         path: _vlc/
+    ~/.local/share/fonts:
+        create: true
+        path: _fonts/
     ~/.antigen: _antigen/
     ~/.bin: _bin/
     ~/.cabal: _cabal/
@@ -58,5 +61,7 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
+    - [ansible-update, Installing/updating zsh customizations]
     - [cd ~/.fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
+    - [cd ~/.local/share/fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
 
