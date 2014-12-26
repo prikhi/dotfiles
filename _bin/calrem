@@ -9,6 +9,7 @@ Unspecified
 
 from __future__ import print_function
 
+from os.path import isfile
 import subprocess
 import sys
 
@@ -17,7 +18,7 @@ def main(args):
     """Print a calendar and reminders for the current date or a passed date."""
 
     calendar = get_calendar(args)
-    reminders = get_reminders(args)
+    reminders = get_reminders(args) if isfile("~/.reminders") else []
     output_width = max(len(s) for s in calendar + reminders)
     output = format_output(calendar, reminders, output_width)
 
@@ -26,7 +27,7 @@ def main(args):
 
 def get_calendar(args):
     """Use cal to reurn a calendar, using a date if passed as an argument."""
-    cal = open_process_with_stdout_pipe("/usr/bin/cal --color=always " +
+    cal = open_process_with_stdout_pipe("cal --color=always " +
                                         ' '.join(args))
     return get_cleaned_process_output(cal)
 
