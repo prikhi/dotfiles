@@ -61,7 +61,7 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
-    - [ansible-update, Installing/updating zsh customizations]
+    - [antigen-update, Installing/updating zsh customizations]
     - [cd ~/.fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
     - [cd ~/.local/share/fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
 
