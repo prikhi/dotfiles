@@ -73,3 +73,9 @@
 [submodule "_vim/bundle/vim-ansible-yaml"]
 	path = _vim/bundle/vim-ansible-yaml
 	url = http://github.com/chase/vim-ansible-yaml.git
+[submodule "_vim/bundle/vim-syntax-shakespeare"]
+	path = _vim/bundle/vim-syntax-shakespeare
+	url = http://github.com/pbrisbin/vim-syntax-shakespeare.git
+[submodule "_vim/bundle/tabular"]
+	path = _vim/bundle/tabular
+	url = http://github.com/godlygeek/tabular.git

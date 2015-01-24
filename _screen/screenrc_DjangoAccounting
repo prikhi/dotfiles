@@ -1,0 +1,10 @@
+source /home/prikhi/.screenrc
+# auto create windows
+screen -t Server 0 zsh -c './manage.py runserver 0.0.0.0:8000'
+screen -t Shell 1 zsh -c './manage.py shell_plus'
+screen 2 zsh -i
+screen 3 zsh -i
+screen 4 zsh -c 'cd ../docs; zsh -i'
+screen -t Code 5 zsh -c 'vim'
+screen -t Docs 6 zsh -c 'cd ../docs/source/; vim'
+screen -t Files 7 zsh -c 'cd ..; ranger'

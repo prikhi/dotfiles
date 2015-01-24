@@ -1,0 +1,3 @@
+source /home/prikhi/.screenrc
+
+screen -t irssi 0 irssi
