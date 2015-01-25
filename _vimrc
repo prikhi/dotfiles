@@ -347,6 +347,10 @@ au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smart
 " Mako/HTML
 autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
 autocmd FileType html,htmldjango,xhtml,xml,css,less setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" Shaksperean Templates
+autocmd FileType cassius,julius,hamlet,lucius setlocal expandtab sw=2 ts=2 sts=2
+
 " Nix
 autocmd FileType nix setlocal expandtab sw=2 ts=2 sts=2
 au BufNewFile,BufRead *.nix set ft=nix
