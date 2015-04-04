@@ -5,6 +5,6 @@ screen -t Shell 1 zsh -c './manage.py shell_plus'
 screen 2 zsh -i
 screen 3 zsh -i
 screen 4 zsh -c 'cd ../docs; zsh -i'
-screen -t Code 5 zsh -c 'vim'
-screen -t Docs 6 zsh -c 'cd ../docs/source/; vim'
+screen -t Code 5 zsh -c 'nvim'
+screen -t Docs 6 zsh -c 'cd ../docs/source/; nvim'
 screen -t Files 7 zsh -c 'cd ..; ranger'

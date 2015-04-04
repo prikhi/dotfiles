@@ -32,7 +32,7 @@ setopt RM_STAR_WAIT
 setopt AUTO_CONTINUE
 
 # Environmental Variables
-export EDITOR="vim"
+export EDITOR="nvim"
 export PAGER="less"
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
@@ -44,7 +44,7 @@ export NNTPSERVER="news.gmane.org"
 # Aliases
 #########
 # Vim shortcuts
-alias v="vim"
+alias v="nvim"
 alias vd="vimdiff"
 alias sv="EDITOR=vim sudoedit"
 alias svim="EDITOR=vim sudoedit"

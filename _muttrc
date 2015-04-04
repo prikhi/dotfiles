@@ -36,7 +36,7 @@ set check_new = yes
 set timeout = 600
 
 set sendmail = "/usr/bin/msmtp"
-set editor = 'vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "set spell"'
+set editor = 'nvim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "set spell"'
 
 set imap_check_subscribed
 set imap_user = "pavan@sleepanarchy.com"
