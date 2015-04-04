@@ -39,6 +39,7 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 
 " ;; to exit Insert Mode
 imap ;; <Esc>
+imap jj <Esc>
 
 " For when you forget to let go of SHIFT...
 command! W :w
@@ -118,6 +119,7 @@ call pathogen#helptags()
 syntax on                     " syntax highlighing
 filetype on                   " try to detect filetypes
 filetype plugin indent on     " enable loading indent file for filetype
+set synmaxcol=200             " improve speed in large files
 set number                    " Display line numbers
 set numberwidth=1             " using only 1 column (and 1 space) while possible
 set background=dark           " We are using dark background in vim
@@ -273,6 +275,36 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['python'] }
+let g:neomake_c_make_maker = {
+    \ 'errorformat':
+        \ '%-G%f:%s:,' .
+        \ '%-G%f:%l: %#error: %#(Each undeclared identifier is reported only%.%#,' .
+        \ '%-G%f:%l: %#error: %#for each function it appears%.%#,' .
+        \ '%-GIn file included%.%#,' .
+        \ '%-G %#from %f:%l\,,' .
+        \ '%f:%l:%c: %trror: %m,' .
+        \ '%f:%l:%c: %tarning: %m,' .
+        \ '%f:%l:%c: %m,' .
+        \ '%f:%l: %trror: %m,' .
+        \ '%f:%l: %tarning: %m,'.
+        \ '%f:%l: %m'
+    \ }
+let g:neomake_c_enabled_makers = ['make']
+let g:neomake_cpp_enabled_makers = ['make']
+let g:neomake_error_sign = {'text': "✖✖"}
+let g:neomake_warning_sign = {'text': "⚑⚑"}
+let g:neomake_make_modified = 1
+let g:neomake_open_list = 1
+autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h Neomake
+
+" ==========================================================
+" Ctrl-P
+" ==========================================================
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll|svg|hi|dyn_o)$',
+    \ 'link': '',
+\ }
 
 " ==========================================================
 " Tagbar
@@ -353,13 +385,21 @@ autocmd FileType cassius,julius,hamlet,lucius setlocal expandtab sw=2 ts=2 sts=2
 
 " Nix
 autocmd FileType nix setlocal expandtab sw=2 ts=2 sts=2
-au BufNewFile,BufRead *.nix set ft=nix
+au BufNewFile,BufRead *.nix setlocal ft=nix
 
 " LESS
-au BufNewFile,BufRead *.less set ft=less
+au BufNewFile,BufRead *.less setlocal ft=less
 
 " RedmineWiki
-au BufNewFile,BufRead *.redmine set ft=redminewiki
+au BufNewFile,BufRead *.redmine setlocal ft=redminewiki
+
+" Elm
+au BufNewFile,BufRead *.elm setlocal ft=elm
+
+" XULRunner
+au BufNewFile,BufRead *.xul setlocal ft=xul
+au BufNewFile,BufRead *.xbl setlocal ft=xbl
+
 
 " ==========================================================
 " Python

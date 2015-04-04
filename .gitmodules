@@ -16,9 +16,6 @@
 [submodule "_vim/bundle/nerdtree"]
 	path = _vim/bundle/nerdtree
 	url = http://github.com/vim-scripts/The-NERD-tree.git
-[submodule "_vim/bundle/syntastic"]
-	path = _vim/bundle/syntastic
-	url = http://github.com/scrooloose/syntastic.git
 [submodule "_vim/bundle/youcompleteme"]
 	path = _vim/bundle/youcompleteme
 	url = http://github.com/Valloric/YouCompleteMe.git
@@ -79,3 +76,9 @@
 [submodule "_vim/bundle/tabular"]
 	path = _vim/bundle/tabular
 	url = http://github.com/godlygeek/tabular.git
+[submodule "_vim/bundle/ctrlp.vim"]
+	path = _vim/bundle/ctrlp.vim
+	url = http://github.com/kien/ctrlp.vim.git
+[submodule "_vim/bundle/neomake"]
+	path = _vim/bundle/neomake
+	url = http://github.com/benekastah/neomake.git

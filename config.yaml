@@ -44,6 +44,8 @@
     ~/.ncmpcpp: _ncmpcpp/
     ~/.newsbeuter: _newsbeuter/
     ~/.notmuch-config: _notmuch-config
+    ~/.nvim: _vim/
+    ~/.nvimrc: _vimrc
     ~/.pentadactyl: _pentadactyl
     ~/.pentadactylrc: _pentadactylrc
     ~/.pip: _pip/
