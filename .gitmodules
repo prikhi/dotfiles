@@ -4,9 +4,6 @@
 [submodule "_vim/bundle/git"]
 	path = _vim/bundle/git
 	url = http://github.com/tpope/vim-git.git
-[submodule "_vim/bundle/gundo"]
-	path = _vim/bundle/gundo
-	url = http://github.com/sjl/gundo.vim.git
 [submodule "_vim/bundle/makegreen"]
 	path = _vim/bundle/makegreen
 	url = http://github.com/reinh/vim-makegreen
@@ -82,3 +79,6 @@
 [submodule "_vim/bundle/neomake"]
 	path = _vim/bundle/neomake
 	url = http://github.com/benekastah/neomake.git
+[submodule "_vim/bundle/vim-mundo"]
+	path = _vim/bundle/vim-mundo
+	url = http://github.com/simnalamburt/vim-mundo.git
