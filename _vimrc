@@ -72,7 +72,7 @@ nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Select the item in the list with enter
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " open/close the quickfix window
 nmap <leader>c  :copen<CR>
@@ -270,7 +270,7 @@ let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 
 " Remove the filetype section
-let g:airline_section_x="%{airline#util#wrap(airline#extensions#tagbar#currenttag(), 0)}"
+"let g:airline_section_x="%{airline#util#wrap(airline#extensions#tagbar#currenttag(), 0)}"
 
 " ==========================================================
 " YouCompleteMe
@@ -292,25 +292,13 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:pymode_lint_ignore = "E1101,E1103,E0202,W0232,R0904,C0103,C0111"
 let g:pymode_rope_completion = 0
 let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe']
+let g:pymode_lint_on_write = 1
 " let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe', 'pep257']
 let g:pymode_options_max_line_length = 79
 
 " ==========================================================
-" Syntastic - Syntax Checking
+" Neomake - Asynchronous Linting
 " ==========================================================
-let g:syntastic_error_symbol = "✖✖"
-let g:syntastic_style_error_symbol = '⚑⚑'
-let g:syntastic_warning_symbol = '∆∆'
-let g:syntastic_style_warning_symbol = '≈≈'
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 5
-
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': [],
-                           \ 'passive_filetypes': ['python'] }
 let g:neomake_c_make_maker = {
     \ 'errorformat':
         \ '%-G%f:%s:,' .
@@ -327,6 +315,7 @@ let g:neomake_c_make_maker = {
     \ }
 let g:neomake_c_enabled_makers = ['make']
 let g:neomake_cpp_enabled_makers = ['make']
+let g:neomake_python_enabled_makers = ['pylint']
 let g:neomake_error_sign = {'text': "✖✖"}
 let g:neomake_warning_sign = {'text': "⚑⚑"}
 let g:neomake_make_modified = 1
@@ -337,10 +326,16 @@ autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h Neomake
 " Ctrl-P
 " ==========================================================
 let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/]\.(git|hg|svn)$',
+    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules)$',
     \ 'file': '\v\.(exe|so|dll|svg|hi|dyn_o)$',
     \ 'link': '',
 \ }
+
+" ==========================================================
+" delimitMate
+" ==========================================================
+let delimitMate_expand_space = 1
+imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 
 " ==========================================================
 " Tagbar
@@ -399,6 +394,8 @@ let g:necoghc_enable_detailed_browse = 1
 " Generate a tags file when cabal file present
 let g:haskell_autotags = 1
 
+" Deactivate delimitMate
+au FileType haskell let b:loaded_delimitMate = 1
 " Run Check and Lint Asynchronously
 " autocmd BufWritePost *.hs GhcModCheckAndLintAsync
 
@@ -414,7 +411,8 @@ au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smart
 " ============================================================
 " Mako/HTML
 autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
-autocmd FileType html,htmldjango,xhtml,xml,css,less setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html,htmldjango,html.handlebars,xhtml,xml,css,less,javascript
+    \ setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " Shaksperean Templates
 autocmd FileType cassius,julius,hamlet,lucius setlocal expandtab sw=2 ts=2 sts=2
