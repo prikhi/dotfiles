@@ -1,27 +1,9 @@
-[submodule "_vim/bundle/fugitive"]
-	path = _vim/bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
-[submodule "_vim/bundle/git"]
-	path = _vim/bundle/git
-	url = http://github.com/tpope/vim-git.git
 [submodule "_vim/bundle/makegreen"]
 	path = _vim/bundle/makegreen
 	url = http://github.com/reinh/vim-makegreen
 [submodule "_vim/bundle/tasklist"]
 	path = _vim/bundle/tasklist
 	url = http://github.com/vim-scripts/TaskList.vim.git
-[submodule "_vim/bundle/nerdtree"]
-	path = _vim/bundle/nerdtree
-	url = http://github.com/vim-scripts/The-NERD-tree.git
-[submodule "_vim/bundle/youcompleteme"]
-	path = _vim/bundle/youcompleteme
-	url = http://github.com/Valloric/YouCompleteMe.git
-[submodule "_vim/bundle/vim-airline"]
-	path = _vim/bundle/vim-airline
-	url = http://github.com/bling/vim-airline
-[submodule "_vim/bundle/tagbar"]
-	path = _vim/bundle/tagbar
-	url = http://github.com/majutsushi/tagbar
 [submodule "_vim/tool/rst2ctags"]
 	path = _vim/tool/rst2ctags
 	url = http://github.com/jszakmeister/rst2ctags.git
@@ -31,24 +13,6 @@
 [submodule "_oh-my-zsh"]
 	path = _oh-my-zsh
 	url = http://github.com/robbyrussell/oh-my-zsh.git
-[submodule "_vim/bundle/python-mode"]
-	path = _vim/bundle/python-mode
-	url = http://github.com/klen/python-mode.git
-[submodule "_vim/bundle/neco-ghc"]
-	path = _vim/bundle/neco-ghc
-	url = http://github.com/eagletmt/neco-ghc.git
-[submodule "_vim/bundle/vim2hs"]
-	path = _vim/bundle/vim2hs
-	url = http://github.com/dag/vim2hs.git
-[submodule "_vim/bundle/SudoEdit.vim"]
-	path = _vim/bundle/SudoEdit.vim
-	url = http://github.com/chrisbra/SudoEdit.vim.git
-[submodule "_vim/bundle/vim-markdown"]
-	path = _vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "_vim/bundle/haskell-vim"]
-	path = _vim/bundle/haskell-vim
-	url = http://github.com/raichoo/haskell-vim.git
 [submodule "_vim/bundle/vim-cucumber"]
 	path = _vim/bundle/vim-cucumber
 	url = https://github.com/tpope/vim-cucumber.git
@@ -64,21 +28,3 @@
 [submodule "_awesome"]
 	path = _awesome
 	url = http://bugs.sleepanarchy.com/awesome-config.git
-[submodule "_vim/bundle/vim-ansible-yaml"]
-	path = _vim/bundle/vim-ansible-yaml
-	url = http://github.com/chase/vim-ansible-yaml.git
-[submodule "_vim/bundle/vim-syntax-shakespeare"]
-	path = _vim/bundle/vim-syntax-shakespeare
-	url = http://github.com/pbrisbin/vim-syntax-shakespeare.git
-[submodule "_vim/bundle/tabular"]
-	path = _vim/bundle/tabular
-	url = http://github.com/godlygeek/tabular.git
-[submodule "_vim/bundle/ctrlp.vim"]
-	path = _vim/bundle/ctrlp.vim
-	url = http://github.com/kien/ctrlp.vim.git
-[submodule "_vim/bundle/neomake"]
-	path = _vim/bundle/neomake
-	url = http://github.com/benekastah/neomake.git
-[submodule "_vim/bundle/vim-mundo"]
-	path = _vim/bundle/vim-mundo
-	url = http://github.com/simnalamburt/vim-mundo.git

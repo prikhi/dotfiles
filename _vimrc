@@ -106,12 +106,48 @@ command SW SudoWrite
 command SWQ SudoWrite|q
 
 " ==========================================================
-" Pathogen - Allows us to organize our vim plugins
+" vim-plug - Allows us to organize our vim plugins
 " ==========================================================
-" Load pathogen with docs for all plugins
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call plug#begin('~/.vim/plugged')
+
+" General
+Plug 'Raimondi/delimitMate'
+Plug 'chrisbra/SudoEdit.vim'
+Plug 'simnalamburt/vim-mundo', { 'on': 'GundoToggle' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'vim-scripts/The-NERD-tree', { 'on': 'NERDTreeToggle' }
+
+" Development
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'benekastah/neomake'
+Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+
+" Haskell
+Plug 'dag/vim2hs', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+Plug 'pbrisbin/vim-syntax-shakespeare',
+    \ { 'for': ['haskell', 'shakespeare', 'cassius', 'hamlet', 'julius'] }
+Plug 'raichoo/haskell-vim', { 'for': 'haskell' }
+
+" Javascript
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html', 'htmldjango'] }
+Plug 'mustache/vim-mustache-handlebars',
+    \ { 'for': ['moustache', 'html.handlebars'] }
+
+
+" Other FileTypes
+Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
+Plug 'klen/python-mode', { 'for': 'python' }
+Plug 'plasticboy/vim-markdown', { 'for': 'mkd' }
+
+" Music Creation
+Plug 'munshkr/vim-tidal', { 'for': 'haskell.tidal' }
+Plug 'wilsaj/chuck.vim', { 'for': 'chuck' }
+
+call plug#end()
 
 " ==========================================================
 " Basic Settings

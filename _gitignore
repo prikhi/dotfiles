@@ -1,5 +1,6 @@
 # Vim
 *.sw[op]
+_vim/plugged
 
 # Python
 *.py[ocd]
