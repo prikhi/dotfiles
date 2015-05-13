@@ -10,6 +10,7 @@ set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set text
 set defsearch=duckduckgo
 set suggestengines=duckduckgo,google
 set hintkeys=hjkl;asdfg
+set maxitems=30
 set guioptions=bCrsn
 
 ""Performance Tweaks
@@ -24,10 +25,53 @@ set! nglayout.initialpaint.delay=0
 set! ui.submenuDelay=0
 
 "Privacy
+set! browser.safebrowsing.enabled=false
+set! browser.safebrowsing.malware.enabled=false
+set! datareporting.healthreport.uploadEnabled=false
+set! dom.event.clipboardevents.enabled=false
+set! dom.storage.enabled=false
 set! geo.enabled=false
+set! geo.wifi.uri=127.0.0.1
+set! network.cookie.cookieBehavior=1
+set! network.dns.disablePrefetch=true
+set! network.http.sendSecureXSiteReferrer=false
+set! network.prefetch-next=false
 set! privacy.donottrackheader.enabled=true
+set! privacy.donottrackheader.value=1
+set! signon.rememberSignons=false
+set! toolkit.telemtry.enabled=false
+
+set! layout.spellcheckDefault=2
 
 map -builtin J 10j
 map -builtin K 10k
+
+
+"Autos
+autocmd LocationChange * :zoom! 150
+
+
+" Addon Configurations
+
+" BlankYourMonitor
+set! bym.bkg=#1B1D1E
+set! bym.link=#F92672
+set! bym.text=#C4BE89
+set! bym.vlink=#FD971F
+
+" Download Status Bar
+set! extensions.downloadbar.autocleancompletedonquit=true
+set! extensions.downloadbar.clearafterlaunch=true
+set! extensions.downloadbar.hideclearbutton=true
+set! extensions.downloadbar.hidedownloadsbutton=true
+set! extensions.downloadbar.barbackgroundcolor=#1B1D1E
+set! extensions.downloadbar.downloadbackgroundcolor=#1B1D1E
+set! extensions.downloadbar.downloadcompletecolor=#A6E22E
+set! extensions.downloadbar.downloadpausecolor=#FD971F
+set! extensions.downloadbar.downloadprogresscolor=#F92672
+set! extensions.downloadbar.downloadtextcolor=#F8F8F0
+
+" HTTPS Everywhere
+set! extensions.https_everywhere._observatory.priv_dns=true
 
 " vim: set ft=pentadactyl:
