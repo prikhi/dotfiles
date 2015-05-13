@@ -14,6 +14,7 @@ antigen bundle vi-mode
 
 # Fish-like command coloring
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions src
 antigen bundle zsh-users/zsh-history-substring-search
 
 antigen theme prikhi/molokai-powerline-zsh molokai-powerline
@@ -37,7 +38,7 @@ export PAGER="less"
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
 export VBOX_USB=usbfs
-export PATH=$PATH:~/.bin:~/.cabal/bin
+export PATH=~/.bin:~/.cabal/bin:$PATH
 export NNTPSERVER="news.gmane.org"
 
 #########
@@ -50,9 +51,11 @@ alias sv="EDITOR=vim sudoedit"
 alias svim="EDITOR=vim sudoedit"
 alias svimdiff="EDITOR=vimdiff sudoedit"
 
-alias c="gcc -g -O2 -Wall -Wextra -Werror --std=c11 -pedantic -Wno-unused-parameter -D_XOPEN_SOURCE=700"
+alias s="sudo"
 alias ra="ranger"
 alias zc="zcalc"
+alias srv="python -m http.server"
+alias open="xdg-open"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 
 # Launch and/or Open Screen Sessions
@@ -131,6 +134,21 @@ alias hspec='cbt --show-details=always --test-option=--color --test-option=--fai
 alias tasty='cbt --show-details=always --test-option=--color=always'
 alias fcbb='cbc && cbb && cbh'  # A full Clean + Build (including docs)
 
+# C development
+alias c="gcc -g -O2 -Wall -Wextra -Werror --std=c11 -pedantic         \
+             -Wno-unused-parameter -Wfloat-equal -Wundef -Wshadow     \
+             -Wpointer-arith -Wcast-align -Wstrict-prototypes         \
+             -Wstrict-overflow=5 -Wwrite-strings -Waggregate-return   \
+             -Wswitch-enum -Wconversion -Wunreachable-code -Wformat=2 \
+             -Winit-self                                              \
+             -ftrapv -fverbose-asm                                    \
+             -D_XOPEN_SOURCE=700"
+alias smi='sudo make install'
+alias mmc='make maintainer-clean'
+alias auconf='./autogen.sh && ./configure --bindir /usr/bin --datadir /usr/share --sysconfdir /etc'
+alias aumake='auconf && make'
+alias auinstall='auconf && make && sudo make install'
+
 # Redmine CLI Client - hkredmine
 # Show Issues w/ Project as 1st position argument
 alias hkpi='hkredmine issues -S priority:desc,category -p'
@@ -148,10 +166,15 @@ alias hkve='hkredmine version'
 alias hkvs='hkredmine versions'
 alias hknv='hkredmine nextversion -S priority:desc,category'
 alias hkst='hkredmine startwork'
+alias hkrp='hkredmine pause'
+alias hkrr='hkredmine resume'
 alias hkstop='hkredmine stopwork'
 
 # Show the next 2 weeks worth of reminders
 alias rlist='rem -s+2 |  cut -d " " -f 1,6-'
+
+# Translate
+alias french='dict -d fd-fra-eng'
 
 # ls colors
 if [ -f ~/.dir_colors ]; then
