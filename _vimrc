@@ -41,6 +41,12 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 imap ;; <Esc>
 imap jj <Esc>
 
+" Ctrl-E to jump to end of line in Insert Mode
+inoremap <c-e> <c-o>$
+" Ctrl-A to jump to start of line in Insert Mode
+inoremap <c-a> <c-o>^
+
+
 " For when you forget to let go of SHIFT...
 command! W :w
 
@@ -92,7 +98,7 @@ nnoremap <leader>. :lcd %:p:h<CR>
 map <leader>n :NERDTreeToggle<CR>
 
 " Load the Gundo window
-map <leader>g :GundoToggle<CR>
+map <leader>g :UndotreeToggle<CR>
 
 " Jump to the definition of whatever the cursor is on
 map <leader>j :RopeGotoDefinition<CR>
@@ -114,7 +120,7 @@ call plug#begin('~/.vim/plugged')
 " General
 Plug 'Raimondi/delimitMate'
 Plug 'chrisbra/SudoEdit.vim'
-Plug 'simnalamburt/vim-mundo', { 'on': 'GundoToggle' }
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'vim-scripts/The-NERD-tree', { 'on': 'NERDTreeToggle' }
@@ -326,7 +332,7 @@ autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h Neomake
 " Ctrl-P
 " ==========================================================
 let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules)$',
+    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|dist|tmp)$',
     \ 'file': '\v\.(exe|so|dll|svg|hi|dyn_o)$',
     \ 'link': '',
 \ }
