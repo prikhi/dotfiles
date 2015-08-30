@@ -6,6 +6,10 @@ _vim/plugged
 *.py[ocd]
 .ropeproject
 
+# Javascript
+node_modules
+bower_components
+
 # For storing nixpkgs in ~/.nix-defexpr/
 channels_root
 channels
