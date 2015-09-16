@@ -48,10 +48,12 @@ export NNTPSERVER="news.gmane.org"
 alias v="nvim"
 alias vd="vimdiff"
 alias sv="EDITOR=vim sudoedit"
+alias svd="EDITOR=vimdiff sudoedit"
 alias svim="EDITOR=vim sudoedit"
 alias svimdiff="EDITOR=vimdiff sudoedit"
 
 alias s="sudo"
+alias o="xdg-open"
 alias ra="ranger"
 alias zc="zcalc"
 alias srv="python -m http.server"
@@ -79,6 +81,7 @@ alias sese="ssh sese"
 alias acorn="ssh acorn"
 alias vps="ssh pavan@sleepanarchy.com -i ~/.ssh/id_rsa"
 alias fic="ssh fic"
+alias fecvps="ssh fec"
 
 # Safety First!
 alias rm="rm -i"
@@ -112,6 +115,7 @@ alias gm='git merge'
 
 
 # Python/Django Commands
+alias pyt='py.test'
 alias djt='python manage.py test'   # Run Django project's tests
 alias djr='python manage.py runserver 0.0.0.0:8000' # Run Server on All IPs
 alias mcmh='make clean; make html'  # Clean and Make Sphinx Docs
