@@ -3,19 +3,17 @@ hwdec=vdpau
 vo=opengl-hq,opengl,xv
 
 # Audio
-ao=alsa
-channels=5.1
-# Scale Audio to Playback Speed
+ao=jack,alsa
+audio-channels=2
+# Dynamic Range Compression, Scale Audio to Playback Speed
 af=scaletempo
+audio-samplerate=48000
 
-# Use 8MB cache for everything
-cache = 8192
-
-# Prefil 20% of the cache before playing
-cache-min = 20.0
+# Use 25MB cache for network streams
+cache-default = 25000
 
 # English Subtitles
 slang = en
 
 # Japanes then English audio
-alang = jpn,en
+alang = jpn,jp,en,eng,us
