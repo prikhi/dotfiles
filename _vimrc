@@ -343,6 +343,8 @@ let g:ctrlp_custom_ignore = {
 let delimitMate_expand_space = 1
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 
+au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
+
 " ==========================================================
 " Tagbar
 " ==========================================================
@@ -445,6 +447,7 @@ au BufNewFile,BufRead *.xbl setlocal ft=xbl
 " Python
 " ==========================================================
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+autocmd BufWritePost *.py PymodeLint
 
 " Lettuce - Python BDD
 au BufRead,BufNewFile *.feature set filetype=lettuce
