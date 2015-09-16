@@ -15,7 +15,7 @@ From this top-level directory.
 ### Shell
 * zsh
 
-### Vim
+### Neovim/Vim
 * python
   * pep8
   * pylint
