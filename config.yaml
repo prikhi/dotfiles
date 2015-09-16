@@ -50,6 +50,7 @@
     ~/.pentadactylrc: _pentadactylrc
     ~/.pip: _pip/
     ~/.profile: _profile
+    ~/.screen: _screen
     ~/.screenrc: _screenrc
     ~/.urxvt: _urxvt/
     ~/.vim: _vim/
