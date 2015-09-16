@@ -1,5 +1,5 @@
 auto-reload yes
-reload-time 240
+reload-time 480
 reload-threads 5
 
 browser "w3m %u"
