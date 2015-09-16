@@ -29,7 +29,6 @@ set! browser.safebrowsing.enabled=false
 set! browser.safebrowsing.malware.enabled=false
 set! datareporting.healthreport.uploadEnabled=false
 set! dom.event.clipboardevents.enabled=false
-set! dom.storage.enabled=false
 set! geo.enabled=false
 set! geo.wifi.uri=127.0.0.1
 set! network.cookie.cookieBehavior=1
@@ -47,8 +46,14 @@ map -builtin J 10j
 map -builtin K 10k
 
 
-"Autos
-autocmd LocationChange * :zoom! 150
+"Autocommands
+" Use redminewiki editor filetype on bug trackers
+autocmd LocationChange bugs.sleepanarchy.com,projects.acorn :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=redminewiki"'
+autocmd LocationChange !bugs.sleepanarchy.com,!projects.acorn,* :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79"'
+
+" Zoom everything but local server
+autocmd LocationChange !localhost,* :zoom! 150
+autocmd LocationChange localhost :zoom! 100
 
 
 " Addon Configurations
