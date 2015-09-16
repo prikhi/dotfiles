@@ -11,7 +11,7 @@ term rxvt-256color
 vbell off
 
 # I like a girl with a short skirt and a loooong scrollback
-defscrollback 500000
+defscrollback 150000
 
 # Make a better status bar
 hardstatus off
