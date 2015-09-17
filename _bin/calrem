@@ -9,7 +9,7 @@ Unspecified
 
 from __future__ import print_function
 
-from os.path import isfile
+from os.path import isfile, expanduser
 import subprocess
 import sys
 
@@ -18,7 +18,8 @@ def main(args):
     """Print a calendar and reminders for the current date or a passed date."""
 
     calendar = get_calendar(args)
-    reminders = get_reminders(args) if isfile("~/.reminders") else []
+    reminder_file_exists = isfile(expanduser('~/.reminders'))
+    reminders = get_reminders(args) if reminder_file_exists else []
     output_width = max(len(s) for s in calendar + reminders)
     output = format_output(calendar, reminders, output_width)
 
