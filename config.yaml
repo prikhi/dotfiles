@@ -60,7 +60,7 @@
     ~/.Xdefaults: _Xresources
     ~/.zshrc: _zshrc
 
-- clean: ['~']
+- clean: ['~', '~/.config/', '~/.local/share/']
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
