@@ -35,11 +35,11 @@ let mapleader=","             " change the leader to be a comma vs slash
 let $VIMFILES = expand("<sfile>:p:h")
 
 " Reload Vimrc
-map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " ;; to exit Insert Mode
-imap ;; <Esc>
-imap jj <Esc>
+inoremap ;; <Esc>
+inoremap jj <Esc>
 
 " Ctrl-E to jump to end of line in Insert Mode
 inoremap <c-e> <c-o>$
@@ -51,22 +51,22 @@ inoremap <c-a> <c-o>^
 command! W :w
 
 " ctrl-hjkl switches to a split by direction
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+noremap <c-j> <c-w>j
+noremap <c-k> <c-w>k
+noremap <c-l> <c-w>l
+noremap <c-h> <c-w>h
 
 " and lets make these all work in insert mode too ( <C-O> makes next cmd
 "  happen as if in command mode )
-imap <C-W> <C-O><C-W>
+inoremap <C-W> <C-O><C-W>
 
 " Paste from global buffer
-map <leader>p "+p
-map <leader>P "+P
+noremap <leader>p "+p
+noremap <leader>P "+P
 
 " Yank to global buffer
-map <leader>y "+y
-map <leader>Y "+Y
+noremap <leader>y "+y
+noremap <leader>Y "+Y
 
 " Quit window on <leader>q
 nnoremap <leader>q :q<CR>
@@ -81,11 +81,11 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 "inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " open/close the quickfix window
-nmap <leader>c  :copen<CR>
-nmap <leader>cc :cclose<CR>
+nnoremap <leader>c  :copen<CR>
+nnoremap <leader>cc :cclose<CR>
 " open/close the location window (where syntastic puts its feedback)
-nmap <leader>l  :lopen<CR>
-nmap <leader>ll :lclose<CR>
+nnoremap <leader>l  :lopen<CR>
+nnoremap <leader>ll :lclose<CR>
 
 
 " Set working directory
@@ -95,13 +95,13 @@ nnoremap <leader>. :lcd %:p:h<CR>
 " Plugin Shortcuts
 " ==========================================================
 " Open NerdTree
-map <leader>n :NERDTreeToggle<CR>
+noremap <leader>n :NERDTreeToggle<CR>
 
 " Load the Gundo window
-map <leader>g :UndotreeToggle<CR>
+noremap <leader>g :UndotreeToggle<CR>
 
 " Jump to the definition of whatever the cursor is on
-map <leader>j :RopeGotoDefinition<CR>
+noremap <leader>j :RopeGotoDefinition<CR>
 
 " Rename whatever the cursor is on (including references to it)
 noremap <leader>R :RopeRename<CR>
