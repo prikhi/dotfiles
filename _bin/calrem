@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/env python
 """Print a centered calendar followed by any reminders for the month.
 
 Usage: calrem [[[day] month] year]
