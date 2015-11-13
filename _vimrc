@@ -107,9 +107,11 @@ noremap <leader>j :RopeGotoDefinition<CR>
 noremap <leader>R :RopeRename<CR>
 
 " Write a file as a super-user
-command SW SudoWrite
+command! SW SudoWrite
 " Write a file as a super-user, then close the window
-command SWQ SudoWrite|q
+command! SWQ SudoWrite|q
+" Read a file as a super-user
+command! SR SudoRead
 
 " ==========================================================
 " vim-plug - Allows us to organize our vim plugins
