@@ -5,7 +5,7 @@ antigen use oh-my-zsh
 
 # oh-my-zsh plugins
 antigen bundle archlinux
-antigen bundle colored-man
+antigen bundle colored-man-pages
 antigen bundle extract
 antigen bundle git
 antigen bundle python
@@ -112,12 +112,16 @@ alias pacreps='packer -Ss'
 alias grb='git rebase'
 alias gm='git merge'
 
+# Prettify JSON: cat x.json | pretty_json
+alias pretty_json='python -m json.tool'
+
 
 
 # Python/Django Commands
 alias pyt='py.test'
 alias djt='python manage.py test'   # Run Django project's tests
 alias djr='python manage.py runserver 0.0.0.0:8000' # Run Server on All IPs
+alias djrp='python manage.py runserver_plus 0.0.0.0:8000'
 alias mcmh='make clean; make html'  # Clean and Make Sphinx Docs
 
 # Selenium & Xvfb for headless integration testing
