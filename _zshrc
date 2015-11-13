@@ -70,6 +70,7 @@ alias work="~/.bin/start_work; screen -x work"
 alias zshrc="v ~/.zshrc"
 alias vimrc="v ~/.vimrc"
 alias awesomerc="v ~/.config/awesome/rc.lua"
+alias dfiles="cd ~/.dotfiles"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
