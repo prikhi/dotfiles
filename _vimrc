@@ -80,6 +80,9 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 " Select the item in the list with enter
 "inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+" F2 toggles paste mode
+noremap <F2> :set paste!
+
 " open/close the quickfix window
 nnoremap <leader>c  :copen<CR>
 nnoremap <leader>cc :cclose<CR>
@@ -366,7 +369,7 @@ au FileType racket let b:delimitMate_quotes = "\" `"
 " ==========================================================
 
 " TagBar Commands
-nmap <F8> :TagbarToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 " TagBar Settings
 let g:tagbar_width = 35
