@@ -131,7 +131,7 @@ Plug 'vim-scripts/The-NERD-tree', { 'on': 'NERDTreeToggle' }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'benekastah/neomake'
 Plug 'bling/vim-airline'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Haskell
 Plug 'dag/vim2hs', { 'for': 'haskell' }
@@ -139,6 +139,8 @@ Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'pbrisbin/vim-syntax-shakespeare',
     \ { 'for': ['haskell', 'shakespeare', 'cassius', 'hamlet', 'julius'] }
 Plug 'raichoo/haskell-vim', { 'for': 'haskell' }
+Plug 'godlygeek/tabular', {'for': 'haskell'}
+Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
 
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html', 'htmldjango'] }
@@ -150,6 +152,8 @@ Plug 'mustache/vim-mustache-handlebars',
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
 Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'plasticboy/vim-markdown', { 'for': 'mkd' }
+Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
+Plug 'cypok/vim-sml', { 'for': 'sml' }
 
 " Music Creation
 Plug 'munshkr/vim-tidal', { 'for': 'haskell.tidal' }
@@ -346,6 +350,7 @@ let delimitMate_expand_space = 1
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 
 au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
+au FileType racket let b:delimitMate_quotes = "\" `"
 
 " ==========================================================
 " Tagbar
