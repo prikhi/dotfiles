@@ -6,7 +6,7 @@ vo=opengl-hq,opengl,xv
 ao=jack,alsa
 audio-channels=2
 # Dynamic Range Compression, Scale Audio to Playback Speed
-af=scaletempo
+af=scaletempo,drc
 audio-samplerate=48000
 
 # Use 25MB cache for network streams
