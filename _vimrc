@@ -363,6 +363,7 @@ imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 
 au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
 au FileType racket let b:delimitMate_quotes = "\" `"
+au FileType redminewiki let b:delimitMate_quotes = "\" ' ` @"
 
 " ==========================================================
 " Tagbar
