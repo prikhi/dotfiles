@@ -170,7 +170,7 @@ call plug#end()
 syntax on                     " syntax highlighing
 filetype on                   " try to detect filetypes
 filetype plugin indent on     " enable loading indent file for filetype
-set synmaxcol=200             " improve speed in large files
+set synmaxcol=300             " improve speed in large files
 set number                    " Display line numbers
 set numberwidth=1             " using only 1 column (and 1 space) while possible
 set background=dark           " We are using dark background in vim
