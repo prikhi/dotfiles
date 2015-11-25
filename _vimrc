@@ -323,6 +323,17 @@ let g:neomake_python_prospector_maker = {
         \ '%f:%l: [%.%#] %m,' .
         \ '%f:%l:%c [%.%#] %m',
     \ }
+let g:neomake_sml_smlnj_maker = {
+    \ 'exe': 'sml',
+    \ 'args': ['-Ccontrol.poly-eq-warn=false'],
+    \ 'errorformat':
+        \ '%E%f:%l%\%.%c %trror: %m,' .
+        \ '%E%f:%l%\%.%c-%\d%\+%\%.%\d%\+ %trror: %m,' .
+        \ '%W%f:%l%\%.%c %tarning: %m,' .
+        \ '%W%f:%l%\%.%c-%\d%\+%\%.%\d%\+ %tarning: %m,' .
+        \ '%C%\s%\+%m,' .
+        \ '%-G%.%#'
+    \ }
 let g:neomake_c_make_maker = {
     \ 'errorformat':
         \ '%-G%f:%s:,' .
@@ -340,11 +351,12 @@ let g:neomake_c_make_maker = {
 let g:neomake_c_enabled_makers = ['make']
 let g:neomake_cpp_enabled_makers = ['make']
 let g:neomake_python_enabled_makers = ['pylint', 'prospector']
+let g:neomake_sml_enabled_makers = ['smlnj']
 let g:neomake_error_sign = {'text': "✖✖"}
 let g:neomake_warning_sign = {'text': "⚑⚑"}
 let g:neomake_make_modified = 1
 let g:neomake_open_list = 1
-autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h Neomake
+autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h,*.sml Neomake
 
 " ==========================================================
 " Ctrl-P
@@ -364,6 +376,7 @@ imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
 au FileType racket let b:delimitMate_quotes = "\" `"
 au FileType redminewiki let b:delimitMate_quotes = "\" ' ` @"
+au FileType sml let b:delimitMate_quotes = "\" `"
 
 " ==========================================================
 " Tagbar
