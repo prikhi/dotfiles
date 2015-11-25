@@ -81,7 +81,8 @@ alias slacktest="ssh prikhi@SlackTesting.acorn"
 alias sese="ssh sese"
 alias acorn="ssh acorn"
 alias vps="ssh pavan@sleepanarchy.com -i ~/.ssh/id_rsa"
-alias fic="ssh fic"
+alias ficftp="ssh fic"
+alias fic="ssh ficweb"
 alias fecvps="ssh fec"
 
 # Safety First!
