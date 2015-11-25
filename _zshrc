@@ -143,6 +143,9 @@ alias hspec='cbt --show-details=always --test-option=--color --test-option=--fai
 alias tasty='cbt --show-details=always --test-option=--color=always'
 alias fcbb='cbc && cbb && cbh'  # A full Clean + Build (including docs)
 
+# Use readline with the SML/NJ REPL
+alias sml='rlwrap sml'
+
 # C development
 alias c="gcc -g -O2 -Wall -Wextra -Werror --std=c11 -pedantic         \
              -Wno-unused-parameter -Wfloat-equal -Wundef -Wshadow     \
