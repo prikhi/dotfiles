@@ -8,6 +8,9 @@
     ~/.config/keepassx:
         create: true
         path: _keepassx/
+    ~/.config/nvim:
+        create: true
+        path: _vim
     ~/.config/ranger:
         create: true
         path: _ranger/
