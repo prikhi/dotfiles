@@ -56,10 +56,6 @@ noremap <c-k> <c-w>k
 noremap <c-l> <c-w>l
 noremap <c-h> <c-w>h
 
-" and lets make these all work in insert mode too ( <C-O> makes next cmd
-"  happen as if in command mode )
-inoremap <C-W> <C-O><C-W>
-
 " Paste from global buffer
 noremap <leader>p "+p
 noremap <leader>P "+P
@@ -153,9 +149,11 @@ Plug 'mustache/vim-mustache-handlebars',
 
 " Other FileTypes
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
-Plug 'klen/python-mode', { 'for': 'python' }
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss', 'less'] }
 Plug 'plasticboy/vim-markdown', { 'for': 'mkd' }
+Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'cypok/vim-sml', { 'for': 'sml' }
 
 " Music Creation
