@@ -10,6 +10,9 @@ _vim/plugged
 node_modules
 bower_components
 
+# CSS
+.sass-cache
+
 # For storing nixpkgs in ~/.nix-defexpr/
 channels_root
 channels
