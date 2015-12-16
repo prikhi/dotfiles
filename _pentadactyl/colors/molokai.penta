@@ -7,7 +7,9 @@
 " Version: 0.1
 " Name: Molokai
 
-hi clear
+" `hi clear` causes a huge slow down when opening new windows... See gh-pr#3:
+" https://github.com/5digits/dactyl/pull/3
+" hi clear
 " Section: Javascript - General{{{1
 hi -a Boolean color: #AE81FF;
 hi -a Function color: #A6E22E;
