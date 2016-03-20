@@ -9,6 +9,7 @@ video/*; vlc %s; test=test -n "$DISPLAY"
 application/pdf; zathura '%s'; test=test -n "$DISPLAY"
 application/pdf; pdftotext -layout %s -; copiousoutput
 
+application/rtf; lowriter '%s'; test=test -n "$DISPLAY"
 application/msword; lowriter '%s'; test=test -n "$DISPLAY"
 application/ms-excel; localc '%s'; test=test -n "$DISPLAY"
 application/ms-powerpoint; loimpress '%s'; test=test -n "$DISPLAY"
