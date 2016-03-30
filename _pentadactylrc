@@ -43,9 +43,15 @@ set! toolkit.telemtry.enabled=false
 
 set! layout.spellcheckDefault=2
 
-map -builtin J 10j
-map -builtin K 10k
+map -builtin j 10j
+map -builtin k 10k
+map -builtin J j
+map -builtin K k
 
+"" Bookmarks
+" Jump to a subreddit with /r/
+bmark -keyword /r/ -title Go\ To\ Subreddit https://reddit.com/r/%s
+bmark -keyword /p/ -title New\ Paste http://sleepanarchy.com/p/
 
 "Autocommands
 " Use redminewiki editor filetype on bug trackers
@@ -83,5 +89,6 @@ set! extensions.downloadbar.downloadtextcolor=#F8F8F0
 
 " HTTPS Everywhere
 set! extensions.https_everywhere._observatory.priv_dns=true
+set! extensions.encryptedweb._observatory.priv_dns=true
 
-" vim: set ft=pentadactyl:
+" vim: set ft=vim:
