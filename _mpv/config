@@ -9,8 +9,8 @@ audio-channels=2
 af=scaletempo,drc
 audio-samplerate=48000
 
-# Use 25MB cache for network streams
-cache-default = 25000
+# Use 250MB cache for network streams
+cache-default = 250000
 
 # English Subtitles
 slang = en
