@@ -16,3 +16,6 @@ bower_components
 # For storing nixpkgs in ~/.nix-defexpr/
 channels_root
 channels
+
+# Haskell Stack
+.stack-work
