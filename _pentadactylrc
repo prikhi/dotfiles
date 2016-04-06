@@ -12,6 +12,7 @@ set suggestengines=duckduckgo,google
 set hintkeys=hjkl;asdfg
 set maxitems=30
 set guioptions=bCrsn
+set! spellchecker.dictionary.override="en_US-large"
 
 ""Performance Tweaks
 set! network.dns.disableIPv6=true
