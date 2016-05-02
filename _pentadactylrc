@@ -52,7 +52,10 @@ map -builtin K k
 "" Bookmarks
 " Jump to a subreddit with /r/
 bmark -keyword /r/ -title Go\ To\ Subreddit https://reddit.com/r/%s
-bmark -keyword /p/ -title New\ Paste http://sleepanarchy.com/p/
+" SleepAnarchy Issue
+bmark -keyword i -title Go\ To\ Issue http://bugs.sleepanarchy.com/issues/%s
+" New Code Paste
+bmark -keyword p -title New\ Paste http://sleepanarchy.com/p/
 
 "Autocommands
 " Use redminewiki editor filetype on bug trackers
