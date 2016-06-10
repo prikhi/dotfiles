@@ -14,7 +14,8 @@ set maxitems=30
 set guioptions=bCrsn
 set! spellchecker.dictionary.override="en_US-large"
 
-""Performance Tweaks
+"" about:config Tweaks
+"Performance Tweaks
 set! network.dns.disableIPv6=true
 set! network.http.pipelining=true
 set! network.http.pipelining.ssl=true
@@ -44,10 +45,15 @@ set! toolkit.telemtry.enabled=false
 
 set! layout.spellcheckDefault=2
 
+" Fast scroll with j/k
 map -builtin j 10j
 map -builtin k 10k
+" Slow scroll with J/K
 map -builtin J j
 map -builtin K k
+" Search google with v/V
+nmap -builtin v oduckduckgo !g<space>
+nmap -builtin V tduckduckgo !g<space>
 
 "" Bookmarks
 " Jump to a subreddit with /r/
@@ -56,8 +62,11 @@ bmark -keyword /r/ -title Go\ To\ Subreddit https://reddit.com/r/%s
 bmark -keyword i -title Go\ To\ Issue http://bugs.sleepanarchy.com/issues/%s
 " New Code Paste
 bmark -keyword p -title New\ Paste http://sleepanarchy.com/p/
+" Media Library
+bmark -keyword ml -title Media\ Library http://sleepanarchy.com/admin/media-library/browse/
 
-"Autocommands
+
+"" Autocommands
 " Use redminewiki editor filetype on bug trackers
 autocmd LocationChange bugs.sleepanarchy.com,projects.acorn :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=redminewiki"'
 " Set no auto linebreaks on FIC sites
@@ -69,6 +78,15 @@ autocmd LocationChange !bugs.sleepanarchy.com,!projects.acorn,!ic.org,staging.wp
 " Zoom everything but local server
 autocmd LocationChange !localhost,* :zoom! 150
 autocmd LocationChange localhost :zoom! 100
+
+
+"" Commands
+" Check Weather via Google
+com! -nargs=0 weather tabopen google weather 23117
+com! -nargs=0 we weather
+
+" Source the Default Pentadactyl Config
+com! -nargs=0 sp source ~/.pentadactylrc
 
 
 " Addon Configurations
