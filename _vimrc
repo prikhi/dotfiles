@@ -453,7 +453,7 @@ au FileType haskell let b:loaded_delimitMate = 1
 " ==========================================================
 " Javascript
 " ==========================================================
-au BufRead *.js set makeprg=jshint\ %
+au BufRead *.js set makeprg=eslint\ %
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 " ===========================================================
