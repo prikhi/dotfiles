@@ -68,9 +68,11 @@ bmark -keyword ml -title Media\ Library http://sleepanarchy.com/admin/media-libr
 
 "" Autocommands
 " Use redminewiki editor filetype on bug trackers
-autocmd LocationChange bugs.sleepanarchy.com,projects.acorn :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=redminewiki"'
+autocmd LocationChange bugs.sleepanarchy.com,projects.acorn
+    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=redminewiki"'
 " Set no auto linebreaks on FIC sites
-autocmd LocationChange staging.wpengine.com,ic.org :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=0 wrapmargin=0"'
+autocmd LocationChange staging.wpengine.com,ic.org
+    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=0 wrapmargin=0"'
 
 autocmd LocationChange !bugs.sleepanarchy.com,!projects.acorn,!ic.org,staging.wpengine.com,*
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79"'
