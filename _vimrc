@@ -363,7 +363,7 @@ let g:neomake_error_sign = {'text': "✖✖"}
 let g:neomake_warning_sign = {'text': "⚑⚑"}
 let g:neomake_make_modified = 1
 let g:neomake_open_list = 1
-autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h,*.sml Neomake
+autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h,*.sml,*.php Neomake
 
 " ==========================================================
 " Ctrl-P
