@@ -17,6 +17,7 @@ application/vnd.oasis.opendocument.text; libreoffice '%s'; test=test -n "$DISPLA
 application/vnd.oasis.opendocument.spreadsheet; localc '%s'; test=test -n "$DISPLAY"
 application/vnd.oasis.opendocument.presentation; loimpress '%s'; test=test -n "$DISPLAY"
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; localc '%s'; test=test -n "$DISPLAY"
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice '%s'; test=test -n "$DISPLAY"
 
 application/x-tar; tar tvf %s; copiousoutput
 application/x-tar-gz; tar tvfz %s; copiousoutput
