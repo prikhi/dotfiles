@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 
-YOUCOMPLETEME="~/.vim/bundle/youcompleteme"
+YOUCOMPLETEME="${HOME}/.vim/plugged/YouCompleteMe"
 rm -f "$YOUCOMPLETEME/python/*.so"
 
-mkdir -p ~/ycm_build
-cd ~/ycm_build
-
-cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON . "$YOUCOMPLETEME/cpp"
-make ycm_support_libs
-rm -rf ~/ycm_build
+cd $YOUCOMPLETEME
+python2 install.py
