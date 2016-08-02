@@ -17,9 +17,6 @@
     ~/.config/user-dirs.dirs:
         create: true
         path: _user-dirs.dirs
-    ~/.config/vlc:
-        create: true
-        path: _vlc/
     ~/.local/share/fonts:
         create: true
         path: _fonts/
