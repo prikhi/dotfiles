@@ -68,6 +68,6 @@
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
     - [antigen-update, Installing/updating zsh customizations]
+    - [mkdir ~/.vim/bak; mkdir -p ~/.vim/swp, Making vim backup directories]
     - [cd ~/.fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
     - [cd ~/.local/share/fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
-

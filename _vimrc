@@ -257,6 +257,11 @@ set smarttab                " Handle tabs more intelligently
 set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
 
+""" Backups
+set backup
+set backupdir^=~/.vim/bak//
+set dir^=~/.vim/swp//
+
 """" Display
 if has("gui_running")
     " Remove menu bar
