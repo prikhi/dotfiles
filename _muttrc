@@ -24,7 +24,7 @@ set certificate_file=~/.mutt/certificates
 set mailcap_path = ~/.mailcap
 
 set from = "pavan.rikhi@gmail.com"
-alternates "(pavan@acorncommunity\.org)|(accounting@acorncommunity\.org)|(pavan@sleepanarchy.com)"
+alternates "(web\.manager@ic\.org)|(pavan@acorncommunity\.org)|(accounting@acorncommunity\.org)|(pavan@sleepanarchy.com)"
 set realname = "Pavan Rikhi"
 set use_from = yes
 set envelope_from = yes
