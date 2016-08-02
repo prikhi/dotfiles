@@ -378,7 +378,9 @@ let g:ctrlp_custom_ignore = {
 " delimitMate
 " ==========================================================
 let delimitMate_expand_space = 1
-imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
+imap <expr> <CR> pumvisible() ? "\<c-y>" : "\<Plug>delimitMateCR"
+let g:delimitMate_excluded_ft = 'haskell'
+let g:delimitMate_excluded_regions = "Comment,String"
 
 au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
 au FileType racket let b:delimitMate_quotes = "\" `"
