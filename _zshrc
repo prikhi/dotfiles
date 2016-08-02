@@ -63,6 +63,8 @@ alias yt='youtube-dl -a vids.txt'
 alias srv="python -m http.server"
 alias open="xdg-open"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
+alias xpaste="xsel --clipboard --output"
+alias mpaste='mpv $(xpaste)'
 
 # Launch and/or Open Screen Sessions
 alias ssplit="~/.bin/start_split; screen -x split"
