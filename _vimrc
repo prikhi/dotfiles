@@ -322,7 +322,7 @@ let g:pymode_options_max_line_length = 79
 " Neomake - Asynchronous Linting
 " ==========================================================
 let g:neomake_python_prospector_maker = {
-    \ 'args': ['-o', 'pylint', '-M', '--absolute-paths', '%:p'],
+    \ 'args': ['-o', 'pylint', '-M', '--absolute-paths', '%:p', '-W', 'pylint'],
     \ 'errorformat':
         \ '%-G%.%#module named%.%#,' .
         \ '%f:%l:%c [%t%n%.%#] %m,' .
@@ -357,7 +357,7 @@ let g:neomake_c_make_maker = {
     \ }
 let g:neomake_c_enabled_makers = ['make']
 let g:neomake_cpp_enabled_makers = ['make']
-let g:neomake_python_enabled_makers = ['pylint', 'prospector']
+let g:neomake_python_enabled_makers = ['prospector']
 let g:neomake_sml_enabled_makers = ['smlnj']
 let g:neomake_error_sign = {'text': "✖✖"}
 let g:neomake_warning_sign = {'text': "⚑⚑"}
