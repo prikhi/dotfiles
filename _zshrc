@@ -238,6 +238,34 @@ push_rxvt_info () {
 mysql_restore_bz2 () {
     bunzip2 < "$2" | mysql -u root -p "$1"
 }
+buildRunWatchKill () {
+    PROGRAM="${1}"
+    WATCH_DIR="${2}"
+    while true; do
+        PID=""
+        make build
+        if [ $? -eq 0 ] ; then
+            echo "OK"
+            if [ "$PROGRAM" ] ; then
+                $PROGRAM &
+                PID="$!"
+                sleep 0.1
+            fi
+        else
+            echo "FAIL"
+        fi
+
+        inotifywait -q -q -r -e 'close_write' $WATCH_DIR
+
+        echo "CHANGED"
+
+        if [ "$PID" ] ; then
+            kill $PID
+        fi
+
+        echo "AGAIN"
+    done
+}
 
 
 
