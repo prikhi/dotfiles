@@ -206,6 +206,8 @@ fi
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python2.7"
 if [ -f "/usr/bin/virtualenvwrapper.sh" ]; then
     source /usr/bin/virtualenvwrapper.sh
+elif [ -f "/etc/bash_completion.d/virtualenvwrapper" ]; then
+    source /etc/bash_completion.d/virtualenvwrapper
 fi
 
 # Setup zsh history substring search plugin
