@@ -1,0 +1,4 @@
+# Invert Colors by Default
+set recolor true
+# Retain Hues When Inverting
+set recolor-keephue true

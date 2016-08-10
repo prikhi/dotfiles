@@ -17,6 +17,9 @@
     ~/.config/user-dirs.dirs:
         create: true
         path: _user-dirs.dirs
+    ~/.config/zathura:
+        create: true
+        path: _zathura
     ~/.local/share/fonts:
         create: true
         path: _fonts/
