@@ -38,7 +38,7 @@ export PAGER="less"
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
 export VBOX_USB=usbfs
-export PATH=~/.bin:~/.cabal/bin:$PATH
+export PATH=~/.bin:~/.local/bin:~/.cabal/bin:$PATH
 export NNTPSERVER="news.gmane.org"
 
 #########
