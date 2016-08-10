@@ -1,6 +1,8 @@
 # Vim
 *.sw[op]
 _vim/plugged
+_vim/bak
+_vim/swp
 
 # Python
 *.py[ocd]
