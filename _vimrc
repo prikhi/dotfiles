@@ -159,6 +159,7 @@ Plug 'plasticboy/vim-markdown', { 'for': 'mkd' }
 Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
 Plug 'cypok/vim-sml', { 'for': 'sml' }
+Plug 'JesseKPhillips/d.vim', { 'for': 'd' }
 
 " Music Creation
 Plug 'munshkr/vim-tidal', { 'for': 'haskell.tidal' }
