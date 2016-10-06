@@ -140,7 +140,7 @@ Plug 'godlygeek/tabular', {'for': 'haskell'}
 Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
 
 " Web Development
-Plug 'lambdatoast/elm.vim', { 'for': ['elm'] }
+Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html', 'htmldjango'] }
 Plug 'posva/vim-vue', { 'for': ['vue'] }
 " Web Templates
@@ -303,6 +303,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_filepath_completion_use_working_dir = 1
 "let g:ycm_semantic_triggers = {'haskell' : ['.']}
+let g:ycm_semantic_triggers = {'elm' : ['.']}
 let g:ycm_complete_in_comments = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_collect_identifiers_from_tag_files = 1
@@ -370,7 +371,7 @@ autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h,*.sml,*.php Neomake
 " Ctrl-P
 " ==========================================================
 let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|dist|tmp)$',
+    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|dist|tmp|elm-stuff)$',
     \ 'file': '\v\.(exe|so|dll|svg|hi|dyn_o)$',
     \ 'link': '',
 \ }
@@ -480,6 +481,8 @@ au BufNewFile,BufRead *.redmine setlocal ft=redminewiki
 
 " Elm
 au BufNewFile,BufRead *.elm setlocal ft=elm
+au BufWritePost *.elm ElmFormat
+let g:elm_make_output_file = "/dev/null"
 
 " XULRunner
 au BufNewFile,BufRead *.xul setlocal ft=xul
