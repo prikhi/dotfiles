@@ -44,6 +44,8 @@ set! signon.rememberSignons=false
 set! toolkit.telemtry.enabled=false
 
 set! layout.spellcheckDefault=2
+" Disable Pale Moon's Tab Switching Previews
+set! browser.ctrlTab.previews=false
 
 " Fast scroll with j/k
 map -builtin j 10j
