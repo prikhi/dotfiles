@@ -365,6 +365,9 @@ let g:neomake_error_sign = {'text': "✖✖"}
 let g:neomake_warning_sign = {'text': "⚑⚑"}
 let g:neomake_make_modified = 1
 let g:neomake_open_list = 1
+let g:neomake_list_height = 5
+let g:neomake_serialize = 1
+let g:neomake_serialize_abort_on_error = 1
 autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h,*.sml,*.php Neomake
 
 " ==========================================================
