@@ -66,6 +66,10 @@ bmark -keyword i -title Go\ To\ Issue http://bugs.sleepanarchy.com/issues/%s
 bmark -keyword p -title New\ Paste http://sleepanarchy.com/p/
 " Media Library
 bmark -keyword ml -title Media\ Library http://sleepanarchy.com/admin/media-library/browse/
+" Links
+bmark -keyword l -title Links http://sleepanarchy.com/links
+" Add Link
+bmark -keyword al -title Add\ Link http://sleepanarchy.com/admin/linkdump/dump/add/
 
 
 "" Autocommands
