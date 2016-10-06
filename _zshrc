@@ -279,8 +279,8 @@ bindkey '^W' backward-kill-word
 # Bind ;; to Command Mode
 bindkey -M viins ';;' vi-cmd-mode
 # Bind Ctrl-K/Ctrl-J to go Up/Down in History
-bindkey '^K' up-history
-bindkey '^J' down-history
+bindkey '^K' history-substring-search-up
+bindkey '^J' history-substring-search-down
 
 
 
