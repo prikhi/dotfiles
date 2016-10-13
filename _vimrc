@@ -143,6 +143,8 @@ Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
 Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html', 'htmldjango'] }
 Plug 'posva/vim-vue', { 'for': ['vue'] }
+Plug 'raichoo/purescript-vim'
+Plug 'FrigoEU/psc-ide-vim'
 " Web Templates
 Plug 'digitaltoad/vim-pug', { 'for': ['jade', 'pug']  }
 Plug 'mustache/vim-mustache-handlebars', { 'for': ['moustache', 'html.handlebars'] }
@@ -374,7 +376,7 @@ autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h,*.sml,*.php Neomake
 " Ctrl-P
 " ==========================================================
 let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|dist|tmp|elm-stuff)$',
+    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|dist|tmp|elm-stuff|output)$',
     \ 'file': '\v\.(exe|so|dll|svg|hi|dyn_o)$',
     \ 'link': '',
 \ }
@@ -391,6 +393,7 @@ au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
 au FileType racket let b:delimitMate_quotes = "\" `"
 au FileType redminewiki let b:delimitMate_quotes = "\" ' ` @"
 au FileType sml let b:delimitMate_quotes = "\" `"
+au FileType purescript let b:delimitMate_matchpairs = "(:),{:},[:]"
 
 " ==========================================================
 " Tagbar
@@ -486,6 +489,10 @@ au BufNewFile,BufRead *.redmine setlocal ft=redminewiki
 au BufNewFile,BufRead *.elm setlocal ft=elm
 au BufWritePost *.elm ElmFormat
 let g:elm_make_output_file = "/dev/null"
+
+" Purescript
+let g:purescript_indent_if = 4
+let g:purescript_indent_case = 4
 
 " XULRunner
 au BufNewFile,BufRead *.xul setlocal ft=xul
