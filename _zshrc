@@ -32,8 +32,15 @@ setopt completealiases
 setopt RM_STAR_WAIT
 setopt AUTO_CONTINUE
 
+#########################
 # Environmental Variables
-export EDITOR="nvim"
+#########################
+# Use neovim but fallback to vim if not isn't installed
+if type "nvim" > /dev/null; then
+    export EDITOR="nvim"
+else
+    export EDITOR="vim"
+fi
 export PAGER="less"
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
@@ -45,7 +52,7 @@ export NNTPSERVER="news.gmane.org"
 # Aliases
 #########
 # Vim shortcuts
-alias v="nvim"
+alias v="$EDITOR"
 alias vd="vimdiff"
 alias sv="EDITOR=vim sudoedit"
 alias svd="EDITOR=vimdiff sudoedit"
