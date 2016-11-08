@@ -76,11 +76,14 @@ bmark -keyword al -title Add\ Link http://sleepanarchy.com/admin/linkdump/dump/a
 " Use redminewiki editor filetype on bug trackers
 autocmd LocationChange bugs.sleepanarchy.com,projects.acorn
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=redminewiki"'
+" Use moin editor filetype on MoinMoin Wiki
+autocmd LocationChange wiki.acorn
+    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=moin"'
 " Set no auto linebreaks on FIC sites
 autocmd LocationChange staging.wpengine.com,ic.org
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=0 wrapmargin=0"'
 
-autocmd LocationChange !bugs.sleepanarchy.com,!projects.acorn,!ic.org,staging.wpengine.com,*
+autocmd LocationChange !bugs.sleepanarchy.com,!projects.acorn,!ic.org,staging.wpengine.com,!wiki.acorn,*
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79"'
 
 " Zoom everything but local/staging servers
