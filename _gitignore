@@ -11,6 +11,7 @@ _vim/swp
 # Javascript
 node_modules
 bower_components
+npm-debug.log
 
 # CSS
 .sass-cache
