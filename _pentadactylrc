@@ -70,6 +70,19 @@ bmark -keyword ml -title Media\ Library http://sleepanarchy.com/admin/media-libr
 bmark -keyword l -title Links http://sleepanarchy.com/links
 " Add Link
 bmark -keyword al -title Add\ Link http://sleepanarchy.com/admin/linkdump/dump/add/
+" Redmine Roadmaps
+bmark -keyword rm -title Redmine\ Roadmap http://bugs.sleepanarchy.com/projects/%s/roadmap
+bmark -keyword accrm -title Accounting\ Roadmap http://bugs.sleepanarchy.com/projects/acorn-accounting/roadmap
+bmark -keyword fecrm -title FEC\ Roadmap http://bugs.sleepanarchy.com/projects/fec/roadmap
+bmark -keyword ficrm -title FIC\ Roadmap http://bugs.sleepanarchy.com/projects/fic/roadmap
+bmark -keyword rssrm -title RSSonate\ Roadmap http://bugs.sleepanarchy.com/projects/rssonate/roadmap
+" Important Websites
+bmark -keyword fec -title FEC\ Website http://thefec.org
+bmark -keyword fic -title FIC\ Website http://www.ic.org
+bmark -keyword sendy -title SESE\ Sendy http://sendy.southernexposure.com
+bmark -keyword sese -title SESE\ Website http://www.southernexposure.com
+bmark -keyword seseblog -title SESE\ Blog http://www.southernexposure.com/blog/
+bmark -keyword rss -title RSSonate http://rssonate.com
 
 
 "" Autocommands
