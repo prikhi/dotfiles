@@ -88,7 +88,7 @@ bmark -keyword rss -title RSSonate http://rssonate.com
 "" Autocommands
 " Use redminewiki editor filetype on bug trackers
 autocmd LocationChange bugs.sleepanarchy.com,projects.acorn
-    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=redminewiki"'
+    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=redminewiki tw=0"'
 " Use moin editor filetype on MoinMoin Wiki
 autocmd LocationChange wiki.acorn
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=moin"'
