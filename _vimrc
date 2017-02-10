@@ -77,7 +77,7 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 "inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " F2 toggles paste mode
-noremap <F2> :set paste!
+noremap <F2> :set paste!<CR>
 
 " open/close the quickfix window
 nnoremap <leader>c  :copen<CR>
