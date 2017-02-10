@@ -317,7 +317,7 @@ let g:ycm_seed_identifiers_with_syntax = 1
 
 let g:pymode_lint_ignore = "E1101,E1103,E0202,W0232,R0904,C0103,C0111"
 let g:pymode_rope_completion = 0
-let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe']
+let g:pymode_lint_checkers = ['pep8', 'mccabe', 'prospector']
 let g:pymode_lint_on_write = 1
 " let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe', 'pep257']
 let g:pymode_options_max_line_length = 79
