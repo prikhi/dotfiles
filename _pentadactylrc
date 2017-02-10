@@ -112,7 +112,7 @@ autocmd Fullscreen .* :set guioptions+=s
 
 "" Commands
 " Check Weather via Google
-com! -nargs=0 weather tabopen google weather 23117
+com! -nargs=0 weather tabopen !g weather 23117
 com! -nargs=0 we weather
 
 " Source the Default Pentadactyl Config
