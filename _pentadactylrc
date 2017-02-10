@@ -91,15 +91,18 @@ bmark -keyword rss -title RSSonate http://rssonate.com
 "" Autocommands
 " Use redminewiki editor filetype on bug trackers
 autocmd LocationChange bugs.sleepanarchy.com,projects.acorn
-    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=redminewiki tw=0"'
+    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set ft=redminewiki tw=0 nowrap"'
 " Use moin editor filetype on MoinMoin Wiki
 autocmd LocationChange wiki.acorn
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=moin"'
 " Set no auto linebreaks on FIC sites
 autocmd LocationChange staging.wpengine.com,ic.org
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=0 wrapmargin=0"'
+" Set elm editor filetype on Elm Slack
+autocmd LocationChange elmlang.slack.com
+    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79 ft=elm"'
 
-autocmd LocationChange !bugs.sleepanarchy.com,!projects.acorn,!ic.org,staging.wpengine.com,!wiki.acorn,*
+autocmd LocationChange !bugs.sleepanarchy.com,!projects.acorn,!ic.org,!wiki.acorn,!elmlang.slack.com,*
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79"'
 
 " Zoom everything but local/staging servers
