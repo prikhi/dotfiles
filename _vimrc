@@ -498,6 +498,9 @@ let g:purescript_indent_case = 4
 au BufNewFile,BufRead *.xul setlocal ft=xul
 au BufNewFile,BufRead *.xbl setlocal ft=xbl
 
+" StandardML
+au BufNewFile,BufRead *.sig setlocal ft=sml
+
 
 " ==========================================================
 " Python
