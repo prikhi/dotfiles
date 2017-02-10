@@ -56,6 +56,9 @@ map -builtin K k
 " Search google with v/V
 nmap -builtin v oduckduckgo !g<space>
 nmap -builtin V tduckduckgo !g<space>
+" Map Ctrl-N/P in Insert mode to Next/Previous Tab
+imap -builtin <C-n> <ESC>:tabnext<CR>
+imap -builtin <C-p> <ESC>:tabprevious<CR>
 
 "" Bookmarks
 " Jump to a subreddit with /r/
