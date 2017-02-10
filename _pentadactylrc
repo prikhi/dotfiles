@@ -8,7 +8,7 @@ colorscheme molokai
 set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79"'
 
 set defsearch=duckduckgo
-set suggestengines=duckduckgo,google
+set suggestengines=duckduckgo
 set hintkeys=hjkl;asdfg
 set maxitems=30
 set guioptions=bCrsn
