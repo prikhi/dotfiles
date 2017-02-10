@@ -65,9 +65,10 @@ alias ra="ranger"
 alias zc="zcalc"
 alias am="alsamixer"
 alias sz="source ~/.zshrc"
-alias rs="rsync -avhz --progress"
+alias rs="rsync -avhz --append --progress"
 alias yt='youtube-dl -a vids.txt'
 alias srv="python -m http.server"
+alias hkl="hklaunch"
 alias open="xdg-open"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 alias xpaste="xsel --clipboard --output"
@@ -85,6 +86,7 @@ alias vimrc="v ~/.vimrc"
 alias awesomerc="v ~/.config/awesome/rc.lua"
 alias pentarc="v ~/.pentadactylrc"
 alias dfiles="cd ~/.dotfiles"
+alias notes="cd ~/Documents/Notes"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
@@ -130,7 +132,6 @@ alias gm='git merge'
 
 # Prettify JSON: cat x.json | pretty_json
 alias pretty_json='python -m json.tool'
-
 
 
 # Python/Django Commands
