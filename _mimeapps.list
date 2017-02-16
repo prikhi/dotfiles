@@ -1,0 +1,21 @@
+[Default Applications]
+application/atom+xml=palemoon.desktop
+application/rss+xml=palemoon.desktop
+application/vnd.mozilla.xul+xml=palemoon.desktop
+application/pdf=zathura.desktop
+application/x-extension-htm=userapp-Pale Moon-KEYNEY.desktop
+application/x-extension-html=userapp-Pale Moon-KEYNEY.desktop
+application/x-extension-shtml=userapp-Pale Moon-KEYNEY.desktop
+application/x-extension-xht=userapp-Pale Moon-KEYNEY.desktop
+application/x-extension-xhtml=userapp-Pale Moon-KEYNEY.desktop
+application/x-mozilla-bookmarks=palemoon.desktop
+application/x-mswinurl=palemoon.desktop
+application/x-xbel=palemoon.desktop
+application/xhtml+xml=userapp-Pale Moon-KEYNEY.desktop
+text/html=userapp-Pale Moon-KEYNEY.desktop
+text/opml+xml=palemoon.desktop
+text/plain=gvim.desktop
+x-scheme-handler/chrome=userapp-Pale Moon-KEYNEY.desktop
+x-scheme-handler/ftp=userapp-Pale Moon-KEYNEY.desktop
+x-scheme-handler/http=userapp-Pale Moon-KEYNEY.desktop
+x-scheme-handler/https=userapp-Pale Moon-KEYNEY.desktop

@@ -8,6 +8,9 @@
     ~/.config/keepassx:
         create: true
         path: _keepassx/
+    ~/.config/mimeapps.list:
+        create: true
+        path: _mimeapps.list
     ~/.config/nvim:
         create: true
         path: _vim
@@ -23,6 +26,9 @@
     ~/.local/share/fonts:
         create: true
         path: _fonts/
+    ~/.local/share/applications/mimeapps.list:
+        create: true
+        path: _mimeapps.list
     ~/.antigen: _antigen/
     ~/.bin: _bin/
     ~/.cabal: _cabal/
