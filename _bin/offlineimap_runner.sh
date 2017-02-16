@@ -7,3 +7,5 @@ if ps $pid &>/dev/null; then
 fi
 
 offlineimap -o -u quiet $@ &
+OIPID=$!
+echo $OIPID > ~/.offlineimap/pid
