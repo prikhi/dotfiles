@@ -63,6 +63,7 @@
     ~/.urxvt: _urxvt/
     ~/.vim: _vim/
     ~/.vimrc: _vimrc
+    ~/.xinitrc: _xinitrc
     ~/.xprofile: _xprofile
     ~/.Xresources: _Xresources
     ~/.Xdefaults: _Xresources

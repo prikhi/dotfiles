@@ -1,0 +1,2 @@
+source ~/.xprofile
+exec awesome
