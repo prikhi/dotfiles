@@ -11,9 +11,6 @@ fi
 # Xresources for urxvt
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-# flashplugin
-export VDPAU_NVIDIA_NO_OVERLAY=1
-
 # Set some variables now so they are available to Awesome
 export EDITOR=vim
 export PATH=$PATH:~/.bin:~/.cabal/bin
@@ -26,12 +23,8 @@ fi
 
 
 # font-cache
-xset +fp /usr/share/fonts/local
 xset +fp /home/prikhi/.fonts
 xset fp rehash
-
-# Nvidia pixmap performance increase (see arch wiki: nvidia)
-nvidia-settings -a InitialPixmapPlacement=2
 
 # Start mpdscribble (mpd -> lastfm)
 pidof mpdscribble >& /dev/null
@@ -42,9 +35,6 @@ fi
 # rotate bckgd
 ~/.bin/feh-bg &
 
-wmname LG3D &
 gpg-agent --daemon &
+
 export $(dbus-launch)
-
-
-#dbus-launch awesome
