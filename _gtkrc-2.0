@@ -1,10 +1,11 @@
 # DO NOT EDIT! This file will be overwritten by LXAppearance.
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-gtk-theme-name="Clearlooks-Phenix"
-gtk-icon-theme-name="gnome"
-gtk-font-name="Sans 7"
-gtk-cursor-theme-name="Obsidian"
+include "/home/prikhi//.gtkrc-2.0.mine"
+gtk-theme-name="Numix"
+gtk-icon-theme-name="Adwaita"
+gtk-font-name="DejaVu Sans 7"
+gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
@@ -16,5 +17,3 @@ gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="rgb"
-gtk-color-scheme="tooltip_fg_color:#1a1a1a\nlink_color:#0000ee\nbase_color:#4c4c4c\nselected_fg_color:#000000\nvisited_link_color:#551a8b\ntext_color:#ffffff\nbg_color:#3c3c3c\ntooltip_bg_color:#f5f576\nselected_bg_color:#f27800\nfg_color:#d4d4d4\n"
-include "/home/prikhi/.gtkrc-2.0.mine"
