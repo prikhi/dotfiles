@@ -122,7 +122,7 @@ alias scu-status="systemctl --user status"
 alias scu-enable="systemctl --user enable"
 alias scu-disable="systemctl --user disable"
 
-# Arch linux package management - packer
+# Arch linux package management - packer/pacman
 # Only download new packages, do not install them
 alias pacdow='sudo pacman -Syuw'
 # Synchronize with repositories before upgrading packages that are out of date
@@ -134,6 +134,10 @@ alias pacin='packer -S'
 alias pacrep='packer -Si'
 # Search for package(s) in the repositories
 alias pacreps='packer -Ss'
+# Search for packages containing a file
+alias pacfs='pacman -Fs'
+# Update the file database
+alias pacfu='sudo pacman -Fy'
 
 # Git
 alias grb='git rebase'
