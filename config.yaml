@@ -29,6 +29,9 @@
     ~/.local/share/applications/mimeapps.list:
         create: true
         path: _mimeapps.list
+    ~/.themes/oomox-molokai:
+        create: true
+        path: _molokai-gtk-theme/
     ~/.antigen: _antigen/
     ~/.bin: _bin/
     ~/.cabal: _cabal/
