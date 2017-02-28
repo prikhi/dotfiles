@@ -61,10 +61,6 @@ imap -builtin <C-n> <ESC>:tabnext<CR>
 imap -builtin <C-p> <ESC>:tabprevious<CR>
 
 "" Bookmarks
-" Jump to a subreddit with /r/
-bmark -keyword /r/ -title Go\ To\ Subreddit https://reddit.com/r/%s
-" SleepAnarchy Issue
-bmark -keyword i -title Go\ To\ Issue http://bugs.sleepanarchy.com/issues/%s
 " New Code Paste
 bmark -keyword p -title New\ Paste http://sleepanarchy.com/p/
 " Media Library
@@ -74,7 +70,6 @@ bmark -keyword l -title Links http://sleepanarchy.com/links
 " Add Link
 bmark -keyword al -title Add\ Link http://sleepanarchy.com/admin/linkdump/dump/add/
 " Redmine Roadmaps
-bmark -keyword rm -title Redmine\ Roadmap http://bugs.sleepanarchy.com/projects/%s/roadmap
 bmark -keyword accrm -title Accounting\ Roadmap http://bugs.sleepanarchy.com/projects/acorn-accounting/roadmap
 bmark -keyword fecrm -title FEC\ Roadmap http://bugs.sleepanarchy.com/projects/fec/roadmap
 bmark -keyword ficrm -title FIC\ Roadmap http://bugs.sleepanarchy.com/projects/fic/roadmap
@@ -86,6 +81,15 @@ bmark -keyword sendy -title SESE\ Sendy http://sendy.southernexposure.com
 bmark -keyword sese -title SESE\ Website http://www.southernexposure.com
 bmark -keyword seseblog -title SESE\ Blog http://www.southernexposure.com/blog/
 bmark -keyword rss -title RSSonate http://rssonate.com
+
+"" Bookmark Keyword Shortcuts
+" Subreddit
+bmark -keyword /r/ -title Go\ To\ Subreddit https://reddit.com/r/%s
+" SleepAnarchy Issue
+bmark -keyword i -title Go\ To\ Issue http://bugs.sleepanarchy.com/issues/%s
+" SleepAnarchy Roadmap
+bmark -keyword rm -title Go\ To\ Redmine\ Roadmap http://bugs.sleepanarchy.com/projects/%s/roadmap
+
 
 
 "" Autocommands
