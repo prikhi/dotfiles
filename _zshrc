@@ -23,12 +23,12 @@ antigen apply
 
 # Modules
 autoload -U zcalc
-autoload bashcompinit
-bashcompinit
+autoload -U compinit && compinit
+autoload -U bashcompinit && bashcompinit
 
 # Options
 zstyle ':completion:*' menu select
-setopt completealiases
+unsetopt completealiases
 setopt RM_STAR_WAIT
 setopt AUTO_CONTINUE
 
