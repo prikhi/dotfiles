@@ -21,7 +21,6 @@ then
     export GTK_DATA_PREFIX=/home/prikhi/.nix-profile
 fi
 
-
 # font-cache
 xset +fp /home/prikhi/.fonts
 xset fp rehash
@@ -34,7 +33,5 @@ fi
 
 # rotate bckgd
 ~/.bin/feh-bg &
-
-gpg-agent --daemon &
 
 export $(dbus-launch)
