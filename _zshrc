@@ -1,21 +1,26 @@
+#########
 # Antigen
+#########
 source $HOME/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
-# oh-my-zsh plugins
-antigen bundle archlinux
-antigen bundle colored-man-pages
-antigen bundle extract
-antigen bundle git
-antigen bundle python
-antigen bundle systemd
-antigen bundle vi-mode
+antigen bundles <<EOBUNDLES
+    # oh-my-zsh plugins
+    archlinux
+    colored-man-pages
+    extract
+    git
+    python
+    systemd
+    vi-mode
 
-# Fish-like command coloring
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions src
-antigen bundle zsh-users/zsh-history-substring-search
+    zsh-users/zsh-completions src
+    zsh-users/zsh-history-substring-search
+
+    # Fish-like command coloring - this needs to be the last bundle
+    zsh-users/zsh-syntax-highlighting
+EOBUNDLES
 
 antigen theme prikhi/molokai-powerline-zsh molokai-powerline
 
@@ -305,7 +310,7 @@ bindkey '^J' history-substring-search-down
 
 
 
-## Fix for special keys (home, end, delete, etc.)
+##### Fix for special keys (home, end, delete, etc.)
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -A key
@@ -341,6 +346,7 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-init
     zle -N zle-line-finish
 fi
+#####
 
 
 
