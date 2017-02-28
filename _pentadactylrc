@@ -110,8 +110,8 @@ autocmd LocationChange !bugs.sleepanarchy.com,!projects.acorn,!ic.org,!wiki.acor
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79"'
 
 " Zoom everything but local/staging servers
-autocmd LocationChange !localhost,!192.168.1.3,!ember-extension*,!thoughtbot*,* :zoom 135
-autocmd LocationChange localhost,192.168.1.3,ember-extension*,thoughtbot* :zoom 100
+autocmd LocationChange !localhost,!.*staging.*,* :zoom 135
+autocmd LocationChange localhost,.*staging.* :zoom 100
 
 " Fix Status Bar Disappearing When Switching to Fullscreen
 autocmd Fullscreen .* :set guioptions+=s
