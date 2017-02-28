@@ -113,6 +113,15 @@ alias nc-restart="sudo netctl restart"
 alias nc-status="sudo netctl status"
 alias wifi-menu="sudo wifi-menu && sudo mount -a"
 
+# SystemD User Commands
+alias scu="systemctl --user"
+alias scu-start="systemctl --user start"
+alias scu-stop="systemctl --user stop"
+alias scu-restart="systemctl --user restart"
+alias scu-status="systemctl --user status"
+alias scu-enable="systemctl --user enable"
+alias scu-disable="systemctl --user disable"
+
 # Arch linux package management - packer
 # Only download new packages, do not install them
 alias pacdow='sudo pacman -Syuw'
