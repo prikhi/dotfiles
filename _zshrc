@@ -33,9 +33,16 @@ autoload -U bashcompinit && bashcompinit
 
 # Options
 zstyle ':completion:*' menu select
-unsetopt completealiases
+# Allow completions for commands to apply to their aliases as well
+unsetopt COMPLETE_ALIASES
+# Wait 10 seconds before allowing globbed deletes
 setopt RM_STAR_WAIT
+# Allow background jobs to continue on exit
 setopt AUTO_CONTINUE
+# Enable recursive & negation globbing
+setopt EXTENDED_GLOB
+# Allow file completions for all command flags
+setopt MAGIC_EQUAL_SUBST
 
 #########################
 # Environmental Variables
