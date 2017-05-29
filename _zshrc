@@ -155,8 +155,9 @@ alias pacfs='pacman -Fs'
 alias pacfu='sudo pacman -Fy'
 
 # Git
-alias grb='git rebase'
 alias gm='git merge'
+alias grb='git rebase'
+alias gpft='git push --follow-tags'
 
 # Prettify JSON: cat x.json | pretty_json
 alias pretty_json='python -m json.tool'
