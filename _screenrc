@@ -5,7 +5,7 @@ altscreen on
 startup_message off
 
 # Enable 256 colors
-term rxvt-256color
+term rxvt-unicode-256color
 
 # No visal bell
 vbell off
