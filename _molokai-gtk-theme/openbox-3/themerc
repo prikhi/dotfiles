@@ -17,13 +17,13 @@ menu.title.text.justify: Center
 menu.items.bg: Solid Flat
 menu.items.bg.color: #232526
 menu.items.text.color: #f92672
-menu.items.disabled.text.color: #832548
+menu.items.disabled.text.color: #c3255f
 
 menu.items.active.bg: Solid Flat
 menu.items.active.bg.color: #fd971f
 menu.items.active.text.color: #f92672
 
-menu.separator.color: #832548
+menu.separator.color: #c3255f
 menu.separator.width: 1
 menu.separator.padding.width: 2
 menu.separator.padding.height: 4
@@ -32,7 +32,8 @@ menu.separator.padding.height: 4
 window.active.title.separator.color: #232526
 
 # Active window
-window.active.border.color: #fd971f
+window.active.border.color: #232526
+
 
 window.active.title.bg: flat solid
 window.active.title.bg.color: #232526
@@ -58,7 +59,7 @@ window.active.button.pressed.image.color: #1b1d1e
 
 window.active.button.disabled.bg: flat solid
 window.active.button.disabled.bg.color: #232526
-window.active.button.disabled.image.color: #832548
+window.active.button.disabled.image.color: #c3255f
 
 window.active.button.hover.bg: flat solid
 window.active.button.hover.bg.color: #232526
@@ -76,7 +77,7 @@ window.inactive.title.separator.color: #232526
 window.inactive.text.justify: center
 
 window.inactive.label.bg: parentrelative
-window.inactive.label.text.color: #832548
+window.inactive.label.text.color: #c3255f
 
 window.inactive.handle.bg: flat solid
 window.inactive.handle.bg.color: #232526
@@ -86,14 +87,14 @@ window.inactive.grip.bg.color: #232526
 
 window.inactive.button.unpressed.bg: flat solid
 window.inactive.button.unpressed.bg.color: #232526
-window.inactive.button.unpressed.image.color: #832548
+window.inactive.button.unpressed.image.color: #c3255f
 
 window.inactive.button.pressed.bg: flat solid
 window.inactive.button.pressed.bg.color: #fd971f
 window.inactive.button.pressed.image.color: #1b1d1e
 
 window.inactive.button.disabled.bg: flat solid
-window.inactive.button.disabled.bg.color: #832548
+window.inactive.button.disabled.bg.color: #c3255f
 window.inactive.button.disabled.image.color: #232526
 
 window.inactive.button.hover.bg: flat solid

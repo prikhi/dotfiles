@@ -32,6 +32,11 @@ $dark_fg_color: #f92672;
 $dark_shadow: shade($fg_color, .2);
 $light_shadow: lighten($bg_color, .4);
 
+// caret
+$primary_caret_color: #272822;
+$secondary_caret_color: #272822;
+$caret_aspect_ratio: 0.04;
+
 // white and black
 $black: #000;
 $white: #fff;
@@ -96,9 +101,9 @@ $osd_borders_color: shade($osd_bg, .85);
 $lightdm_bg_color: $dark_bg_color;
 $lightdm_fg_color: $dark_fg_color;
 
-$wm_bg: $base_color;
-$wm_border_focused: $selected_bg_color;
-$wm_border_unfocused: $titlebar_bg_color;
+$wm_bg: $titlebar_bg_color;
+$wm_border_focused: #232526;
+$wm_border_unfocused: #232526;
 $wm_title_focused: mix($titlebar_fg_color, $titlebar_bg_color, .1);
 $wm_title_unfocused: mix($titlebar_fg_color, $titlebar_bg_color, .4);
 $wm_icons_focused: mix($titlebar_fg_color, $titlebar_bg_color, .1);
