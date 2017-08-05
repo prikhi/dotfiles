@@ -1,4 +1,5 @@
-" https://github.com/sontek/dotfiles/
+" TODO: Switch out w/ relevant docs
+" https://github.com/prikhi/dotfiles/
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
@@ -73,9 +74,6 @@ nnoremap <leader><space> :nohlsearch<cr>
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
-" Select the item in the list with enter
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
 " F2 toggles paste mode
 noremap <F2> :set paste!<CR>
 
@@ -99,6 +97,7 @@ noremap <leader>n :NERDTreeToggle<CR>
 " Load the Gundo window
 noremap <leader>g :UndotreeToggle<CR>
 
+"" TODO: Make these Rope keybinds only in Python files
 " Jump to the definition of whatever the cursor is on
 noremap <leader>j :RopeGotoDefinition<CR>
 
