@@ -15,8 +15,6 @@ set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys
 set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r" 
 
 # Set PGP/MIME signature settings
-set pgp_mime_signature_filename="signature.asc"
-set pgp_mime_signature_description="GnuPG Digital Signature"
 
 # specify the uid to use when encrypting/signing
 set pgp_sign_as=0xA736A3428D5063BB
