@@ -4,8 +4,12 @@
 source $HOME/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
+export NVM_LAZY_LOAD=true
 
 antigen bundles <<EOBUNDLES
+    # node version manager
+    lukechilds/zsh-nvm
+
     # oh-my-zsh plugins
     archlinux
     colored-man-pages
