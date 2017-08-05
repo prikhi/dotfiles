@@ -12,6 +12,7 @@ application/pdf; pdftotext -layout %s -; copiousoutput
 application/rtf; lowriter '%s'; test=test -n "$DISPLAY"
 application/msword; lowriter '%s'; test=test -n "$DISPLAY"
 application/ms-excel; localc '%s'; test=test -n "$DISPLAY"
+application/vnd.ms-excel; localc '%s'; test=test -n "$DISPLAY"
 application/ms-powerpoint; loimpress '%s'; test=test -n "$DISPLAY"
 application/vnd.oasis.opendocument.text; libreoffice '%s'; test=test -n "$DISPLAY"
 application/vnd.oasis.opendocument.spreadsheet; localc '%s'; test=test -n "$DISPLAY"
