@@ -89,6 +89,7 @@ alias open="xdg-open"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 alias xpaste="xsel --clipboard --output"
 alias mpaste='mpv $(xpaste)'
+alias xclass='echo "WM_CLASS(STRING) = \"NAME\", \"CLASS\"" && xprop | grep "WM_CLASS"'
 
 # Launch and/or Open Screen Sessions
 alias ssplit="~/.bin/start_split; screen -x split"
@@ -149,6 +150,8 @@ alias pacdow='sudo pacman -Syuw'
 alias pacupg='packer -Syu'
 # Install specific package(s) from the repositories
 alias pacin='packer -S'
+# Install packages as dependencies instead of explicitly
+alias pacind='sudo pacman -S --asdeps'
 # Display information about a given package in the repositories
 alias pacrep='packer -Si'
 # Search for package(s) in the repositories
