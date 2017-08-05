@@ -26,3 +26,11 @@ From this top-level directory.
 * Awesome Window Manager
 * Obsidian xcursor theme
 * Clearlooks Phenix gtk theme
+
+# Services
+
+You should enable & start these services using systemd user sessions:
+
+* mpd
+* mpdscribble
+* redshift

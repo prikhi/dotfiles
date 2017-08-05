@@ -25,12 +25,6 @@ fi
 xset +fp /home/prikhi/.fonts
 xset fp rehash
 
-# Start mpdscribble (mpd -> lastfm)
-pidof mpdscribble >& /dev/null
-if [ $? -ne 0 ]; then
- mpdscribble &
-fi
-
 # rotate bckgd
 ~/.bin/feh-bg &
 
