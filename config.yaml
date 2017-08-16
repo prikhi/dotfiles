@@ -63,7 +63,9 @@
     ~/.nvimrc: _vimrc
     ~/.pentadactyl: _pentadactyl
     ~/.pentadactylrc: _pentadactylrc
-    ~/.profile: _profile
+    ~/.profile:
+        force: true
+        path: _profile
     ~/.screen: _screen
     ~/.screenrc: _screenrc
     ~/.urxvt: _urxvt/
