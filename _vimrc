@@ -301,18 +301,22 @@ let g:airline_symbols.linenr = '⭡'
 "let g:airline_section_x="%{airline#util#wrap(airline#extensions#tagbar#currenttag(), 0)}"
 
 " ==========================================================
-" YouCompleteMe
+" Deoplete  - Completion Engine (Neocomplete for Vim)
 " ==========================================================
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_filepath_completion_use_working_dir = 1
-"let g:ycm_semantic_triggers = {'haskell' : ['.']}
-let g:ycm_semantic_triggers = {'elm' : ['.']}
-let g:ycm_complete_in_comments = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_collect_identifiers_from_tag_files = 1
-let g:ycm_seed_identifiers_with_syntax = 1
+if has('nvim')
+    let g:deoplete#enable_at_startup = 1
+    call deoplete#custom#source('_', 'matchers', ['matcher_fuzzy', 'matcher_full_fuzzy'])
+else
+    let g:neocomplete#enable_at_startup = 1
+endif
+
+let g:deoplete#auto_complete_start_length = 1
+let g:deoplete#enable_camel_case = 1
+let g:deoplete#max_menu_width = 100
+let g:deoplete#tag#cache_limit_size = 7500000   " 7.5MB
+
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 " ==========================================================
 " Python-mode
@@ -326,54 +330,29 @@ let g:pymode_lint_on_write = 1
 let g:pymode_options_max_line_length = 79
 
 " ==========================================================
-" Neomake - Asynchronous Linting
+" Ale - Asynchronous Linting
 " ==========================================================
-let g:neomake_python_prospector_maker = {
-    \ 'args': ['-o', 'pylint', '-M', '--absolute-paths', '%:p', '-W', 'pylint'],
-    \ 'errorformat':
-        \ '%-G%.%#module named%.%#,' .
-        \ '%f:%l:%c [%t%n%.%#] %m,' .
-        \ '%f:%l: [%t%n%.%#] %m,' .
-        \ '%f:%l: [%.%#] %m,' .
-        \ '%f:%l:%c [%.%#] %m',
+let g:ale_sign_column_always = 1
+let g:ale_change_sign_column_color = 1
+let g:ale_open_list = 1
+let g:ale_list_window_size = 2
+let g:ale_sign_error = '✖✖'
+let g:ale_sign_warning = '⚑⚑'
+let g:airline#extensions#ale#enabled = 1
+
+let g:ale_linters = {
+    \   'haskell': ['hlint', 'hdevtools' ],
     \ }
-let g:neomake_sml_smlnj_maker = {
-    \ 'exe': 'sml',
-    \ 'args': ['-Ccontrol.poly-eq-warn=false'],
-    \ 'errorformat':
-        \ '%E%f:%l%\%.%c %trror: %m,' .
-        \ '%E%f:%l%\%.%c-%\d%\+%\%.%\d%\+ %trror: %m,' .
-        \ '%W%f:%l%\%.%c %tarning: %m,' .
-        \ '%W%f:%l%\%.%c-%\d%\+%\%.%\d%\+ %tarning: %m,' .
-        \ '%C%\s%\+%m,' .
-        \ '%-G%.%#'
+au BufRead *.elm let g:ale_lint_delay=1000
+
+let g:ale_fixers = {
+    \   'elm': ['format'],
+    \   'haskell': ['remove_trailing_lines', 'trim_whitespace'],
     \ }
-let g:neomake_c_make_maker = {
-    \ 'errorformat':
-        \ '%-G%f:%s:,' .
-        \ '%-G%f:%l: %#error: %#(Each undeclared identifier is reported only%.%#,' .
-        \ '%-G%f:%l: %#error: %#for each function it appears%.%#,' .
-        \ '%-GIn file included%.%#,' .
-        \ '%-G %#from %f:%l\,,' .
-        \ '%f:%l:%c: %trror: %m,' .
-        \ '%f:%l:%c: %tarning: %m,' .
-        \ '%f:%l:%c: %m,' .
-        \ '%f:%l: %trror: %m,' .
-        \ '%f:%l: %tarning: %m,'.
-        \ '%f:%l: %m'
-    \ }
-let g:neomake_c_enabled_makers = ['make']
-let g:neomake_cpp_enabled_makers = ['make']
-let g:neomake_python_enabled_makers = ['prospector']
-let g:neomake_sml_enabled_makers = ['smlnj']
-let g:neomake_error_sign = {'text': "✖✖"}
-let g:neomake_warning_sign = {'text': "⚑⚑"}
-let g:neomake_make_modified = 1
-let g:neomake_open_list = 1
-let g:neomake_list_height = 5
-let g:neomake_serialize = 1
-let g:neomake_serialize_abort_on_error = 1
-autocmd BufWritePost *.py,*.js,*.css,*.hs,*.c,*.h,*.sml,*.php Neomake
+let g:ale_fix_on_save = 1
+
+nmap <silent> <leader>k <Plug>(ale_previous_wrap)
+nmap <silent> <leader>j <Plug>(ale_next_wrap)
 
 " ==========================================================
 " Ctrl-P
@@ -490,8 +469,10 @@ au BufNewFile,BufRead *.redmine setlocal ft=redminewiki
 
 " Elm
 au BufNewFile,BufRead *.elm setlocal ft=elm
-au BufWritePost *.elm ElmFormat
-let g:elm_make_output_file = "/dev/null"
+let g:elm_make_output_file = '/dev/null'
+let g:elm_format_autosave = 0
+let g:elm_format_fail_silently = 1
+let g:elm_format_detailed_complete = 1
 
 " Purescript
 let g:purescript_indent_if = 4
