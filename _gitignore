@@ -12,6 +12,7 @@ _vim/swp
 node_modules
 bower_components
 npm-debug.log
+package-lock.json
 
 # CSS
 .sass-cache
@@ -22,3 +23,4 @@ channels
 
 # Haskell Stack
 .stack-work
+codex.tags
