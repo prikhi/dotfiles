@@ -137,10 +137,12 @@ endif
 
 " Haskell
 Plug 'dag/vim2hs', { 'for': 'haskell' }
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
-Plug 'raichoo/haskell-vim', { 'for': 'haskell' }
-Plug 'godlygeek/tabular', {'for': 'haskell'}
-Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
+Plug 'godlygeek/tabular', { 'for': 'haskell' }
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+" Better Haskell Completions
+Plug 'mkasa/lushtags', { 'for': 'haskell' }
+Plug 'mkasa/neco-ghc-lushtags', { 'for': 'haskell' }
+
 
 " Web Development
 Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
