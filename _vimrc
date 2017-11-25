@@ -126,10 +126,14 @@ Plug 'tpope/vim-git'
 Plug 'vim-scripts/The-NERD-tree', { 'on': 'NERDTreeToggle' }
 
 " Development
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-Plug 'benekastah/neomake'
+Plug 'w0rp/ale'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/neocomplete.vim'
+endif
 
 " Haskell
 Plug 'dag/vim2hs', { 'for': 'haskell' }
