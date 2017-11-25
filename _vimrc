@@ -29,7 +29,7 @@
 " Shortcuts
 " ==========================================================
 set nocompatible              " Don't be compatible with vi
-let mapleader=","             " change the leader to be a comma vs slash
+let g:mapleader=' '           " change the leader to be space instead of slash
 
 " Set environment variable to directory containing this vimrc. Expect absolute
 " directory $HOME on Unix or %USERPROFILE% on Windows.
