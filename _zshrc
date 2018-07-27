@@ -15,7 +15,10 @@ antigen bundles <<EOBUNDLES
     colored-man-pages
     extract
     git
+    gpg-agent
+    npm
     python
+    stack
     systemd
     vi-mode
 
