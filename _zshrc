@@ -92,6 +92,8 @@ alias open="xdg-open"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 alias xpaste="xsel --clipboard --output"
 alias mpaste='mpv $(xpaste)'
+alias ytpaste='youtube-dl $(xpaste)'
+alias xget='wget $(xpaste)'
 alias xclass='echo "WM_CLASS(STRING) = \"NAME\", \"CLASS\"" && xprop | grep "WM_CLASS"'
 
 # Launch and/or Open Screen Sessions
