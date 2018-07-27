@@ -84,7 +84,7 @@ bmark -keyword rss -title RSSonate http://rssonate.com
 
 "" Bookmark Keyword Shortcuts
 " Subreddit
-bmark -keyword /r/ -title Go\ To\ Subreddit https://reddit.com/r/%s
+bmark -keyword /r/ -title Go\ To\ Subreddit https://old.reddit.com/r/%s
 " SleepAnarchy Issue
 bmark -keyword i -title Go\ To\ Issue http://bugs.sleepanarchy.com/issues/%s
 " SleepAnarchy Roadmap
