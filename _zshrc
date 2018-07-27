@@ -36,7 +36,7 @@ antigen apply
 # Modules
 autoload -U zcalc
 autoload -U compinit && compinit
-autoload -U bashcompinit && bashcompinit
+autoload -U +X bashcompinit && bashcompinit
 
 # Options
 zstyle ':completion:*' menu select
