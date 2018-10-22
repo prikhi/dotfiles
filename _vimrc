@@ -34,7 +34,7 @@ let g:mapleader=' '           " change the leader to be space instead of slash
 
 " Set environment variable to directory containing this vimrc. Expect absolute
 " directory $HOME on Unix or %USERPROFILE% on Windows.
-let $VIMFILES = expand("<sfile>:p:h")
+let $VIMFILES = expand('<sfile>:p:h')
 
 " Reload Vimrc
 noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
@@ -185,7 +185,7 @@ set guifont=Dina\ 10
 
 " don't bell or blink
 set noerrorbells
-set vb t_vb=
+set visualbell t_vb=
 
 " Ignore these files when completing
 set wildignore+=*.o,*.obj,.git,*.pyc
@@ -235,11 +235,11 @@ set noautowriteall          " NEVER.
 set noautoread              " Don't automatically re-read changed files.
 set modeline                " Allow vim options to be embedded in files;
 set modelines=5             " they must be within the first or last 5 lines.
-set ffs=unix,dos,mac        " Try recognizing dos, unix, and mac line endings.
+set fileformats=unix,dos,mac        " Try recognizing dos, unix, and mac line endings.
 
 """" Messages, Info, Status
-set ls=2                    " allways show status line
-set vb t_vb=                " Disable all bells.  I hate ringing/flashing.
+set laststatus=2            " allways show status line
+set visualbell t_vb=        " Disable all bells.  I hate ringing/flashing.
 set confirm                 " Y-N-C prompt if closing with unsaved changes.
 set showcmd                 " Show incomplete normal mode commands as I type.
 set report=0                " : commands always print changed line count.
@@ -266,7 +266,7 @@ set directory^=~/.vim/swp//
 set undodir^=~/.vim/undo//
 
 """" Display
-if has("gui_running")
+if has('gui_running')
     " Remove menu bar
     set guioptions-=m
 
@@ -319,7 +319,7 @@ inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " Python-mode
 " ==========================================================
 
-let g:pymode_lint_ignore = "E1101,E1103,E0202,W0232,R0904,C0103,C0111"
+let g:pymode_lint_ignore = 'E1101,E1103,E0202,W0232,R0904,C0103,C0111'
 let g:pymode_rope_completion = 0
 let g:pymode_lint_checkers = ['pep8', 'mccabe', 'prospector']
 let g:pymode_lint_on_write = 1
@@ -366,7 +366,7 @@ let g:ctrlp_custom_ignore = {
 let delimitMate_expand_space = 1
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "\<Plug>delimitMateCR"
 let g:delimitMate_excluded_ft = 'haskell'
-let g:delimitMate_excluded_regions = "Comment,String"
+let g:delimitMate_excluded_regions = 'Comment,String'
 
 au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
 au FileType racket let b:delimitMate_quotes = "\" `"
@@ -386,7 +386,7 @@ let g:tagbar_width = 35
 let g:tagbar_autofocus = 1
 
 " Support for reStructuredText, if available.
-if executable("rst2ctags")
+if executable('rst2ctags')
     let g:rst2ctags = 'rst2ctags'
 else
     let g:rst2ctags = $VIMFILES . '/.vim/tool/rst2ctags/rst2ctags.py'
@@ -419,10 +419,10 @@ let g:tagbar_type_rst = g:local_tagbar_type_rst
 " ==========================================================
 
 " GHC is our Haskell compiler
-let g:ghc = "/usr/bin/ghc"
+let g:ghc = '/usr/bin/ghc'
 
 " Firefox for browsing Haddock
-let g:haddock_browser = "/usr/bin/firefox"
+let g:haddock_browser = '/usr/bin/firefox'
 
 
 " Show the Types of Symbols in the autocomplete menu
@@ -511,6 +511,6 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
     source $VIRTUAL_ENV/.vimrc
 endif
 
-if exists("&colorcolumn")
+if exists('&colorcolumn')
    set colorcolumn=78
 endif
