@@ -139,6 +139,15 @@ alias nc-restart="sudo netctl restart"
 alias nc-status="sudo netctl status"
 alias wifi-menu="sudo wifi-menu && sudo mount -a"
 
+# Udevil Mounting
+alias udm="udevil mount"
+alias udum="udevil unmount"
+function udevil-umount-all() {
+    for f in /media/smb-*; do
+        udevil unmount "$f"
+    done
+}
+
 # SystemD User Commands
 alias sc="sudo systemctl"
 alias scu="systemctl --user"
