@@ -181,6 +181,8 @@ set background=dark           " We are using dark background in vim
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
+set exrc                      " Load .vimrc files in the current directory
+set secure                    " Restrict command in non-default .vimrc files
 set guifont=Dina\ 10
 
 " don't bell or blink
