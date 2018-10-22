@@ -80,6 +80,7 @@ bmark -keyword l -title Links http://sleepanarchy.com/links
 bmark -keyword al -title Add\ Link http://sleepanarchy.com/admin/linkdump/dump/add/
 " Redmine Roadmaps
 bmark -keyword accrm -title Accounting\ Roadmap http://bugs.sleepanarchy.com/projects/acorn-accounting/roadmap
+bmark -keyword seserm -title SESE\ Website\ Roadmap http://bugs.sleepanarchy.com/projects/sese-website/roadmap
 bmark -keyword fecrm -title FEC\ Roadmap http://bugs.sleepanarchy.com/projects/fec/roadmap
 bmark -keyword ficrm -title FIC\ Roadmap http://bugs.sleepanarchy.com/projects/fic/roadmap
 bmark -keyword rssrm -title RSSonate\ Roadmap http://bugs.sleepanarchy.com/projects/rssonate/roadmap
@@ -90,6 +91,10 @@ bmark -keyword sendy -title SESE\ Sendy http://sendy.southernexposure.com
 bmark -keyword sese -title SESE\ Website http://www.southernexposure.com
 bmark -keyword seseblog -title SESE\ Blog http://www.southernexposure.com/blog/
 bmark -keyword rss -title RSSonate http://rssonate.com
+" Elm
+bmark -keyword elmp -title Elm\ Packages http://package.elm-lang.org
+" Adminer
+bmark -keyword sql -title Adminer http://localhost/adminer/
 
 "" Bookmark Keyword Shortcuts
 " Subreddit
