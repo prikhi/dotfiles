@@ -12,6 +12,8 @@ set suggestengines=duckduckgo
 set hintkeys=hjkl;asdfg
 set maxitems=30
 set guioptions=bCrsn
+set spelllang="en-US"
+set! spellchecker.dictionary="en_US-large"
 set! spellchecker.dictionary.override="en_US-large"
 
 "" about:config Tweaks
