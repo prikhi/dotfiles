@@ -5,7 +5,8 @@
 " ==========================================================
 " pip install pep8 pylint mccabe pep257
 " cabal install hlint ghc-mod hdevtools fast-tags pointfree
-"
+
+scriptencoding utf-8
 
 " ==========================================================
 " Plugins included
