@@ -18,6 +18,10 @@ URxvt.saveLines: 20000
 URxvt.urgentOnBell: true
 ! No Window Flashing
 URxvt.visualBell: false
+! Stop Autoscroll When Scrolled Up
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
 
 !URxvt*termName: rxvt-256color
 URxvt.perl-ext-common:  default,matcher,tabbedex,vtwheel
@@ -27,7 +31,7 @@ URxvt.tabbed.title-fg:  12
 URxvt.tabbed.tab-bg:    12
 
 ! URL Matcher
-URxvt.url-launcher:      /usr/bin/palemoon
+URxvt.url-launcher:     /usr/bin/palemoon
 URxvt.matcher.button:   1
 
 URxvt.scrollBar: true
@@ -40,7 +44,7 @@ URxvt.cursorColor: #FD971F
 
 
 ! Replace DarkBlue + Blue with OrangeRed + Orange
-URxvt.color4: #FF4500
+URxvt.color4:   #FF4500
 URxvt.color12:  #FD971F
 
 !!!! Molokai Attempt (some colors tweaked for saturation)
@@ -57,7 +61,7 @@ URxvt.color10:      #AAFF00
 URxvt.color5:       #CC004A
 URxvt.color13:      #F9005A
 !!DarkCyan + Cyan
-URxvt.color6:      #00A1BF
+URxvt.color6:       #00A1BF
 URxvt.color14:      #00C9EF
 !! White
 URxvt.color15:      #F8F8F0
