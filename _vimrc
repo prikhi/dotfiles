@@ -262,7 +262,8 @@ set incsearch               " Incrementally search while typing a /regex
 """ Backups
 set backup
 set backupdir^=~/.vim/bak//
-set dir^=~/.vim/swp//
+set directory^=~/.vim/swp//
+set undodir^=~/.vim/undo//
 
 """" Display
 if has("gui_running")
