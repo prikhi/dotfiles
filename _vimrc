@@ -138,8 +138,10 @@ endif
 
 " Haskell
 Plug 'dag/vim2hs', { 'for': 'haskell' }
+"Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'godlygeek/tabular', { 'for': 'haskell' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+"Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
 " Better Haskell Completions
 Plug 'mkasa/lushtags', { 'for': 'haskell' }
 Plug 'mkasa/neco-ghc-lushtags', { 'for': 'haskell' }
@@ -148,14 +150,7 @@ Plug 'mkasa/neco-ghc-lushtags', { 'for': 'haskell' }
 " Web Development
 Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html', 'htmldjango'] }
-Plug 'posva/vim-vue', { 'for': ['vue'] }
-Plug 'raichoo/purescript-vim'
-Plug 'FrigoEU/psc-ide-vim'
-" Web Templates
-Plug 'digitaltoad/vim-pug', { 'for': ['jade', 'pug']  }
-Plug 'mustache/vim-mustache-handlebars', { 'for': ['moustache', 'html.handlebars'] }
-Plug 'pbrisbin/vim-syntax-shakespeare',
-    \ { 'for': ['haskell', 'shakespeare', 'cassius', 'hamlet', 'julius'] }
+
 " Web Design
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss', 'less'] }
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
@@ -165,13 +160,11 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
 Plug 'plasticboy/vim-markdown', { 'for': 'mkd' }
 Plug 'klen/python-mode', { 'for': 'python' }
-Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
 Plug 'cypok/vim-sml', { 'for': 'sml' }
-Plug 'JesseKPhillips/d.vim', { 'for': 'd' }
+Plug 'tikhomirov/vim-glsl', { 'for': 'glsl' }
 
-" Music Creation
-Plug 'munshkr/vim-tidal', { 'for': 'haskell.tidal' }
-Plug 'wilsaj/chuck.vim', { 'for': 'chuck' }
+" TODO: Investigate following plugins:
+" https://github.com/parsonsmatt/intero-neovim
 
 call plug#end()
 
