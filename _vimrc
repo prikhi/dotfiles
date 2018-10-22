@@ -72,8 +72,8 @@ nnoremap <leader>q :q<CR>
 " hide matches on <leader>space
 nnoremap <leader><space> :nohlsearch<cr>
 
-" Remove trailing whitespace on <leader>S
-nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
+" Remove trailing whitespace on <leader>s
+nnoremap <leader>s :%s/\s\+$//<cr>:let @/=''<CR>
 
 " F2 toggles paste mode
 noremap <F2> :set paste!<CR>
