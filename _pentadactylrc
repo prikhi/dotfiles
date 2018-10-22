@@ -61,6 +61,13 @@ nmap -builtin V tduckduckgo !g<space>
 " Map Ctrl-N/P in Insert mode to Next/Previous Tab
 imap -builtin <C-n> <ESC>:tabnext<CR>
 imap -builtin <C-p> <ESC>:tabprevious<CR>
+" Map jj in Insert Mode to Switch to Normal Mode
+imap -builtin jj <Esc>
+" Map Ctrl-j/k in Command mode to Next/Previous Entry in Command History
+cmap -builtin <C-j> <Down>
+cmap -builtin <C-k> <Up>
+" Open Downloads with Ctrl-Shift-D
+nmap -builtin <C-S-d> :downloads<CR>
 
 "" Bookmarks
 " New Code Paste
