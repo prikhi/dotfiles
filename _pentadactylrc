@@ -115,7 +115,7 @@ autocmd LocationChange wiki.acorn
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79" -c "set ft=moin"'
 " Set no auto linebreaks on FIC sites
 autocmd LocationChange staging.wpengine.com,ic.org
-    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=0 wrapmargin=0"'
+    \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=0 wrapmargin=0 filetype=html synmaxcol=0 wrap"'
 " Set elm editor filetype on Elm Slack
 autocmd LocationChange elmlang.slack.com
     \ :set editor='gvim -f +<line> +"sil! call cursor(0, <column>)" <file> -c "set textwidth=79 ft=elm"'
