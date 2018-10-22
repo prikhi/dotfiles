@@ -344,8 +344,9 @@ buildRunWatchKill () {
 bindkey '^R' history-incremental-search-backward
 # Bind Ctrl-W to Delete Word Backwards
 bindkey '^W' backward-kill-word
-# Bind ;; to Command Mode
+# Bind ;; & jj o Command Mode
 bindkey -M viins ';;' vi-cmd-mode
+bindkey -M viins 'jj' vi-cmd-mode
 # Bind Ctrl-K/Ctrl-J to go Up/Down in History
 bindkey '^K' history-substring-search-up
 bindkey '^J' history-substring-search-down
