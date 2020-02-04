@@ -69,6 +69,7 @@ export LESS="-R"
 export VBOX_USB=usbfs
 export PATH="$HOME/.local/bin:$HOME/.bin:$PATH"
 export NNTPSERVER="news.gmane.org"
+export CCACHE_DIR=/tmp/ccache
 
 #########
 # Aliases
