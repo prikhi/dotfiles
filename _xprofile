@@ -24,6 +24,12 @@ then
 fi
 
 
+# Use ibus as the input method framework
+export GTK_IM_MODULE=xim
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon --xim -dr
+
 
 # font-cache
 xset +fp /home/prikhi/.fonts
