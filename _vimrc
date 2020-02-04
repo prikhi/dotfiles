@@ -144,7 +144,6 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
     Plug 'Shougo/neocomplete.vim'
 endif
@@ -314,16 +313,9 @@ let g:airline_symbols.linenr = '⭡'
 " Deoplete  - Completion Engine (Neocomplete for Vim)
 " ==========================================================
 if has('nvim')
-    let g:deoplete#enable_at_startup = 1
-    call deoplete#custom#source('_', 'matchers', ['matcher_fuzzy', 'matcher_full_fuzzy'])
 else
     let g:neocomplete#enable_at_startup = 1
 endif
-
-let g:deoplete#auto_complete_start_length = 1
-let g:deoplete#enable_camel_case = 1
-let g:deoplete#max_menu_width = 100
-let g:deoplete#tag#cache_limit_size = 7500000   " 7.5MB
 
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
