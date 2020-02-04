@@ -14,7 +14,7 @@ fi
 [ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
 
 
-export SDL_AUDIODRIVER=alsa
+export SDL_AUDIODRIVER=pulse
 
 
 # NixOS Specifics
