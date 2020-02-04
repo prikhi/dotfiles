@@ -1,0 +1,5 @@
+#!/bin/bash
+WINDOWS=$(xdotool search --name --onlyvisible $1)
+for id in $WINDOWS; do
+    xdotool "$2" "$id"
+done
