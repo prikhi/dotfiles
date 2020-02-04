@@ -171,7 +171,7 @@ com! -nargs=0 sp source ~/.pentadactylrc
 " BlankYourMonitor
 set! bym.bkg=#1B1D1E
 set! bym.link=#F92672
-set! bym.text=#C4BE89
+set! bym.text=#F8F8F0
 set! bym.vlink=#FD971F
 
 " Download Status Bar
