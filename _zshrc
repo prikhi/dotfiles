@@ -182,6 +182,14 @@ alias pacreps='packer -Ss'
 alias pacfs='pacman -Fs'
 # Update the file database
 alias pacfu='sudo pacman -Fy'
+# Pull the git repository for a package from the AUR
+function aur-clone() {
+    cd "$HOME/Projects/AUR/"
+    if [ ! -d "$1/.git" ]; then
+        git clone "ssh://aur@aur.archlinux.org/$1.git"
+    fi
+    cd "$1/"
+}
 
 # Git
 alias gm='git merge'
