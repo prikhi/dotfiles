@@ -130,16 +130,16 @@ group autozoom | group default
 com! autozoomon
     \ -nargs=0
     \ -description "Enable Auto-Zoom"
-    \ autocmd LocationChange -group=autozoom !localhost,!.*staging.*,* :zoom 135
-    \ autocmd LocationChange -group=autozoom localhost,.*staging.* :zoom 100
+    \ autocmd LocationChange -group=autozoom !getboostrap.com,!localhost,!.*staging.*,* :zoom! 135
+    \ autocmd LocationChange -group=autozoom getbootstrap.com,localhost,.*staging.* :zoom! 100
     \ set! penta.autozoom=true
-    \ zoom 135
+    \ zoom! 135
 com! autozoomoff
     \ -nargs=0
     \ -description "Disable Auto-Zoom"
     \ autocmd! LocationChange -group=autozoom
     \ set! penta.autozoom=false
-    \ bufdo zoom 100
+    \ bufdo zoom! 100
 com! toggleautozoom
     \ -nargs=0
     \ -description "Toggle Auto-Zoom"
