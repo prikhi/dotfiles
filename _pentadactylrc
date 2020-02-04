@@ -165,6 +165,9 @@ com! -nargs=0 we weather
 " Source the Default Pentadactyl Config
 com! -nargs=0 sp source ~/.pentadactylrc
 
+" Lookup Docs for an Elm Package(e.g. `elmp prikhi/decimal`)
+com! -nargs=1 elmp tabopen http://package.elm-lang.org/packages/<args[1]>/latest
+
 
 " Addon Configurations
 
