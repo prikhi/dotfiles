@@ -21,6 +21,13 @@ package-lock.json
 channels_root
 channels
 
-# Haskell Stack
+# Haskell
 .stack-work
 codex.tags
+/_cabal/lib
+/_cabal/logs
+/_cabal/packages
+/_cabal/world
+/_cabal/setup-exe-cache
+/_cabal/share
+/_cabal/store
