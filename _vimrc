@@ -354,7 +354,7 @@ nmap <silent> <leader>j <Plug>(ale_next_wrap)
 " Ctrl-P
 " ==========================================================
 let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|dist|tmp|elm-stuff|output)$',
+    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|dist|tmp|elm-stuff|output|.stack-work)$',
     \ 'file': '\v\.(exe|so|dll|svg|hi|dyn_o)$',
     \ 'link': '',
 \ }
