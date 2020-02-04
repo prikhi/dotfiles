@@ -98,7 +98,6 @@ noremap <leader>n :NERDTreeToggle<CR>
 " Load the Gundo window
 noremap <leader>g :UndotreeToggle<CR>
 
-"" TODO: Make these Rope keybinds only in Python files
 " Jump to the definition of whatever the cursor is on
 au FileType python noremap <leader>j :RopeGotoDefinition<CR>
 " Rename whatever the cursor is on (including references to it)
@@ -481,7 +480,6 @@ au BufNewFile,BufRead *.sig setlocal ft=sml
 " Python
 " ==========================================================
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-autocmd BufWritePost *.py PymodeLint
 
 " Lettuce - Python BDD
 au BufRead,BufNewFile *.feature set filetype=lettuce
