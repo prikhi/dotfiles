@@ -12,7 +12,8 @@ URxvt.font:             -*-dinapowerline-medium-r-*-*-13-*-*-*-*-*-*-*
 !URxvt.font:              xft:Inconsolata-dz for Powerline:size=7
 
 URxvt.depth: 24
-URxvt.fading: 20
+! disable fading to get w3mimgdisplay to work...
+!URxvt.fading: 20
 URxvt.iconFile: /home/prikhi/Media/Pictures/Icons/terminal.png
 URxvt.saveLines: 20000
 URxvt.urgentOnBell: true
@@ -38,6 +39,8 @@ URxvt.scrollBar: true
 URxvt.scrollBar_right: true
 URxvt.scrollColor: #FD971F
 URxvt.troughColor: #000000
+!needed after disabling fading
+URxvt.scrollBar_floating: true
 
 URxvt.cursorBlink: true
 URxvt.cursorColor: #FD971F
