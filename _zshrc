@@ -116,6 +116,7 @@ alias xmrcd="cd ~/.config/xmonad/"
 alias pentarc="v ~/.pentadactylrc"
 alias dfiles="cd ~/.dotfiles"
 alias notes="cd ~/Documents/Notes"
+alias ideas="v ~/Projects/ideas.rst"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
