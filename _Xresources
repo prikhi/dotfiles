@@ -35,6 +35,10 @@ URxvt.tabbed.tab-bg:    12
 URxvt.url-launcher:     /usr/bin/palemoon
 URxvt.matcher.button:   1
 
+! IBUS IME
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot
+
 URxvt.scrollBar: true
 URxvt.scrollBar_right: true
 URxvt.scrollColor: #FD971F
