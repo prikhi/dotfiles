@@ -325,20 +325,25 @@ inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " ==========================================================
 let g:ale_sign_column_always = 1
 let g:ale_change_sign_column_color = 1
-let g:ale_open_list = 1
+let g:ale_open_list = 'on_save'
 let g:ale_list_window_size = 2
 let g:ale_sign_error = '✖✖'
 let g:ale_sign_warning = '⚑⚑'
 let g:airline#extensions#ale#enabled = 1
 
-let g:ale_linters = {
-    \   'haskell': ['hlint', 'hdevtools' ],
-    \ }
-au BufRead *.elm let g:ale_lint_delay=1000
+let g:ale_linters = {'haskell': [], 'elm': []}
+
+" Close location list on buffer close:
+augroup CloseLoclistWindowGroup
+    autocmd!
+    autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
 
 let g:ale_fixers = {
-    \   'elm': ['format'],
     \   'haskell': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'sass': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'yaml': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'ansible': ['remove_trailing_lines', 'trim_whitespace'],
     \ }
 let g:ale_fix_on_save = 1
 
