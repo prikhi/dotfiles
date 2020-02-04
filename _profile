@@ -8,10 +8,27 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# if running zsh
+## if running zsh
 if [ -n "$ZSH_VERSION" ]; then
     # include .zshrc if it exists
     if [ -f "$HOME/.zshrc" ]; then
 	. "$HOME/.zshrc"
     fi
+else
+    if type "nvim" > /dev/null; then
+        export EDITOR="nvim"
+    else
+        export EDITOR="vim"
+    fi
+    export PAGER="less"
+    export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+    export LESS="-R"
+    export VBOX_USB=usbfs
+    export PATH="$HOME/.local/bin:$HOME/.bin:$PATH"
+    export CCACHE_DIR=/tmp/ccache
 fi
+
+
+export XMONAD_CONFIG_DIR="$HOME/.config/xmonad/"
+export XMONAD_DATA_DIR="$HOME/.xmonad/"
+export XMONAD_CACHE_DIR="$HOME/.xmonad/"
