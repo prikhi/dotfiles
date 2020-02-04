@@ -362,9 +362,8 @@ let g:ctrlp_custom_ignore = {
 " ==========================================================
 " delimitMate
 " ==========================================================
-let delimitMate_expand_space = 1
+let g:delimitMate_expand_space = 1
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "\<Plug>delimitMateCR"
-let g:delimitMate_excluded_ft = 'haskell'
 let g:delimitMate_excluded_regions = 'Comment,String'
 
 au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
@@ -429,11 +428,6 @@ let g:necoghc_enable_detailed_browse = 1
 
 " Generate a tags file when cabal file present
 let g:haskell_autotags = 1
-
-" Deactivate delimitMate
-au FileType haskell let b:loaded_delimitMate = 1
-" Run Check and Lint Asynchronously
-" autocmd BufWritePost *.hs GhcModCheckAndLintAsync
 
 
 " ==========================================================
