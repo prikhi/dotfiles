@@ -19,3 +19,6 @@ x-scheme-handler/chrome=userapp-Pale Moon-KEYNEY.desktop
 x-scheme-handler/ftp=userapp-Pale Moon-KEYNEY.desktop
 x-scheme-handler/http=userapp-Pale Moon-KEYNEY.desktop
 x-scheme-handler/https=userapp-Pale Moon-KEYNEY.desktop
+
+[Added Associations]
+x-scheme-handler/ckan=ckan-handler.desktop
