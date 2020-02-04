@@ -27,6 +27,9 @@ antigen bundles <<EOBUNDLES
 
     # Fish-like command coloring - this needs to be the last bundle
     zsh-users/zsh-syntax-highlighting
+
+    # Use zsh for nix-shell
+    chisui/zsh-nix-shell
 EOBUNDLES
 
 antigen theme prikhi/molokai-powerline-zsh molokai-powerline
