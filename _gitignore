@@ -3,6 +3,9 @@
 _vim/plugged
 _vim/bak
 _vim/swp
+_vim/spell
+_vim/.netrwhist
+.nvimrc
 
 # Python
 *.py[ocd]
@@ -31,3 +34,16 @@ codex.tags
 /_cabal/setup-exe-cache
 /_cabal/share
 /_cabal/store
+
+# Pentadactyl
+/_pentadactyl/info/
+
+# Newsbeuter
+/_newsbeuter/cache*
+/_newsbeuter/history*
+
+# Mutt
+/_mutt/passwords
+/_mutt/.passwd
+/_mutt/cache
+/_mutt/cache
