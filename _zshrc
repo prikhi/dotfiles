@@ -290,6 +290,16 @@ elif [ -f "/etc/bash_completion.d/virtualenvwrapper" ]; then
     source /etc/bash_completion.d/virtualenvwrapper
 fi
 
+# Nix
+# Set the default <nix-pkgs> if we have a local repository.
+if [ -d "${HOME}/.nix-defexpr/" ]; then
+    export NIXPKGS="${HOME}/.nix-defexpr/"
+fi
+# Load our user's nix profile if it exists.
+if [ -f "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]; then
+    source "${HOME}/.nix-profile/etc/profile.d/nix.sh"
+fi
+
 # Setup zsh history substring search plugin
 # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
