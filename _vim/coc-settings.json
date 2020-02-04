@@ -1,0 +1,62 @@
+{
+    "diagnostic.displayByAle": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "json",
+        "elm"
+    ],
+    "css.filetypes": [
+        "css",
+        "less",
+        "wxss",
+        "scss",
+        "sass"
+    ],
+    "languageserver": {
+        "elmLS": {
+            "command": "elm-language-server",
+            "filetypes": [
+                "elm"
+            ],
+            "rootPatterns": [
+                "elm.json"
+            ],
+            "initializationOptions": {
+                "elmAnalyseTrigger": "save"
+            }
+        },
+        "haskell": {
+            "command": "hie-wrapper",
+            "rootPatterns": [
+                "stack.yaml",
+                "cabal.config",
+                "package.yaml"
+            ],
+            "filetypes": [
+                "hs",
+                "lhs",
+                "haskell"
+            ],
+            "initializationOptions": {
+                "languageServerHaskell": {
+                    "hlintOn": true
+                }
+            }
+        },
+        "purescript": {
+            "command": "purescript-language-server",
+            "args": [
+                "--stdio"
+            ],
+            "filetypes": [
+                "purescript"
+            ],
+            "rootPatterns": [
+                "bower.json",
+                "psc-package.json",
+                "spago.dhall"
+            ]
+        }
+    },
+    "yaml.validate": true,
+    "yaml.format.enable": true
+}
