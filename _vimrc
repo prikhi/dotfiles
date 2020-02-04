@@ -151,18 +151,15 @@ endif
 
 " Haskell
 Plug 'dag/vim2hs', { 'for': 'haskell' }
-"Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
-Plug 'godlygeek/tabular', { 'for': 'haskell' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-"Plug 'itchyny/vim-haskell-indent', {'for': 'haskell'}
-" Better Haskell Completions
-Plug 'mkasa/lushtags', { 'for': 'haskell' }
-Plug 'mkasa/neco-ghc-lushtags', { 'for': 'haskell' }
 
 
 " Web Development
-Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
+Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
+Plug 'antew/vim-elm-language-server', { 'for': ['elm'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html', 'htmldjango'] }
+Plug 'purescript-contrib/purescript-vim', { 'for': ['purescript'] }
+Plug 'frigoeu/psc-ide-vim', { 'for': ['purescript'] }
 
 " Web Design
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss', 'less'] }
@@ -170,11 +167,12 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
 
 " Other FileTypes
-Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
+Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 Plug 'plasticboy/vim-markdown', { 'for': 'mkd' }
 Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'cypok/vim-sml', { 'for': 'sml' }
 Plug 'tikhomirov/vim-glsl', { 'for': 'glsl' }
+Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 
 " TODO: Investigate following plugins:
 " https://github.com/parsonsmatt/intero-neovim
