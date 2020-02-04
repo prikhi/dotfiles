@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+# Turn xmonad's xmessage requests into notifications
+shift
+shift
+TITLE=$(echo -e "$@" | head -n1)
+BODY=$(echo -e "$@" | tail -n +2)
+notify-send --icon=dialog-information "${TITLE}" "${BODY}"
