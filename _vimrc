@@ -321,17 +321,6 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 " ==========================================================
-" Python-mode
-" ==========================================================
-
-let g:pymode_lint_ignore = 'E1101,E1103,E0202,W0232,R0904,C0103,C0111'
-let g:pymode_rope_completion = 0
-let g:pymode_lint_checkers = ['pep8', 'mccabe', 'prospector']
-let g:pymode_lint_on_write = 1
-" let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe', 'pep257']
-let g:pymode_options_max_line_length = 79
-
-" ==========================================================
 " Ale - Asynchronous Linting
 " ==========================================================
 let g:ale_sign_column_always = 1
@@ -496,20 +485,6 @@ autocmd BufWritePost *.py PymodeLint
 
 " Lettuce - Python BDD
 au BufRead,BufNewFile *.feature set filetype=lettuce
-
-" Add the virtualenv's site-packages to vim path
-if has('python')
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
-endif
 
 " Load up virtualenv's vimrc if it exists
 if filereadable($VIRTUAL_ENV . '/.vimrc')
