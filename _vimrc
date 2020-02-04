@@ -100,17 +100,25 @@ noremap <leader>g :UndotreeToggle<CR>
 
 "" TODO: Make these Rope keybinds only in Python files
 " Jump to the definition of whatever the cursor is on
-noremap <leader>j :RopeGotoDefinition<CR>
-
+au FileType python noremap <leader>j :RopeGotoDefinition<CR>
 " Rename whatever the cursor is on (including references to it)
-noremap <leader>R :RopeRename<CR>
+au FileType python noremap <leader>R :RopeRename<CR>
 
-" Write a file as a super-user
-command! SW SudoWrite
-" Write a file as a super-user, then close the window
-command! SWQ SudoWrite|q
-" Read a file as a super-user
-command! SR SudoRead
+if has('nvim')
+    " Write a file as a super-user
+    command! SW :w sudoa://%
+    " Write a file as a super-user, then close the window
+    command! SWQ SW|q
+    " Read a file as a super-user
+    command! SR :e suda://%
+else
+    " Write a file as a super-user
+    command! SW SudoWrite
+    " Write a file as a super-user, then close the window
+    command! SWQ SudoWrite|q
+    " Read a file as a super-user
+    command! SR SudoRead
+endif
 
 " ==========================================================
 " vim-plug - Allows us to organize our vim plugins
@@ -120,11 +128,15 @@ call plug#begin('~/.vim/plugged')
 
 " General
 Plug 'Raimondi/delimitMate'
-Plug 'chrisbra/SudoEdit.vim'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'vim-scripts/The-NERD-tree', { 'on': 'NERDTreeToggle' }
+if has('nvim')
+    Plug 'lambdalisue/suda.vim'
+else
+    Plug 'chrisbra/SudoEdit.vim'
+endif
 
 " Development
 Plug 'w0rp/ale'
