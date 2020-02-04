@@ -11,6 +11,9 @@
     ~/.config/mimeapps.list:
         create: true
         path: _mimeapps.list
+    ~/.config/mpv:
+        create: true
+        path: _mpv/
     ~/.config/nvim:
         create: true
         path: _vim
@@ -52,7 +55,6 @@
     ~/.gtk-bookmarks: _gtk-bookmarks
     ~/.gtkrc-2.0: _gtkrc-2.0
     ~/.mailcap: _mailcap
-    ~/.mpv: _mpv/
     ~/.msmtprc: _msmtprc
     ~/.mutt: _mutt/
     ~/.muttrc: _muttrc
