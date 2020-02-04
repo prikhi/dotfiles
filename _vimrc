@@ -467,6 +467,7 @@ let g:elm_format_detailed_complete = 1
 " Purescript
 let g:purescript_indent_if = 4
 let g:purescript_indent_case = 4
+let g:purescript_indent_do = 4
 
 " XULRunner
 au BufNewFile,BufRead *.xul setlocal ft=xul
