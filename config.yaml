@@ -37,7 +37,7 @@
         path: _molokai-gtk-theme/
     ~/.themes/oomox-molokai-light:
         create: true
-        path: _molokai-gtk-theme/
+        path: _molokai-gtk-theme-light/
     ~/.antigen: _antigen/
     ~/.bin: _bin/
     ~/.cabal: _cabal/
