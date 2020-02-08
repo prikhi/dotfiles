@@ -171,6 +171,7 @@ Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'cypok/vim-sml', { 'for': 'sml' }
 Plug 'tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
+Plug 'ledger/vim-ledger', { 'for': 'ledger' }
 
 " TODO: Investigate following plugins:
 " https://github.com/parsonsmatt/intero-neovim
@@ -343,6 +344,7 @@ let g:ale_fixers = {
     \   'sass': ['remove_trailing_lines', 'trim_whitespace'],
     \   'yaml': ['remove_trailing_lines', 'trim_whitespace'],
     \   'ansible': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'ledger': ['remove_trailing_lines', 'trim_whitespace'],
     \ }
 let g:ale_fix_on_save = 1
 
