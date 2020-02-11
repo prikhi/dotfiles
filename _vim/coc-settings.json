@@ -57,6 +57,7 @@
             ]
         }
     },
+    "prettier.tabWidth": 4,
     "yaml.validate": true,
     "yaml.format.enable": true
 }
