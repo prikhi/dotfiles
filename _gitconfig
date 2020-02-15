@@ -17,6 +17,21 @@
     whitespace = cr-at-eol
     autocrif = true
     excludesfile = /home/prikhi/.gitignore
+    pager = /usr/share/git/diff-highlight/diff-highlight | less
 
 [url "git://github.com/ghc/packages-"]
     insteadOf = git://github.com/ghc/packages/
+
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+
+[color "diff"]
+  commit = green
+  meta = yellow
+  frag = cyan
+  old = red
+  new = green
+  whitespace = red reverse
