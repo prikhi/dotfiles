@@ -70,6 +70,7 @@ export VBOX_USB=usbfs
 export PATH="$HOME/.local/bin:$HOME/.bin:$PATH"
 export NNTPSERVER="news.gmane.org"
 export CCACHE_DIR=/tmp/ccache
+export LEDGER_FILE="${HOME}/Documents/accounting/2020.journal"
 
 #########
 # Aliases
@@ -92,6 +93,7 @@ alias rs="rsync -avhz --progress"
 alias yt='youtube-dl -a vids.txt'
 alias srv="python -m http.server"
 alias hkl="hklaunch"
+alias ldg='hledger'
 alias open="xdg-open"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 alias xpaste="xsel --clipboard --output"
@@ -118,6 +120,7 @@ alias pentarc="v ~/.pentadactylrc"
 alias dfiles="cd ~/.dotfiles"
 alias notes="cd ~/Documents/Notes"
 alias ideas="v ~/Projects/ideas.rst"
+alias acct="cd ~/Documents/accounting/"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
