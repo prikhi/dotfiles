@@ -13,7 +13,7 @@
     default = current
 
 [core]
-	 editor = vim
+    editor = nvim
     whitespace = cr-at-eol
     autocrif = true
     excludesfile = /home/prikhi/.gitignore
