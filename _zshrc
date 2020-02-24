@@ -325,7 +325,32 @@ done
 complete -o bashdefault -F _hkredmine hkr
 
 
-## Functions
+###########
+# Functions
+###########
+# For things in `~/.config`. If `$1` is a directory, cd into it. If `$1` is a
+# file, cd into it's directory & open it in vim. If doesn't exist, creating,
+# assuming `$1` is a file.
+# TODO: if doesn't exist, prompt if file or directory & handle appropriately
+function cfg() {
+    DEST="${1}"
+    FULL_DEST="${HOME}/.config/${DEST}"
+    if [[ -d "${FULL_DEST}" ]]; then
+        if [[ ! -e "${FULL_DEST}" ]]; then
+            mkdir -p "${FULL_DEST}"
+        fi
+        cd "${FULL_DEST}"
+    else
+        BASE_DIR="$(dirname ${FULL_DEST})"
+        FILE_NAME="$(basename ${DEST})"
+        if [[ ! -e "${BASE_DIR}" ]]; then
+            mkdir -p "${BASE_DIR}"
+        fi
+        cd "${BASE_DIR}"
+        ${EDITOR} ${FILE_NAME}
+    fi
+}
+
 # Copy rxvt-unicode-256color terminfo to specified remote host
 function push_rxvt_info () {
     infocmp rxvt-unicode-256color | ssh $1 "mkdir -p .terminfo && cat >/tmp/ti && tic /tmp/ti"
