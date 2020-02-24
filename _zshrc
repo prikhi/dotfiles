@@ -362,10 +362,12 @@ function mksrcinfo() {
 function push_rxvt_info () {
     infocmp rxvt-unicode-256color | ssh $1 "mkdir -p .terminfo && cat >/tmp/ti && tic /tmp/ti"
 }
-# Restore mysql bz2 backup to the `$1` database
+
+# Restore the `$2` MySQL bzip2 dump to the `$1` database.
 function mysql_restore_bz2 () {
     bunzip2 < "$2" | mysql -u root -p "$1"
 }
+
 # Run `make build`, and run `$1` if successful. Afterwards, watch the `$2`
 # directory for changes and repeat.
 function buildRunWatchKill () {
