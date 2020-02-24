@@ -341,8 +341,10 @@ augroup END
 
 let g:ale_fixers = {
     \   'haskell': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'purescript': ['remove_trailing_lines', 'trim_whitespace'],
     \   'sass': ['remove_trailing_lines', 'trim_whitespace'],
     \   'yaml': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'markdown': ['remove_trailing_lines', 'trim_whitespace'],
     \   'ansible': ['remove_trailing_lines', 'trim_whitespace'],
     \   'ledger': ['remove_trailing_lines', 'trim_whitespace'],
     \ }
@@ -468,7 +470,9 @@ let g:elm_format_detailed_complete = 1
 " Purescript
 let g:purescript_indent_if = 4
 let g:purescript_indent_case = 4
+let g:purescript_indent_where = 4
 let g:purescript_indent_do = 4
+let g:purescript_indent_in = 0
 
 " XULRunner
 au BufNewFile,BufRead *.xul setlocal ft=xul
