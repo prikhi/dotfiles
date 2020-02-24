@@ -353,6 +353,11 @@ function cfg() {
     fi
 }
 
+# Make the .SRCINFO file for an AUR package
+function mksrcinfo() {
+    makepkg --printsrcinfo > .SRCINFO
+}
+
 # Copy rxvt-unicode-256color terminfo to specified remote host
 function push_rxvt_info () {
     infocmp rxvt-unicode-256color | ssh $1 "mkdir -p .terminfo && cat >/tmp/ti && tic /tmp/ti"
