@@ -6,6 +6,7 @@ _vim/swp
 _vim/spell
 _vim/.netrwhist
 .nvimrc
+.vim
 
 # Python
 *.py[ocd]
