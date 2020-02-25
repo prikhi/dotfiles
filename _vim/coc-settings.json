@@ -2,7 +2,8 @@
     "diagnostic.displayByAle": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "json",
-        "elm"
+        "elm",
+        "haskell"
     ],
     "css.filetypes": [
         "css",
