@@ -19,8 +19,13 @@ From this top-level directory.
 * python
   * pep8
   * pylint
+* elm
+  * elm-language-server
+  * elm-analyse
+  * elm-format
 * haskell
-  * hlint
+  * haskell-ide-engine
+* neovim-qt
 
 ### X
 * Awesome Window Manager
@@ -33,4 +38,3 @@ You should enable & start these services using systemd user sessions:
 
 * mpd
 * mpdscribble
-* redshift
