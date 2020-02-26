@@ -193,7 +193,7 @@ set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
 set exrc                      " Load .vimrc files in the current directory
 set secure                    " Restrict command in non-default .vimrc files
-set guifont=Dina\ 10
+set guifont=Droid\ Sans\ Mono\ 9
 
 " don't bell or blink
 set noerrorbells
