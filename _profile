@@ -30,5 +30,5 @@ fi
 
 
 export XMONAD_CONFIG_DIR="$HOME/.config/xmonad/"
-export XMONAD_DATA_DIR="$HOME/.xmonad/"
-export XMONAD_CACHE_DIR="$HOME/.xmonad/"
+export XMONAD_DATA_DIR="$HOME/.local/share/xmonad/"
+export XMONAD_CACHE_DIR="$HOME/.cache/xmonad/"

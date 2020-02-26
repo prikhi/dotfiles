@@ -86,5 +86,6 @@
     - [git submodule update --init --recursive, Installing/updating submodules]
     - [zsh -c 'source ~/.zshrc; antigen update', Installing/updating zsh customizations]
     - [mkdir ~/.vim/bak; mkdir -p ~/.vim/swp; mkdir -p ~/.vim/undo, Making vim backup/swap/undo directories]
+    - [mkdir -p ~/.cache/xmonad; mkdir -p ~/.local/share/xmonad, Making xmonad directories]
     - [fc-cache -rf ~/.fonts, Installing/updating fonts]
     - [fc-cache -rf ~/.local/share/fonts, Installing/updating fonts]
