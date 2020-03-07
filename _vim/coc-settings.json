@@ -5,13 +5,7 @@
         "elm",
         "haskell"
     ],
-    "css.filetypes": [
-        "css",
-        "less",
-        "wxss",
-        "scss",
-        "sass"
-    ],
+    "coc.source.omni.filetypes": ["ledger"],
     "languageserver": {
         "elmLS": {
             "command": "elm-language-server",
@@ -27,6 +21,7 @@
         },
         "haskell": {
             "command": "hie-wrapper",
+            "args": ["--lsp"],
             "rootPatterns": [
                 "stack.yaml",
                 "cabal.config",
