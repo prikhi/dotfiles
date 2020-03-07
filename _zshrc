@@ -205,6 +205,9 @@ alias gpft='git push --follow-tags'
 # Prettify JSON: cat x.json | pretty_json
 alias pretty_json='python -m json.tool'
 
+# Install global NPM applications
+alias npm_install_apps='npm i -g prettier sass-lint stylelint elm elm-analyse @elm-tooling/elm-language-server elm-format npm-check-updates'
+
 
 # Python/Django Commands
 alias pyt='py.test'
