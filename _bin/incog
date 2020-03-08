@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+TMP_PROFILE=$(mktemp -d)
+chromium --incognito --user-data-dir="${TMP_PROFILE}"
+rm -rf "${TMP_PROFILE}"
