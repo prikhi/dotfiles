@@ -72,6 +72,7 @@ set fcc_attach
 set forward_decode
 set reply_to
 set reverse_name=yes
+my_hdr X-Clacks-Overhead: GNU Terry Pratchett
 
 set query_command="goobook query '%s'"
 macro index,pager a "<pipe-message>goobook add<return>" "add the sender address to google contacts"
