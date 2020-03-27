@@ -25,7 +25,8 @@
             "rootPatterns": [
                 "stack.yaml",
                 "cabal.config",
-                "package.yaml"
+                "package.yaml",
+                "cabal.project"
             ],
             "filetypes": [
                 "hs",
