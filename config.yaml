@@ -17,6 +17,9 @@
     ~/.config/nvim:
         create: true
         path: _vim
+    ~/.config/picom/picom.conf:
+        create: true
+        path: _picom.conf
     ~/.config/ranger:
         create: true
         path: _ranger/
