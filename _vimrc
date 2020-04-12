@@ -331,7 +331,7 @@ let g:ale_sign_error = '✖✖'
 let g:ale_sign_warning = '⚑⚑'
 let g:airline#extensions#ale#enabled = 1
 
-let g:ale_linters = {'haskell': [], 'elm': []}
+let g:ale_linters = {'haskell': [], 'elm': [], 'c': [], 'cpp': []}
 
 " Close location list on buffer close:
 augroup CloseLoclistWindowGroup
@@ -347,6 +347,7 @@ let g:ale_fixers = {
     \   'markdown': ['remove_trailing_lines', 'trim_whitespace'],
     \   'ansible': ['remove_trailing_lines', 'trim_whitespace'],
     \   'ledger': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'rst': ['remove_trailing_lines', 'trim_whitespace'],
     \ }
 let g:ale_fix_on_save = 1
 
