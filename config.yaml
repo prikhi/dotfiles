@@ -23,6 +23,9 @@
     ~/.config/ranger:
         create: true
         path: _ranger/
+    ~/.config/smos:
+        create: true
+        path: _smos/
     ~/.config/user-dirs.dirs:
         create: true
         path: _user-dirs.dirs

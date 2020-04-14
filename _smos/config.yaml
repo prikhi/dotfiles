@@ -1,0 +1,8 @@
+---
+
+workflow-dir:
+    "/home/prikhi/.tasks"
+archive-dir:
+    "/home/prikhi/.tasks/archive"
+projects-dir:
+    "/home/prikhi/.tasks/projects"
