@@ -283,6 +283,12 @@ alias hkrp='hkredmine pause'
 alias hkrr='hkredmine resume'
 alias hkstop='hkredmine stopwork'
 
+# smos & intray - Getting Things Done
+alias tasks='smos ~/.tasks/general.smos'
+alias smosd='cd ~/.tasks/'
+alias in='intray add'
+alias review='intray review'
+
 # Show the next 2 weeks worth of reminders
 alias rlist='rem -s+2 |  cut -d " " -f 1,6-'
 
