@@ -6,3 +6,7 @@ archive-dir:
     "/home/prikhi/.tasks/archive"
 projects-dir:
     "/home/prikhi/.tasks/projects"
+
+sync:
+    server-url: https://smos.sleepanarchy.com
+    username: prikhi
