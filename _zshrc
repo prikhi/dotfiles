@@ -71,6 +71,8 @@ export PATH="$HOME/.local/bin:$HOME/.bin:$HOME/.cargo/bin:$PATH"
 export NNTPSERVER="news.gmane.org"
 export CCACHE_DIR=/tmp/ccache
 export LEDGER_FILE="${HOME}/Documents/accounting/2020.journal"
+export HISTSIZE=1000000000
+export SAVEHIST=${HISTSIZE}
 
 #########
 # Aliases
