@@ -290,6 +290,8 @@ alias tasks='smos ~/.tasks/general.smos'
 alias smosd='cd ~/.tasks/'
 alias in='intray add'
 alias review='intray review'
+alias next='smos-query next'
+alias sq='smos-query'
 
 # Show the next 2 weeks worth of reminders
 alias rlist='rem -s+2 |  cut -d " " -f 1,6-'
