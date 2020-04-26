@@ -213,6 +213,11 @@ browser_playlist_prefix = "$6playlist$9 "
 #selected_item_prefix = "$6"
 #
 #selected_item_suffix = "$9"
+
+current_item_prefix = "$(blue)$r"
+
+current_item_suffix = "$/r$(end)"
+
 #
 ## colors are not supported for below variable
 #
@@ -473,15 +478,11 @@ color1 = "white"
 #
 color2 = "blue"
 #
-main_window_highlight_color = "blue"
-#
 progressbar_color = "blue"
 #
 statusbar_color = "blue"
 #
 alternative_ui_separator_color = "magenta"
-#
-active_column_color = "magenta"
 #
 visualizer_color = "white"
 #
