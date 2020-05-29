@@ -6,3 +6,16 @@ workflow-dir:
 sync:
     server-url: https://smos.sleepanarchy.com
     username: prikhi
+
+keys:
+    file:
+        entry:
+            - action: forestPromoteSubTree
+              key: <<
+            - action: forestDemoteSubTree
+              key: ">>"
+        header:
+            - action: forestPromoteSubTree
+              key: <<
+            - action: forestDemoteSubTree
+              key: ">>"
