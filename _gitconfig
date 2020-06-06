@@ -35,3 +35,5 @@
   old = red
   new = green
   whitespace = red reverse
+[pull]
+  rebase = false
