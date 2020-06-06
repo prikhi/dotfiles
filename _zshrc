@@ -290,8 +290,66 @@ alias tasks='smos ~/.tasks/general.smos'
 alias smosd='cd ~/.tasks/'
 alias in='intray add'
 alias review='intray review'
-alias next='smos-query next'
 alias sq='smos-query'
+alias next='smos-query next'
+alias waiting='smos-query waiting'
+alias agenda='smos-query agenda'
+alias projects='smos-query projects'
+alias ssync='smos-sync-client sync'
+
+# start a new smos project file with a single task
+function smosnp() {
+    PROJECT_FILE="$1"
+    FULL_PATH="${HOME}/.tasks/projects/${PROJECT_FILE}"
+    PROJECT_DIR="$(dirname ${FULL_PATH})"
+    TASK="${@:2}"
+    if [ ! -e "${FULL_PATH}" ]; then
+        smos-single ${TASK} --file "projects/${PROJECT_FILE}"
+    fi
+    smos "${FULL_PATH}"
+}
+function _smosnp() {
+    _arguments "1:directory:_path_files -/ -W \"${HOME}/.tasks/projects/\""
+}
+compdef _smosnp smosnp
+
+# open the given project file in smos
+function smosp() {
+    PROJECT_FILE="$1"
+    FULL_PATH="${HOME}/.tasks/projects/${PROJECT_FILE}"
+    smos "${FULL_PATH}"
+}
+function _smosp() {
+    _arguments "1:file:_path_files -W \"${HOME}/.tasks/projects/\""
+
+}
+compdef _smosp smosp
+
+# open the given task file in smos
+function task() {
+    TASK_FILE="$1"
+    FULL_PATH="${HOME}/.tasks/${TASK_FILE}"
+    smos "${FULL_PATH}"
+}
+
+# archive the given task file
+function archive() {
+    TASK_FILE="$1"
+    FULL_PATH="${HOME}/.tasks/${TASK_FILE}"
+    smos-archive "${FULL_PATH}"
+}
+
+# edit a smos task in vim
+function vt() {
+    TASK_FILE="$1"
+    FULL_PATH="${HOME}/.tasks/${TASK_FILE}"
+    $EDITOR "${FULL_PATH}"
+}
+function _smos_comp_tasks() {
+    _arguments "1:file:_files -W \"${HOME}/.tasks/\""
+}
+compdef _smos_comp_tasks task archive vt
+
 
 # Show the next 2 weeks worth of reminders
 alias rlist='rem -s+2 |  cut -d " " -f 1,6-'
