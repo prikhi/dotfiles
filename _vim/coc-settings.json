@@ -5,7 +5,6 @@
         "elm",
         "haskell"
     ],
-    "coc.source.omni.filetypes": ["ledger"],
     "languageserver": {
         "elmLS": {
             "command": "elm-language-server",
@@ -55,6 +54,9 @@
         }
     },
     "prettier.tabWidth": 4,
+    "prettier.disableLanguages": [
+        "yaml"
+    ],
     "yaml.validate": true,
     "yaml.format.enable": true
 }
