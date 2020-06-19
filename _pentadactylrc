@@ -106,6 +106,8 @@ bmark -keyword /r/ -title Go\ To\ Subreddit https://old.reddit.com/r/%s
 bmark -keyword i -title Go\ To\ Issue http://bugs.sleepanarchy.com/issues/%s
 " SleepAnarchy Roadmap
 bmark -keyword rm -title Go\ To\ Redmine\ Roadmap http://bugs.sleepanarchy.com/projects/%s/roadmap
+" ClubHouse Story
+bmark -keyword ch -title Go\ To\ Story http://app.clubhouse.io/costar/story/%s
 
 
 
