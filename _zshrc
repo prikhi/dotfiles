@@ -289,6 +289,7 @@ alias hkstop='hkredmine stopwork'
 alias tasks='smos ~/.tasks/general.smos'
 alias smosd='cd ~/.tasks/'
 alias in='intray add'
+alias isize='intray size'
 alias review='intray review'
 alias sq='smos-query'
 alias next='smos-query next'
@@ -296,6 +297,7 @@ alias waiting='smos-query waiting'
 alias agenda='smos-query agenda'
 alias projects='smos-query projects'
 alias ssync='smos-sync-client sync'
+alias isync='intray sync'
 
 # start a new smos project file with a single task
 function smosnp() {
