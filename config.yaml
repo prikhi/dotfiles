@@ -26,6 +26,9 @@
     ~/.config/smos:
         create: true
         path: _smos/
+    ~/.config/tridactyl:
+        create: true
+        path: _tridactyl/
     ~/.config/user-dirs.dirs:
         create: true
         path: _user-dirs.dirs

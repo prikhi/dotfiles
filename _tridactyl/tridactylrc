@@ -1,0 +1,35 @@
+sanitise tridactyllocal tridactylsync
+
+set theme dark
+set smoothscroll true
+set hintchars hjkl;asdfg
+
+guiset_quiet hoverlink right
+
+
+bind yy clipboard yankcannon
+
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+bind ,<Space> nohlsearch
+
+bind J scrollline 1
+bind K scrollline -1
+
+bind <C-j> tabprev
+bind <C-k> tabnext
+
+bind v fillcmdline open search !g
+bind V fillcmdline tabopen search !g
+
+bind x fillcmdline tabopen search !stackage
+bind X fillcmdline tabopen search !hackage
+
+bind --mode=insert jj unfocus
+
+
+autocmd DocStart ^http(s)://www.amazon.com js tri.excmds.urlmodify("-t", "www", "smile")
+
+" vim: set ft=tridactyl
