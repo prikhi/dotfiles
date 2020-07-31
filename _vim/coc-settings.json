@@ -1,19 +1,11 @@
 {
     "diagnostic.displayByAle": true,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "json",
-        "elm",
-        "haskell"
-    ],
+    "coc.preferences.formatOnSaveFiletypes": ["json", "elm", "haskell"],
     "languageserver": {
         "elmLS": {
             "command": "elm-language-server",
-            "filetypes": [
-                "elm"
-            ],
-            "rootPatterns": [
-                "elm.json"
-            ],
+            "filetypes": ["elm"],
+            "rootPatterns": ["elm.json"],
             "initializationOptions": {
                 "elmAnalyseTrigger": "save"
             }
@@ -27,11 +19,7 @@
                 "package.yaml",
                 "cabal.project"
             ],
-            "filetypes": [
-                "hs",
-                "lhs",
-                "haskell"
-            ],
+            "filetypes": ["hs", "lhs", "haskell"],
             "initializationOptions": {
                 "languageServerHaskell": {
                     "hlintOn": true
@@ -40,23 +28,13 @@
         },
         "purescript": {
             "command": "purescript-language-server",
-            "args": [
-                "--stdio"
-            ],
-            "filetypes": [
-                "purescript"
-            ],
-            "rootPatterns": [
-                "bower.json",
-                "psc-package.json",
-                "spago.dhall"
-            ]
+            "args": ["--stdio"],
+            "filetypes": ["purescript"],
+            "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
         }
     },
     "prettier.tabWidth": 4,
-    "prettier.disableLanguages": [
-        "yaml"
-    ],
+    "prettier.disableLanguages": ["yaml"],
     "yaml.validate": true,
     "yaml.format.enable": true
 }
