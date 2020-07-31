@@ -428,6 +428,10 @@ function cfg() {
         ${EDITOR} ${FILE_NAME}
     fi
 }
+function _cfg() {
+    _arguments "1:file:_path_files -W \"${HOME}/.config/\""
+}
+compdef _cfg cfg
 
 # Make the .SRCINFO file for an AUR package
 function mksrcinfo() {
