@@ -1,11 +1,18 @@
 sanitise tridactyllocal tridactylsync
 
+" Settings
+
 set theme dark
 set smoothscroll true
 set hintchars hjkl;asdfg
 
+set searchurls.ch https://app.clubhouse.io/costar/story/%s
+set searchurls.r https://old.reddit.com/r/%s
+
 guiset_quiet hoverlink right
 
+
+" Bindings
 
 bind yy clipboard yankcannon
 
@@ -27,9 +34,11 @@ bind V fillcmdline tabopen search !g
 bind x fillcmdline tabopen search !stackage
 bind X fillcmdline tabopen search !hackage
 
-bind --mode=insert jj unfocus
 
+" AutoCommands
 
 autocmd DocStart ^http(s)://www.amazon.com js tri.excmds.urlmodify("-t", "www", "smile")
+autocmd DocStart ^http(s)://www.reddit.com js tri.excmds.urlmodify("-t", "www", "old")
+
 
 " vim: set ft=tridactyl
