@@ -150,12 +150,14 @@ endif
 " Haskell
 Plug 'dag/vim2hs', { 'for': 'haskell' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+Plug 'alx741/vim-stylishask', { 'for': 'haskell' }
 
 
 " Web Development
 Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
 Plug 'antew/vim-elm-language-server', { 'for': ['elm'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html', 'htmldjango'] }
+Plug 'peitalin/vim-jsx-typescript', { 'for': ['javascript', 'typescript', 'typescript.tsx', 'typescriptreact'] }
 Plug 'purescript-contrib/purescript-vim', { 'for': ['purescript'] }
 Plug 'frigoeu/psc-ide-vim', { 'for': ['purescript'] }
 
@@ -172,6 +174,7 @@ Plug 'cypok/vim-sml', { 'for': 'sml' }
 Plug 'tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'ledger/vim-ledger', { 'for': 'ledger' }
+Plug 'tridactyl/vim-tridactyl', { 'for': 'tridactyl' }
 
 " TODO: Investigate following plugins:
 " https://github.com/parsonsmatt/intero-neovim
@@ -493,6 +496,8 @@ let g:necoghc_enable_detailed_browse = 1
 
 " Generate a tags file when cabal file present
 let g:haskell_autotags = 1
+
+let g:stylishask_on_save = 0
 
 
 " ==========================================================
