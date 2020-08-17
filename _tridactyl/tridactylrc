@@ -14,7 +14,7 @@ guiset_quiet hoverlink right
 
 " Bindings
 
-bind yy clipboard yankcannon
+bind yy clipboard yankcanon
 
 bind / fillcmdline find
 bind ? fillcmdline find -?
@@ -25,8 +25,8 @@ bind ,<Space> nohlsearch
 bind J scrollline 1
 bind K scrollline -1
 
-bind <C-j> tabprev
-bind <C-k> tabnext
+bind <C-k> tabprev
+bind <C-j> tabnext
 
 bind v fillcmdline open search !g
 bind V fillcmdline tabopen search !g
