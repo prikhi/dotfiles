@@ -32,7 +32,7 @@ URxvt.tabbed.title-fg:  12
 URxvt.tabbed.tab-bg:    12
 
 ! URL Matcher
-URxvt.url-launcher:     /usr/bin/palemoon
+URxvt.url-launcher:     /usr/bin/firefox
 URxvt.matcher.button:   1
 
 ! IBUS IME
