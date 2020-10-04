@@ -298,10 +298,11 @@ alias review='intray review'
 alias sq='smos-query'
 alias next='smos-query next'
 alias waiting='smos-query waiting'
-alias agenda='smos-query agenda'
+alias agenda='smos-query agenda --all-time'
 alias projects='smos-query projects'
 alias ssync='smos-sync-client sync'
 alias isync='intray sync'
+alias install_smos='stack install --ghc-options='"'"'-O2 -threaded'"'"' :smos :smos-archive :smos-query :smos-scheduler :smos-single :smos-sync-client'
 
 # start a new smos project file with a single task
 function smosnp() {
