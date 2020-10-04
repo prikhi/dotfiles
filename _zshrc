@@ -413,6 +413,10 @@ if [ -x "$(which stack)" ]; then
     eval "$(stack --bash-completion-script stack)"
 fi
 
+# Enable ArchLiux command-not-found
+if [ -f "/usr/share/doc/pkgfile/command-not-found.zsh" ]; then
+    source "/usr/share/doc/pkgfile/command-not-found.zsh"
+fi
 
 ###########
 # Functions
