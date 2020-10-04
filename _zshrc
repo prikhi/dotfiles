@@ -407,6 +407,12 @@ for f in $HOME/.completions/*; do
 done
 complete -o bashdefault -F _hkredmine hkr
 
+# Fix Stack Completions
+unfunction _stack
+if [ -x "$(which stack)" ]; then
+    eval "$(stack --bash-completion-script stack)"
+fi
+
 
 ###########
 # Functions
