@@ -9,7 +9,7 @@ Xft.rgba: rgb
 Xft.dpi: 108
 
 URxvt.font:             -*-dinapowerline-medium-r-*-*-13-*-*-*-*-*-*-*
-!URxvt.font:              xft:Inconsolata-dz for Powerline:size=7
+!URxvt.font:              xft:Droid Sans Mono:size=9:style=Regular
 
 URxvt.depth: 24
 ! disable fading to get w3mimgdisplay to work...
