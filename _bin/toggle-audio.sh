@@ -20,4 +20,4 @@ while read -r sink_input; do
     pactl move-sink-input "$sink_input" "$NEW_SINK"
 done
 
-notify-send "Audio Switched" "$NEW_SINK"
+notify-send -t 3500 "Audio Switched" "$NEW_SINK"
