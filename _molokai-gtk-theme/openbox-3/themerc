@@ -32,7 +32,7 @@ menu.separator.padding.height: 4
 window.active.title.separator.color: #232526
 
 # Active window
-window.active.border.color: #232526
+window.active.border.color: #fd971f
 
 
 window.active.title.bg: flat solid
@@ -146,9 +146,9 @@ menu.title.text.font:shadow=n
 
 
 # Everything else
-border.width: 2
+border.width: 1
 padding.width: 8
-padding.height: 2
+padding.height: 1
 window.handle.width: 0
 window.client.padding.width: 0
 window.label.text.justify: center

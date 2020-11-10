@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=oomox-molokai-light
+Name=_molokai-gtk-theme-light
 Comment=A partially sexual act; when a female (of any species; mostly humanoids) rubs the ears/lobes of a male Ferengi, creating sensual emotions and chemical reactions in the male (and sometimes in the female).
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-Name=oomox-molokai-light
-GtkTheme=oomox-molokai-light
-IconTheme=oomox-molokai-light
-MetacityTheme=oomox-molokai-light
+Name=_molokai-gtk-theme-light
+GtkTheme=_molokai-gtk-theme-light
+IconTheme=_molokai-gtk-theme-light
+MetacityTheme=_molokai-gtk-theme-light
