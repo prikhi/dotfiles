@@ -48,3 +48,6 @@ codex.tags
 /_mutt/.passwd
 /_mutt/cache
 /_mutt/cache
+
+# ncmpcpp
+/_ncmpcpp/error.log
