@@ -32,6 +32,9 @@
     ~/.config/user-dirs.dirs:
         create: true
         path: _user-dirs.dirs
+    ~/.config/yay:
+        create: true
+        path: _yay/
     ~/.config/zathura:
         create: true
         path: _zathura
