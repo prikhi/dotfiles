@@ -209,7 +209,7 @@ alias pretty_json='python -m json.tool'
 
 # Install applications from Haskell Stack - needs to be done when global stack
 # LTS is updated
-alias stack_install_apps='stack install -j8 hoogle ghcid brittany'
+alias stack_install_apps='stack install -j8 hoogle ghcid brittany hlint'
 # Install global NPM applications
 alias npm_install_apps='npm i -g prettier sass-lint stylelint elm elm-test elm-analyse @elm-tooling/elm-language-server elm-format elm-json npm-check-updates clubhouse-cli'
 # Install development AUR packages
