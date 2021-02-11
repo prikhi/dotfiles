@@ -51,3 +51,6 @@ codex.tags
 
 # ncmpcpp
 /_ncmpcpp/error.log
+
+# vim
+/_vim/autoload/plug.vim.old
