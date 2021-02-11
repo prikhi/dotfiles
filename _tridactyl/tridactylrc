@@ -15,6 +15,7 @@ guiset_quiet hoverlink right
 " Bindings
 
 bind yy clipboard yankcanon
+bind yo clipboard yank
 
 bind / fillcmdline find
 bind ? fillcmdline find -?
