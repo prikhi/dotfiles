@@ -54,3 +54,8 @@ codex.tags
 
 # vim
 /_vim/autoload/plug.vim.old
+
+# gpg
+_gnupg/crls.d/
+_gnupg/pubring.kbx*
+_gnupg/trustdb.gpg
