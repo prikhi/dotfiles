@@ -410,9 +410,15 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" Format entire file
+xmap <leader>F  <Plug>(coc-format)
+nmap <leader>F  <Plug>(coc-format)
+
+" AutoFix current line
+nmap <leader>f <Plug>(coc-fix-current)
+
+" Open Code Actions menu for current buffer
+nmap <leader>a <Plug>(coc-codeaction)
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
