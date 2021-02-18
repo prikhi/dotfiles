@@ -1,0 +1,2 @@
+--ignore-dir=.stack-work
+--ignore-dir=node_modules

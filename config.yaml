@@ -50,6 +50,7 @@
     ~/.themes/oomox-molokai-light:
         create: true
         path: _molokai-gtk-theme-light/
+    ~/.ackrc: _ackrc
     ~/.antigen: _antigen/
     ~/.bin: _bin/
     ~/.cabal: _cabal/
