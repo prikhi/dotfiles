@@ -11,18 +11,20 @@
             }
         },
         "haskell": {
-            "command": "hie-wrapper",
+            "command": "haskell-language-server-wrapper",
             "args": ["--lsp"],
             "rootPatterns": [
                 "stack.yaml",
-                "cabal.config",
+                "*.cabal",
                 "package.yaml",
+                "hie.yaml",
                 "cabal.project"
             ],
-            "filetypes": ["hs", "lhs", "haskell"],
+            "filetypes": ["haskell", "lhaskell"],
             "initializationOptions": {
-                "languageServerHaskell": {
-                    "hlintOn": true
+                "haskell": {
+                    "hlintOn": true,
+                    "formattingProvider": "brittany"
                 }
             }
         },
