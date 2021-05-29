@@ -37,3 +37,5 @@
   whitespace = red reverse
 [pull]
   rebase = false
+[init]
+	defaultBranch = master
