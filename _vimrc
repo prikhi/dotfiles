@@ -163,7 +163,7 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
 " Other FileTypes
 Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
-Plug 'plasticboy/vim-markdown', { 'for': 'mkd' }
+Plug 'plasticboy/vim-markdown', { 'for': ['mkd', 'markdown'] }
 Plug 'cypok/vim-sml', { 'for': 'sml' }
 Plug 'tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
@@ -230,6 +230,7 @@ set shiftround              " rounds indent to a multiple of shiftwidth
 set matchpairs+=<:>         " show matching <> (html mainly) as well
 set foldmethod=indent       " allow us to fold on indents
 set foldlevel=99            " don't fold by default
+set colorcolumn=78          " vertical indicator at column 78
 
 " don't outdent hashes
 inoremap # #
@@ -500,20 +501,8 @@ let g:stylishask_on_save = 0
 " ===========================================================
 " FileType specific changes
 " ============================================================
-" Mako/HTML
-autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
-autocmd FileType html,htmldjango,html.handlebars,xhtml,xml,css,less,javascript
-    \ setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-
-" Nix
-autocmd FileType nix setlocal expandtab sw=2 ts=2 sts=2
-au BufNewFile,BufRead *.nix setlocal ft=nix
-
-" RedmineWiki
-au BufNewFile,BufRead *.redmine setlocal ft=redminewiki
 
 " Elm
-au BufNewFile,BufRead *.elm setlocal ft=elm
 let g:elm_make_output_file = '/dev/null'
 let g:elm_format_autosave = 0
 let g:elm_format_fail_silently = 1
