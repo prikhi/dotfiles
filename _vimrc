@@ -236,8 +236,10 @@ set colorcolumn=78          " vertical indicator at column 78
 inoremap # #
 
 " close preview window automatically when we move around
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+augroup PreviewClose
+    autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+    autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+augroup end
 
 """" Reading/Writing
 set noautowrite             " Never write a file unless I request it.
@@ -335,7 +337,7 @@ let g:ale_linters = {'haskell': [], 'elm': [], 'c': [], 'cpp': []}
 augroup CloseLoclistWindowGroup
     autocmd!
     autocmd QuitPre * if empty(&buftype) | lclose | endif
-augroup END
+augroup end
 
 let g:ale_fixers = {
     \   'haskell': ['remove_trailing_lines', 'trim_whitespace'],
@@ -401,7 +403,9 @@ function! s:show_documentation()
 endfunction
 
 " Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
+augroup CocHighlight
+    autocmd CursorHold * silent call CocActionAsync('highlight')
+augroup end
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
@@ -435,11 +439,13 @@ let g:delimitMate_expand_space = 1
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "\<Plug>delimitMateCR"
 let g:delimitMate_excluded_regions = 'Comment,String'
 
-au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
-au FileType racket let b:delimitMate_quotes = "\" `"
-au FileType redminewiki let b:delimitMate_quotes = "\" ' ` @"
-au FileType sml let b:delimitMate_quotes = "\" `"
-au FileType purescript let b:delimitMate_matchpairs = "(:),{:},[:]"
+augroup DelimitMate
+    au FileType htmldjango let b:delimitMate_quotes = "\" ' ` %"
+    au FileType racket let b:delimitMate_quotes = "\" `"
+    au FileType redminewiki let b:delimitMate_quotes = "\" ' ` @"
+    au FileType sml let b:delimitMate_quotes = "\" `"
+    au FileType purescript let b:delimitMate_matchpairs = "(:),{:},[:]"
+augroup end
 
 " ==========================================================
 " Tagbar
@@ -515,23 +521,21 @@ let g:purescript_indent_where = 4
 let g:purescript_indent_do = 4
 let g:purescript_indent_in = 0
 
-" StandardML
-au BufNewFile,BufRead *.sig setlocal ft=sml
+augroup AutoFS
+    " HTML/CSS/JS
+    au FileType html,xml,css,sass,javascript
+        \ setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
+    " Nix
+    au FileType nix setlocal expandtab sw=2 ts=2 sts=2
+    au BufNewFile,BufRead *.nix setlocal ft=nix
 
-" ==========================================================
-" Python
-" ==========================================================
-au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+    " RedmineWiki
+    au BufNewFile,BufRead *.redmine setlocal ft=redminewiki
 
-" Lettuce - Python BDD
-au BufRead,BufNewFile *.feature set filetype=lettuce
+    " Elm
+    au BufNewFile,BufRead *.elm setlocal ft=elm
 
-" Load up virtualenv's vimrc if it exists
-if filereadable($VIRTUAL_ENV . '/.vimrc')
-    source $VIRTUAL_ENV/.vimrc
-endif
-
-if exists('&colorcolumn')
-   set colorcolumn=78
-endif
+    " StandardML
+    au BufNewFile,BufRead *.sig setlocal ft=sml
+augroup end
