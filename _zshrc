@@ -292,6 +292,7 @@ alias hkstop='hkredmine stopwork'
 
 # smos & intray - Getting Things Done
 alias tasks='smos ~/.tasks/general.smos'
+alias taskd='cd ~/.tasks/'
 alias smosd='cd ~/.tasks/'
 alias in='intray add'
 alias isize='intray size'
