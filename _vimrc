@@ -98,11 +98,6 @@ noremap <leader>n :NERDTreeToggle<CR>
 " Load the Gundo window
 noremap <leader>g :UndotreeToggle<CR>
 
-" Jump to the definition of whatever the cursor is on
-au FileType python noremap <leader>j :RopeGotoDefinition<CR>
-" Rename whatever the cursor is on (including references to it)
-au FileType python noremap <leader>R :RopeRename<CR>
-
 if has('nvim')
     " Write a file as a super-user
     command! SW :w sudoa://%
@@ -495,21 +490,12 @@ let g:ghc = '/usr/bin/ghc'
 " Firefox for browsing Haddock
 let g:haddock_browser = '/usr/bin/firefox'
 
-
-" Show the Types of Symbols in the autocomplete menu
-let g:necoghc_enable_detailed_browse = 1
-
-" Generate a tags file when cabal file present
-let g:haskell_autotags = 1
-
 let g:stylishask_on_save = 0
 
 
 " ==========================================================
 " Javascript
 " ==========================================================
-au BufRead *.js set makeprg=eslint\ %
-au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 " ===========================================================
 " FileType specific changes
@@ -519,15 +505,9 @@ autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
 autocmd FileType html,htmldjango,html.handlebars,xhtml,xml,css,less,javascript
     \ setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
-" Shaksperean Templates
-autocmd FileType cassius,julius,hamlet,lucius setlocal expandtab sw=2 ts=2 sts=2
-
 " Nix
 autocmd FileType nix setlocal expandtab sw=2 ts=2 sts=2
 au BufNewFile,BufRead *.nix setlocal ft=nix
-
-" LESS
-au BufNewFile,BufRead *.less setlocal ft=less
 
 " RedmineWiki
 au BufNewFile,BufRead *.redmine setlocal ft=redminewiki
@@ -545,10 +525,6 @@ let g:purescript_indent_case = 4
 let g:purescript_indent_where = 4
 let g:purescript_indent_do = 4
 let g:purescript_indent_in = 0
-
-" XULRunner
-au BufNewFile,BufRead *.xul setlocal ft=xul
-au BufNewFile,BufRead *.xbl setlocal ft=xbl
 
 " StandardML
 au BufNewFile,BufRead *.sig setlocal ft=sml
