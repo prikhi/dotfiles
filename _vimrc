@@ -100,11 +100,11 @@ noremap <leader>g :UndotreeToggle<CR>
 
 if has('nvim')
     " Write a file as a super-user
-    command! SW :w sudoa://%
+    command! SW SudaWrite
     " Write a file as a super-user, then close the window
     command! SWQ SW|q
     " Read a file as a super-user
-    command! SR :e suda://%
+    command! SR SudaRead
 else
     " Write a file as a super-user
     command! SW SudoWrite
