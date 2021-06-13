@@ -60,6 +60,7 @@ setopt MAGIC_EQUAL_SUBST
 # Use neovim but fallback to vim if not isn't installed
 if type "nvim" > /dev/null; then
     export EDITOR="nvim"
+    export DIFFPROG="nvim -d"
 else
     export EDITOR="vim"
 fi
