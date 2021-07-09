@@ -269,6 +269,11 @@ alias auconf='./autogen.sh && ./configure --bindir /usr/bin --datadir /usr/share
 alias aumake='auconf && make'
 alias auinstall='auconf && make && sudo make install'
 
+# Make
+alias m='make'
+alias mw='make watch'
+alias mt='make test'
+
 # Redmine CLI Client - hkredmine
 # Show Issues w/ Project as 1st position argument
 alias hkpi='hkredmine issues -S priority:desc,category -p'
