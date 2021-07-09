@@ -28,5 +28,5 @@ scheduler:
           schedule: "0 0 1 * *"
         - description: "Weekly Japanese"
           template: templates/japanese.smos.template
-          destination: templates/japanese/[ %Y ]-W[ %W ].smos
+          destination: projects/japanese/[ %Y ]-W[ %W ].smos
           schedule: "0 0 * * 1"
