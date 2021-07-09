@@ -125,7 +125,7 @@ alias pentarc="v ~/.pentadactylrc"
 alias dfiles="cd ~/.dotfiles"
 alias notes="cd ~/Documents/Notes"
 alias ideas="v ~/Projects/ideas.rst"
-alias acct="cd ~/Documents/accounting/"
+alias acct="cd ~/Documents/accounting/; source .zshrc"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
