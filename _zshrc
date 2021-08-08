@@ -461,6 +461,28 @@ function _cfg() {
 }
 compdef _cfg cfg
 
+# Enter a coding directory - either `~/code/` or `~/Projects/`
+function prj() {
+    local DEST="${1}"
+    local PREFIX=""
+    if [[ -d "${HOME}/Projects" ]]; then
+        PREFIX="Projects"
+    else;
+        PREFIX="code"
+    fi
+
+    cd "${HOME}/${PREFIX}/${DEST}"
+}
+function _prj() {
+    #_arguments "1:directory:_path_files -/ -W \"${HOME}/.tasks/projects/\""
+    if [[ -d "${HOME}/Projects" ]]; then
+        _arguments "1:directory:_path_files -/ -W \"${HOME}/Projects\""
+    else
+        _arguments "1:directory:_path_files -/ -W \"${HOME}/code\""
+    fi
+}
+compdef _prj prj
+
 # Make the .SRCINFO file for an AUR package
 function mksrcinfo() {
     makepkg --printsrcinfo > .SRCINFO
