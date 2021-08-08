@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-YOUCOMPLETEME="${HOME}/.vim/plugged/YouCompleteMe"
-rm -f "$YOUCOMPLETEME/python/*.so"
-
-cd $YOUCOMPLETEME
-python2 install.py
