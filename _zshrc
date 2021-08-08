@@ -125,7 +125,7 @@ alias pentarc="v ~/.pentadactylrc"
 alias dfiles="cd ~/.dotfiles"
 alias notes="cd ~/Documents/Notes"
 alias ideas="v ~/Projects/ideas.rst"
-alias acct="cd ~/Documents/accounting/; source .zshrc"
+alias acct="cd ~/Documents/accounting/"
 
 # SSH
 alias cerberus="ssh admin@cerberus"
@@ -424,6 +424,11 @@ fi
 # Enable ArchLiux command-not-found
 if [ -f "/usr/share/doc/pkgfile/command-not-found.zsh" ]; then
     source "/usr/share/doc/pkgfile/command-not-found.zsh"
+fi
+
+# Load Accounting Aliases
+if [ -f "$(dirname ${LEDGER_FILE})/.zshrc" ]; then
+    source "$(dirname ${LEDGER_FILE})/.zshrc"
 fi
 
 ###########
