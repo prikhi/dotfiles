@@ -16,7 +16,6 @@ _vim/.netrwhist
 node_modules
 bower_components
 npm-debug.log
-package-lock.json
 
 # CSS
 .sass-cache
@@ -35,6 +34,7 @@ codex.tags
 /_cabal/setup-exe-cache
 /_cabal/share
 /_cabal/store
+dist-newstyle/
 
 # Pentadactyl
 /_pentadactyl/info/
