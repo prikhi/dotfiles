@@ -525,10 +525,10 @@ let g:elm_format_fail_silently = 1
 let g:elm_format_detailed_complete = 1
 
 " Purescript
-let g:purescript_indent_if = 4
-let g:purescript_indent_case = 4
-let g:purescript_indent_where = 4
-let g:purescript_indent_do = 4
+let g:purescript_indent_if = 2
+let g:purescript_indent_case = 2
+let g:purescript_indent_where = 2
+let g:purescript_indent_do = 2
 let g:purescript_indent_in = 0
 
 augroup AutoFS
