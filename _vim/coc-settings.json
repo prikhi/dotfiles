@@ -32,7 +32,14 @@
             "command": "purescript-language-server",
             "args": ["--stdio"],
             "filetypes": ["purescript"],
-            "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
+            "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"],
+            "settings": {
+                "purescript": {
+                    "addSpagoSources": true,
+                    "addNpmPath": true,
+                    "formatter": "purs-tidy"
+                }
+            }
         }
     },
     "prettier.tabWidth": 4,
