@@ -331,7 +331,7 @@ let g:ale_sign_error = '✖✖'
 let g:ale_sign_warning = '⚑⚑'
 let g:airline#extensions#ale#enabled = 1
 
-let g:ale_linters = {'haskell': [], 'elm': [], 'c': [], 'cpp': []}
+let g:ale_linters = {'haskell': [], 'elm': [], 'c': [], 'cpp': [], 'python': []}
 
 " Close location list on buffer close:
 augroup CloseLoclistWindowGroup
