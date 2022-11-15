@@ -22,10 +22,14 @@ keys:
 
 scheduler:
     schedule:
+        - description: "Yearly Accounting"
+          template: templates/accounting-yearly.smos.template
+          destination: projects/accounting/[ %Y ].smos
+          schedule: "5 5 1 1 *"
         - description: "Monthly Accounting"
           template: templates/accounting.smos.template
           destination: projects/accounting/[ %Y ]-[ %m ].smos
-          schedule: "0 0 1 * *"
+          schedule: "15 5 1 * *"
         - description: "Weekly Japanese"
           template: templates/japanese.smos.template
           destination: projects/japanese/[ %Y ]-W[ %W ].smos
