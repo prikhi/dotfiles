@@ -196,7 +196,7 @@ alias pretty_json='python -m json.tool'
 # LTS is updated
 alias stack_install_apps='stack install -j8 --ghc-options=-O2 hoogle ghcid brittany hlint implicit-hie'
 # Install global NPM applications
-alias npm_install_apps='npm i -g prettier sass-lint stylelint elm elm-test elm-analyse @elm-tooling/elm-language-server elm-format elm-json npm-check-updates clubhouse-cli'
+alias npm_install_apps='npm i -g prettier sass-lint stylelint elm elm-test elm-analyse @elm-tooling/elm-language-server elm-format elm-json npm-check-updates purescript purescript-language-server purty'
 # Install development AUR packages
 function pacman_install_dev() {
     yay -S --noconfirm $(pacman -Qqe | grep -E '\-(git)')
