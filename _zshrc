@@ -514,10 +514,10 @@ function cmp_mediainfo {
 
 ## Bindings
 # Bind Ctrl-R to History Search
-bindkey '^R' history-incremental-search-backward
+bindkey '^R' history-incremental-pattern-search-backward
 # Bind Ctrl-W to Delete Word Backwards
 bindkey '^W' backward-kill-word
-# Bind ;; & jj o Command Mode
+# Bind ;; & jj to Command Mode
 bindkey -M viins ';;' vi-cmd-mode
 bindkey -M viins 'jj' vi-cmd-mode
 # Bind Ctrl-K/Ctrl-J to go Up/Down in History
