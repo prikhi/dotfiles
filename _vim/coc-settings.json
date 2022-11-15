@@ -42,6 +42,7 @@
             }
         }
     },
+    "suggest.noselect": true,
     "prettier.tabWidth": 4,
     "prettier.disableLanguages": ["yaml"],
     "yaml.validate": true,
