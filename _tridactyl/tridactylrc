@@ -1,6 +1,6 @@
 sanitise tridactyllocal tridactylsync
 
-" Settings
+" Tridactyl Settings
 
 set theme dark
 set smoothscroll true
@@ -41,5 +41,6 @@ bind X fillcmdline tabopen search !hackage
 autocmd DocStart ^http(s)://www.amazon.com js tri.excmds.urlmodify("-t", "www", "smile")
 autocmd DocStart ^http(s)://www.reddit.com js tri.excmds.urlmodify("-t", "www", "old")
 
+autocmd TabEnter .* unfocus
 
 " vim: set ft=tridactyl
