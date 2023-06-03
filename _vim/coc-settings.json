@@ -30,7 +30,7 @@
             "initializationOptions": {
                 "haskell": {
                     "hlintOn": true,
-                    "formattingProvider": "brittany"
+                    "formattingProvider": "fourmolu"
                 }
             }
         },
@@ -38,6 +38,7 @@
             "command": "purescript-language-server",
             "args": ["--stdio"],
             "filetypes": ["purescript"],
+            "trace.server": "off",
             "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"],
             "settings": {
                 "purescript": {
@@ -54,3 +55,4 @@
     "yaml.validate": true,
     "yaml.format.enable": true
 }
+// vim: filetype=jsonc
