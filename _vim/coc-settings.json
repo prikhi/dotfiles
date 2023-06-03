@@ -1,6 +1,12 @@
 {
     "diagnostic.displayByAle": true,
-    "coc.preferences.formatOnSaveFiletypes": ["json", "elm", "haskell"],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "json",
+        "elm",
+        "haskell",
+        "purescript",
+        "javascript"
+    ],
     "languageserver": {
         "elmLS": {
             "command": "elm-language-server",
