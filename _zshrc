@@ -72,7 +72,7 @@ export VBOX_USB=usbfs
 export PATH="$HOME/.ghcup/bin:$HOME/.local/bin:$HOME/.bin:$HOME/.cargo/bin:$PATH"
 export NNTPSERVER="news.gmane.org"
 export CCACHE_DIR=/tmp/ccache
-export LEDGER_FILE="${HOME}/Documents/accounting/2022.journal"
+export LEDGER_FILE="${HOME}/Documents/accounting/2023.journal"
 export HISTSIZE=1000000000
 export SAVEHIST=${HISTSIZE}
 
