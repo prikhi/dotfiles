@@ -94,7 +94,7 @@ alias zc="zcalc"
 alias am="alsamixer"
 alias sz="source ~/.zshrc"
 alias rs="rsync -avhz --progress"
-alias yt='youtube-dl -a vids.txt'
+alias yt='yt-dlp -a vids.txt'
 alias srv="python -m http.server"
 alias hkl="hklaunch"
 alias ldg='hledger'
@@ -102,7 +102,7 @@ alias open="xdg-open"
 alias wine32="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 alias xpaste="xsel --clipboard --output"
 alias mpaste='mpv $(xpaste)'
-alias ytpaste='youtube-dl $(xpaste)'
+alias ytpaste='yt-dlp $(xpaste)'
 alias xget='wget $(xpaste)'
 alias fpaste='xget -O - | feh -'
 
