@@ -354,6 +354,22 @@ let g:ale_fix_on_save = 1
 nmap <silent> <leader>k <Plug>(ale_previous_wrap)
 nmap <silent> <leader>j <Plug>(ale_next_wrap)
 
+augroup AVRAle
+    " Fix ALE Linting for AVR GCC Projects
+    " TODO: The includes and macros should be pulled from project specifics, might
+    " not always be running an atmega168 at 1/8 clock & 9600 baud...
+    " TODO: Move to .nvimrc files in projects
+    au BufRead,BufNewFile */Projects/avr/* let b:ale_c_gcc_options =
+        \ '-std=gnu99 -Wall -Os -g -I. -I/usr/avr/include/ -I/home/prikhi/Projects/avr/book/book-code/AVR-Programming-Library/ -DF_CPU=1000000UL -DBAUD=9600UL -mmcu=atmega168'
+    au BufRead,BufNewFile */Projects/avr/* let b:ale_linters = { 'c': ['gcc'] }
+    au BufRead,BufNewFile */Projects/avr/* let b:ale_c_gcc_executable = 'avr-gcc'
+
+    " rave saber avr
+    au BufRead,BufNewFile */Projects/avr/ravesaber/* let b:ale_c_gcc_options =
+        \ '-std=gnu99 -Wall -Os -g -I/home/prikhi/Projects/avr/ravesaber/avr-apa102-lib/src -I. -I/usr/avr/include/ -I/home/prikhi/Projects/avr/book/book-code/AVR-Programming-Library/ -DBAUD=9600UL -DF_CPU=8000000UL -mmcu=atmega168 -DMOSI_DDR=DDRB -DMOSI=PB3 -DMOSI_PORT=PORTB -DSS=PB2 -DSS_DDR=DDRB -DSS_PORT=PORTB -DSCK=PB5 -DSCK_DDR=DDRB -DLED_COUNT=8U'
+
+augroup end
+
 " ==========================================================
 " Coc.nvim
 " ==========================================================
