@@ -378,6 +378,7 @@ set hidden
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
+hi CocMenuSel term=reverse cterm=reverse gui=reverse
 
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
