@@ -12,6 +12,10 @@ set searchurls.r https://old.reddit.com/r/%s
 guiset_quiet hoverlink right
 
 
+" Firefox Settings"
+setpref alerts.useSystemBackend true
+
+
 " Bindings
 
 bind yy clipboard yankcanon
