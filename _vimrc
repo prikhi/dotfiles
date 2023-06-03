@@ -163,7 +163,7 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
 " Other FileTypes
 Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
-Plug 'plasticboy/vim-markdown', { 'for': ['mkd', 'markdown'] }
+Plug 'preservim/vim-markdown', { 'for': ['mkd', 'markdown'] }
 Plug 'cypok/vim-sml', { 'for': 'sml' }
 Plug 'tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
