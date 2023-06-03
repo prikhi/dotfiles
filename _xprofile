@@ -41,6 +41,8 @@ xsetroot -cursor_name left_ptr
 # rotate background
 ~/.bin/feh-bg &
 
+# enable mangohud in games
+export MANGOHUD=1
 
 # export the DBUS session's environmental variables
 export $(dbus-launch)
