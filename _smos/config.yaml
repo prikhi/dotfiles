@@ -30,6 +30,10 @@ scheduler:
           template: templates/accounting.smos.template
           destination: projects/accounting/[ %Y ]-[ %m ].smos
           schedule: "15 5 1 * *"
+        - description: "Taxes Accounting"
+          template: templates/accounting-taxes.smos.template
+          destination: projects/accounting/[ %Y ]-taxes.smos
+          schedule: "15 5 31 12 *"
         - description: "Weekly Japanese"
           template: templates/japanese.smos.template
           destination: projects/japanese/[ %Y ]-W[ %W ].smos
