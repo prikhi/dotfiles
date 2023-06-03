@@ -42,7 +42,6 @@ bind X fillcmdline tabopen search !hackage
 
 " AutoCommands
 
-autocmd DocStart ^http(s)://www.amazon.com js tri.excmds.urlmodify("-t", "www", "smile")
 autocmd DocStart ^http(s)://www.reddit.com js tri.excmds.urlmodify("-t", "www", "old")
 
 autocmd TabEnter .* unfocus
