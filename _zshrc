@@ -384,7 +384,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # ALL HAIL THE HYPNOTOAD
 if [ -e "/usr/bin/fortune" -a -e "/usr/bin/cowsay" ]; then
-    fortune -o | cowsay -f hypnotoad -n
+    fortune -a | cowsay -f hypnotoad -n
 fi
 
 # Enable custom completions
