@@ -5,6 +5,7 @@ source $HOME/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 export NVM_LAZY_LOAD=true
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim' 'nvim')
 
 antigen bundles <<EOBUNDLES
     # node version manager
