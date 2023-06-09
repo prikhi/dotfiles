@@ -67,6 +67,7 @@
     ~/.goobookrc: _goobookrc
     ~/.gtk-bookmarks: _gtk-bookmarks
     ~/.gtkrc-2.0: _gtkrc-2.0
+    ~/.haskeline: _haskeline
     ~/.mailcap: _mailcap
     ~/.markdownlintrc: _markdownlintrc
     ~/.msmtprc: _msmtprc
