@@ -191,6 +191,9 @@ alias gm='git merge'
 alias grb='git rebase'
 alias gpft='git push --follow-tags'
 
+# Docker
+alias dcub='docker compose up --build'
+
 # Prettify JSON: cat x.json | pretty_json
 alias pretty_json='python -m json.tool'
 
