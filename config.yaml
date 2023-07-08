@@ -38,6 +38,9 @@
     ~/.config/zathura:
         create: true
         path: _zathura
+    ~/.config/zk:
+        create: true
+        path: _zk
     ~/.local/share/fonts:
         create: true
         path: _fonts/
