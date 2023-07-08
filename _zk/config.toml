@@ -1,0 +1,13 @@
+[notebook]
+dir = "~/z"
+
+[tool]
+editor = "nvim"
+shell = "/bin/zsh"
+fzf-preview = "bat -p --color always {-1}"
+
+[lsp]
+
+[lsp.diagnostics]
+wiki-title = "hint"
+dead-link = "error"
