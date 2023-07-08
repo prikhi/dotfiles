@@ -73,6 +73,7 @@ export PATH="$HOME/.ghcup/bin:$HOME/.local/bin:$HOME/.bin:$HOME/.cargo/bin:$PATH
 export NNTPSERVER="news.gmane.org"
 export CCACHE_DIR=/tmp/ccache
 export LEDGER_FILE="${HOME}/Documents/accounting/2023.journal"
+export ZK_NOTEBOOK_DIR="${HOME}/z/"
 export HISTSIZE=1000000000
 export SAVEHIST=${HISTSIZE}
 
