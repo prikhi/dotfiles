@@ -227,10 +227,10 @@ alias tasty='cbt --show-details=always --test-option=--color=always'
 alias fcbb='cbc && cbb && cbh'  # A full Clean + Build (including docs)
 # Pretty much switched to stack so the above can probably be removed
 alias sr='stack repl'
-alias sb='stack build -j8'
-alias st='stack test -j8'
-alias swatch='stack build -j8 --file-watch'
-alias sbfw='swatch'
+alias sb='stack build'
+alias st='stack test'
+alias sbfw='stack build --file-watch'
+alias stfw='stack build --test --file-watch'
 
 # Use readline with the SML/NJ REPL
 alias sml='rlwrap sml'
