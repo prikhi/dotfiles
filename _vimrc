@@ -169,6 +169,7 @@ Plug 'tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'ledger/vim-ledger', { 'for': 'ledger' }
 Plug 'tridactyl/vim-tridactyl', { 'for': 'tridactyl' }
+Plug 'mickael-menu/zk-nvim'
 
 " TODO: Investigate following plugins:
 " https://github.com/parsonsmatt/intero-neovim
