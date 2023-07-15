@@ -4,6 +4,7 @@ dir = "~/z"
 [tool]
 editor = "nvim"
 shell = "/bin/zsh"
+pager = "less -FIRX"
 fzf-preview = "bat -p --color always {-1}"
 
 [lsp]
@@ -11,3 +12,20 @@ fzf-preview = "bat -p --color always {-1}"
 [lsp.diagnostics]
 wiki-title = "hint"
 dead-link = "error"
+
+[alias]
+
+# Print Links That Point to Missing Notes
+missing = "zk graph --format json 2>/dev/null | jq '{ allLinks: .notes|map([.body|scan(\"\\\\[\\\\[(.*?)(\\\\|.*?)?]]\")|.[0]])|add|unique, allTitles: .notes|map(.filenameStem) }| .allLinks - .allTitles'"
+
+# Edit or Create Daily Journal Entry
+daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal/daily"'
+
+# New Note with Given Title: `zk nt My Title Can Be Unquoted`
+nt = 'zk new --title "$*"'
+
+# Open TUI for Searching/Editing/Adding Notes
+ei = 'zk edit --interactive'
+
+# List Notes by Ascending Word Count
+wc = 'zk list -f "{{wordCount}} {{title}}" --sort word-count'
