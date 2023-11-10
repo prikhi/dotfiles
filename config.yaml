@@ -14,6 +14,9 @@
     ~/.config/mpv:
         create: true
         path: _mpv/
+    ~/.config/ncdu:
+        create: true
+        path: _ncdu/
     ~/.config/nvim:
         create: true
         path: _vim
