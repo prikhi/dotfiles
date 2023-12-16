@@ -134,7 +134,7 @@ endif
 
 " Development
 Plug 'w0rp/ale'
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'do': 'npm ci'}
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 if has('nvim')
