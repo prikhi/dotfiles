@@ -567,3 +567,5 @@ augroup AutoFS
     " StandardML
     au BufNewFile,BufRead *.sig setlocal ft=sml
 augroup end
+
+hi ColorColumn cterm=NONE
