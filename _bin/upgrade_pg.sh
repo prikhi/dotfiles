@@ -1,5 +1,5 @@
 ## Set the old version that we want to upgrade from.
-export FROM_VERSION=9.5
+export FROM_VERSION=16
 
 sudo pacman -S --needed postgresql-old-upgrade
 sudo chown postgres:postgres /var/lib/postgres/
