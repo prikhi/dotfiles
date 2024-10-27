@@ -68,7 +68,7 @@
     ~/.fonts.config: _fonts.config
     ~/.gitconfig: _gitconfig
     ~/.gitignore: _gitignore
-    ~/.ghc: _ghc/
+    ~/.ghc/ghci.conf: _ghci.conf
     ~/.gnupg: _gnupg/
     ~/.goobookrc: _goobookrc
     ~/.gtk-bookmarks: _gtk-bookmarks
