@@ -74,6 +74,9 @@
     ~/.gtk-bookmarks: _gtk-bookmarks
     ~/.gtkrc-2.0: _gtkrc-2.0
     ~/.haskeline: _haskeline
+    ~/.local/share/cows/hypnotoad.cow:
+      create: true
+      path: _hypnotoad.cow
     ~/.mailcap: _mailcap
     ~/.markdownlintrc: _markdownlintrc
     ~/.msmtprc: _msmtprc

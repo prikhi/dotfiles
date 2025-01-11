@@ -70,6 +70,7 @@ export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
 export VBOX_USB=usbfs
 export PATH="$HOME/.ghcup/bin:$HOME/.local/bin:$HOME/.bin:$HOME/.cargo/bin:$PATH"
+export COWPATH="${HOME}/.local/share/cows/"
 export NNTPSERVER="news.gmane.org"
 export CCACHE_DIR=/tmp/ccache
 export LEDGER_FILE="${HOME}/Documents/accounting/2024.journal"
