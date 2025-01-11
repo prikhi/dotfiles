@@ -2,22 +2,38 @@
 
 # Toggle pulseaudio between headset & speakers
 
-CARD1="alsa_output.pci-0000_01_00.1.hdmi-surround-extra2"
-CARD2="alsa_output.usb-DeSheng_Electronics_Inc._XIBERIA-00.analog-stereo"
+# 5.1 system
+SPEAKER_DEVICE_DESCRIPTION='AD102 High Definition Audio Controller'
+SPEAKER_PROFILE_DESCRIPTION='Digital Surround 5.1 (HDMI 3)'
+SPEAKER_DEVICE="$(pw-dump Device | jq 'map(select(.info.props|.["device.description"] == "'"${SPEAKER_DEVICE_DESCRIPTION}"'"))|first')"
+SPEAKER_DEVICE_ID="$(echo -E "${SPEAKER_DEVICE}" | jq -r '.id')"
+SPEAKER_PROFILE="$(echo -E "${SPEAKER_DEVICE}" | jq '.info.params.EnumProfile|map(select(.description == "'"${SPEAKER_PROFILE_DESCRIPTION}"' Output"))|first')"
+SPEAKER_PROFILE_NAME=$(echo -E "${SPEAKER_PROFILE}" | jq -r '.description' | sed -e 's| Output||')
 
-CURRENT_SINK="$(pacmd stat | awk -F": " '/^Default sink name: /{print $2}')"
+# Headphones
+HEADPHONE_DEVICE_DESCRIPTION='FiiO K7'
+HEADPHONE_PROFILE_DESCRIPTION='Digital Stereo (IEC958)'
+HEADPHONE_DEVICE="$(pw-dump Device | jq 'map(select(.info.props|.["device.description"] == "'"${HEADPHONE_DEVICE_DESCRIPTION}"'"))|first')"
+HEADPHONE_DEVICE_ID="$(echo -E "${HEADPHONE_DEVICE}" | jq -r '.id')"
+HEADPHONE_PROFILE="$(echo -E "${HEADPHONE_DEVICE}" | jq '.info.params.EnumProfile|map(select(.description == "'"${HEADPHONE_PROFILE_DESCRIPTION}"' Output"))|first')"
 
-if [ "$CURRENT_SINK" == "$CARD1" ]; then
-    NEW_SINK="$CARD2"
+
+DEVICE_ID=""
+PROFILE_IDX=""
+PROFILE_DESCRIPTION=""
+if wpctl status | grep -qE "\*.*${SPEAKER_PROFILE_NAME/\(/\\(}"; then
+    DEVICE_ID="${HEADPHONE_DEVICE_ID}"
+    PROFILE_IDX="$(echo -E "${HEADPHONE_PROFILE}" | jq -r '.index')"
+    PROFILE_DESCRIPTION="${HEADPHONE_PROFILE_DESCRIPTION}"
+    NOTIFICATION_BODY="Headphones"
 else
-    NEW_SINK="$CARD1"
+    DEVICE_ID="${SPEAKER_DEVICE_ID}"
+    PROFILE_IDX="$(echo -E "${SPEAKER_PROFILE}" | jq -r '.index')"
+    PROFILE_DESCRIPTION="${SPEAKER_PROFILE_DESCRIPTION}"
+    NOTIFICATION_BODY="5.1 Speakers"
 fi
+PROFILE_NODE_ID="$(pw-dump Node | jq 'map(select((.info.props|.["device.id"] == '"${DEVICE_ID}"') and (.info.props|.["device.profile.description"] == "'"${PROFILE_DESCRIPTION}"'")))|first|.id')"
+wpctl set-profile "${DEVICE_ID}" "${PROFILE_IDX}"
+wpctl set-default "${PROFILE_NODE_ID}"
 
-pactl set-default-sink "$NEW_SINK"
-
-pactl list sink-inputs | grep -E '^Sink Input \#' | cut -d'#' -f2 |
-while read -r sink_input; do
-    pactl move-sink-input "$sink_input" "$NEW_SINK"
-done
-
-notify-send -t 3500 "Audio Switched" "$NEW_SINK"
+notify-send -t 3500 "Audio Switched" "${NOTIFICATION_BODY}"
