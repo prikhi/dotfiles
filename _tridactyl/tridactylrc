@@ -42,7 +42,7 @@ bind X fillcmdline tabopen search !hackage
 
 " AutoCommands
 
-autocmd DocStart ^http(s)://www.reddit.com js tri.excmds.urlmodify("-t", "www", "old")
+autocmd DocStart ^http(s)://www\.reddit\.com/(?!(?:media|gallery)) js tri.excmds.urlmodify("-t", "www", "old")
 
 autocmd TabEnter .* unfocus
 
