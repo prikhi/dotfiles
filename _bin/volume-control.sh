@@ -14,11 +14,12 @@ NOTIFICATION_ID_FILE="${CACHE_DIR}/notification-id"
 sendNotification() {
     local TITLE="${1}"
     local BODY="${2}"
-    local LAST_ID
+    local LAST_ID=""
     if [[ -f "${NOTIFICATION_ID_FILE}" ]]; then
         LAST_ID="$(cat "${NOTIFICATION_ID_FILE}")"
-    else
-        LAST_ID='0'
+    fi
+    if [[ -z "${LAST_ID}" ]]; then
+        LAST_ID="0"
     fi
     THIS_ID="$(notify-send -p -t 3500 -r "${LAST_ID}" "${TITLE}" "${BODY}")"
     echo "${THIS_ID}" > "${NOTIFICATION_ID_FILE}"
