@@ -4,7 +4,7 @@
 
 # 5.1 system
 SPEAKER_DEVICE_DESCRIPTION='AD102 High Definition Audio Controller'
-SPEAKER_PROFILE_DESCRIPTION='Digital Surround 5.1 (HDMI 3)'
+SPEAKER_PROFILE_DESCRIPTION='Digital Surround 5.1 (HDMI)'
 SPEAKER_DEVICE="$(pw-dump Device | jq 'map(select(.info.props|.["device.description"] == "'"${SPEAKER_DEVICE_DESCRIPTION}"'"))|first')"
 SPEAKER_DEVICE_ID="$(echo -E "${SPEAKER_DEVICE}" | jq -r '.id')"
 SPEAKER_PROFILE="$(echo -E "${SPEAKER_DEVICE}" | jq '.info.params.EnumProfile|map(select(.description == "'"${SPEAKER_PROFILE_DESCRIPTION}"' Output"))|first')"
