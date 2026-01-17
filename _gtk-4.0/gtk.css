@@ -1,0 +1,53 @@
+/* Custom molokai for libadwaita apps */
+@define-color molokai_bg #1B1D1E;
+@define-color molokai_white #F8F8F8;
+@define-color molokai_black #080800;
+
+
+@define-color molokai_red #FF0000;
+@define-color molokai_green #A6E22E;
+@define-color molokai_magenta #F92672;
+@define-color molokai_orange #FD971F;
+@define-color molokai_cyan #66D9EF;
+@define-color molokai_deep_blue #293739;
+
+
+@define-color window_bg_color @molokai_bg;
+@define-color window_fg_color @molokai_white;
+
+@define-color sidebar_bg_color @molokai_deep_blue;
+@define-color sidebar_fg_color @molokai_white;
+
+@define-color accent_color @molokai_white;
+@define-color accent_bg_color @molokai_magenta;
+
+
+@define-color headerbar_bg_color @molokai_deep_blue;
+@define-color headerbar_fg_color @molokai_white;
+
+@define-color popover_bg_color @molokai_bg;
+@define-color popover_fg_color @molokai_white;
+
+@define-color view_bg_color @molokai_deep_blue;
+@define-color view_fg_color @molokai_white;
+
+@define-color card_bg_color rgba(0, 0, 0, 0.08);
+@define-color card_fg_color @molokai_white;
+
+
+@define-color destructive_bg_color @molokai_red
+@define-color destructive_fg_color @molokai_white
+
+@define-color success_bg_color @molokai_green;
+@define-color success_fg_color @molokai_black;
+
+@define-color warning_bg_color @molokai_orange;
+@define-color warning_fg_color @molokai_black;
+
+@define-color error_bg_color @molokai_red
+@define-color error_fg_color @molokai_white
+
+@define-color destructive_color oklab(from @destructive_bg_color min(l, 0.5) a b);
+@define-color success_color oklab(from @success_bg_color min(l, 0.5) a b);
+@define-color warning_color oklab(from @warning_bg_color min(l, 0.5) a b);
+@define-color error_color oklab(from @error_bg_color min(l, 0.5) a b);

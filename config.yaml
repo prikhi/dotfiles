@@ -5,6 +5,9 @@
     ~/.config/gtk-3.0:
         create: true
         path: _gtk-3.0/
+    ~/.config/gtk-4.0:
+        create: true
+        path: _gtk-4.0/
     ~/.config/keepassx:
         create: true
         path: _keepassx/
