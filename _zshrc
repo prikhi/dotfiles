@@ -125,7 +125,7 @@ alias ideas="v ~/Projects/ideas.rst"
 alias acct="cd ~/Documents/accounting/"
 
 # SSH
-alias vps="ssh pavan@sleepanarchy.com -i ~/.ssh/id_ecdsa"
+alias vps="ssh pavan@mail.sleepanarchy.com -i ~/.ssh/id_ecdsa"
 
 # Safety First!
 alias rm="rm -i"
