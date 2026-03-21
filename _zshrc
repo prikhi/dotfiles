@@ -195,6 +195,9 @@ alias gpft='git push --follow-tags'
 # Docker
 alias dcub='docker compose up --build'
 
+# Reset X11 Screens to Default
+alias xs0='xrandr -s 0'
+
 # Prettify JSON: cat x.json | pretty_json
 alias pretty_json='python -m json.tool'
 
