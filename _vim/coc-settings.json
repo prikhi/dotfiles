@@ -5,7 +5,8 @@
         "elm",
         "haskell",
         "purescript",
-        "javascript"
+        "javascript",
+        "rust"
     ],
     "languageserver": {
         "elmLS": {
@@ -27,10 +28,14 @@
                 "cabal.project"
             ],
             "filetypes": ["haskell", "lhaskell"],
-            "initializationOptions": {
+            "settings": {
                 "haskell": {
                     "hlintOn": true,
-                    "formattingProvider": "fourmolu"
+                    "formattingProvider": "fourmolu",
+                    "sessionLoading": "multipleComponents",
+                    "plugin": {
+                        "stan": { "globalOn": false }
+                    }
                 }
             }
         },
@@ -52,6 +57,8 @@
     "suggest.noselect": true,
     "prettier.tabWidth": 4,
     "prettier.disableLanguages": ["yaml"],
+    "rust-analyzer.check.command": "clippy",
+    "inlayHint.enable": false,
     "yaml.validate": true,
     "yaml.format.enable": true
 }
