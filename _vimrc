@@ -5,6 +5,7 @@
 " ==========================================================
 " pip install pep8 pylint mccabe pep257
 " cabal install hlint ghc-mod hdevtools fast-tags pointfree
+" system: fzf fd
 
 scriptencoding utf-8
 
@@ -136,10 +137,14 @@ endif
 Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'do': 'npm ci'}
 Plug 'bling/vim-airline'
-Plug 'ctrlpvim/ctrlp.vim'
 if has('nvim')
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'BurntSushi/ripgrep'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release --target install' }
 else
     Plug 'Shougo/neocomplete.vim'
+    Plug 'ctrlpvim/ctrlp.vim'
 endif
 
 " Haskell
@@ -454,13 +459,33 @@ endif
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " ==========================================================
-" Ctrl-P
+" Telescope / Ctrl-P
 " ==========================================================
-let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|dist|tmp|elm-stuff|output|.stack-work)$',
-    \ 'file': '\v\.(exe|so|dll|svg|hi|dyn_o)$',
-    \ 'link': '',
-\ }
+if has('nvim')
+    lua <<EOF
+require('telescope').setup {
+    defaults = {
+        mappings = {
+            i = {
+                ["<C-j>"] = "move_selection_next",
+                ["<C-k>"] = "move_selection_previous",
+            },
+        },
+    },
+}
+require('telescope').load_extension('fzf')
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader><C-p>', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader><C-b>', builtin.buffers, { desc = 'Telescope buffers' })
+EOF
+else
+    let g:ctrlp_custom_ignore = {
+        \ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|dist|tmp|elm-stuff|output|.stack-work)$',
+        \ 'file': '\v\.(exe|so|dll|svg|hi|dyn_o)$',
+        \ 'link': '',
+    \ }
+endif
 
 " ==========================================================
 " delimitMate
